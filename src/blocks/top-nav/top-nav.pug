@@ -1,0 +1,31 @@
+//- Все примеси в этом файле должны начинаться c имени блока (top-nav)
+
+mixin top-nav(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +top-nav('some-mod')
+
+  -
+    // список модификаторов
+      var allMods = '';
+      if(typeof(mods) !== 'undefined' && mods) {
+        var modsList = mods.split(',');
+        for (var i = 0; i < modsList.length; i++) {
+          allMods = allMods + ' top-nav--' + modsList[i].trim();
+        }
+      }
+
+  .top-nav(class=allMods)&attributes(attributes)
+    ul.top-nav__list
+      li.top-nav__item
+        a.top-nav__link(href="/") О нас
+      li.top-nav__item
+        a.top-nav__link(href="/") Доставка
+      li.top-nav__item
+        a.top-nav__link(href="/") Оплата
+      li.top-nav__item
+        a.top-nav__link(href="/") Возврат
+      li.top-nav__item
+        a.top-nav__link(href="/") Контакты

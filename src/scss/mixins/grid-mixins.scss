@@ -8,11 +8,11 @@ $screen-xxl:                  1800px !default;
 $container-sm:                100% !default;
 $container-md:                100% !default;
 $container-lg:                ($screen-lg - 30) !default;
-$container-xl:                ($screen-xl - 30) !default;
-$container-xxl:               ($screen-xxl - 30) !default;
+$container-xl:                1230px !default;
+$container-xxl:               1230px !default;
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           30px !default;
+$grid-gutter-width:           28px !default;
 
 
 

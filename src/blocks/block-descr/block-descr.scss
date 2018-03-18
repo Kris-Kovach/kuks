@@ -1,0 +1,60 @@
+// В этом файле должны быть стили для БЭМ-блока block-descr, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.block-descr {
+  $block-name:                &; // #{$block-name}__element
+  color: #fff;
+  width: 490px;
+  padding: 46px 10px 50px;
+  max-height: 570px;
+  overflow: hidden;
+  background: rgba(82, 14, 65, 0.9);
+  text-align: center;
+
+  &--blue-stone {
+    background: rgba(0, 87, 104, 0.9);
+  }
+
+  .btn--white {
+    &:hover,
+    &:active {
+      background: #fff;
+      color: rgb(82, 14, 65);
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100px;
+      height: 3px;
+      background: #fff;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    padding: 0 90px;
+    margin-bottom: 33px;
+    line-height: 1.55;
+    font-size: 18px;
+  }
+}

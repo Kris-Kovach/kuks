@@ -1,0 +1,26 @@
+//- Все примеси в этом файле должны начинаться c имени блока (subscribe)
+
+mixin subscribe(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +subscribe('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' subscribe--' + modsList[i].trim();
+      }
+    }
+
+  .subscribe(class=allMods)&attributes(attributes)
+    .subscribe__inner!= text
+      span.subscribe__text Оставьте свою почту, мы будем оповещать вас о самом важном &mdash;
+      form.subscribe__form
+        input.input-field.subscribe__input-field(type="text", name="email")
+        block

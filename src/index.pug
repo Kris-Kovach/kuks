@@ -4,21 +4,101 @@ block meta
   title Главная
   meta(name='description', content='')
 
-//- block append head
-//-   link(rel='stylesheet', href='css/some.css')
-
 block header
-  +page-header()
-    +logo('/')
-      span Логотип
-    +main-nav('10')
+
+  +page-header('absolute')
+    .page-header__top
+      .page-header__top-inner
+        +top-nav()
+        +user-block()
+    .page-header__bottom
+      .page-header__bottom-inner
+        +logo('/')
+          img(src='img/logo.svg', alt='Kuks',)
+        +main-nav()
+        +cart()
 
 block content
-  p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
+
+  +promo-slider()
+
+  +main-content('Авторские сумки')
+
+  +block-center()
+    .block-center__imgs
+      img.block-center__img(src='../img/block-center-1.jpg')
+      img.block-center__img(src='../img/block-center-2.jpg')
+    .block-center__inner
+      +block-descr('Тренды')
+        p.block-descr__text.
+          Не знаете что хотите? Мы&nbsp;подобрали самые трендовые аксессуары сезона, вы точно не&nbsp;промахнетесь.
+        +btn('Смотреть', 'white')(href='/')
+
+  +block-right()
+    img.block-right__img(src='../img/block-right-1.jpg')
+    .block-right__inner
+      +block-descr('Для женщин', 'blue-stone')
+        p.block-descr__text.
+          Основой нашего ассортимента являются в первую очередь сумки, одежда и акссесуары для женщин
+        +btn('Смотреть', 'white')(href='/')
+
+  section.new
+    h2.new__title Нью хот
+    .new__subtitle Наши самых свеженькие и горяченькие новиночки для вас
+    +owl-carousel('new-items')
+      div.new__item-wrap
+        +new-item()
+          +new-item-img('/', '/')
+          +new-item-content('Strap', 'Ремень для сумки', '2 499')
+            p.new-item__descr.
+              Классическая сумка для небольших
+              мелочей, которая прекрасно подойдет для похода в любое место куда вам
+              захочется с ней пойти.
+      div.new__item-wrap
+        +new-item()
+          +new-item-img('index.html', '/')
+          +new-item-content('Valentine', 'Сумка женская', '8 499')
+            p.new-item__descr.
+              Классическая сумка для небольших
+              мелочей, которая прекрасно подойдет для похода в любое место куда вам
+              захочется с ней пойти.
+      div.new__item-wrap
+        +new-item()
+          +new-item-img('/', '/')
+          +new-item-content('Helen', 'Сумка женская', '12 219')
+            p.new-item__descr.
+              Классическая сумка для небольших
+              мелочей, которая прекрасно подойдет для похода в любое место куда вам
+              захочется с ней пойти.
+
+  +bg-gallery()
+    +socials()
+      +socials-item('Vkontakte', '/')
+      +socials-item('Instagram', '/')
+      +socials-item('Facebook', '/')
+
+  +news()
+    +news-item('/', '/', '28 января 2018')
+      .news-item__text.
+        С 10 февраля можно будет купить наши товары на сайте Ламбады.
+    +news-item('/', '/', '22 февраля 2018')
+      .news-item__text.
+        Как отличить хорошую и качественную кожу. Какая прослужит дольше?
+    +news-item('/', '/', '23 марта 2018')
+      .news-item__text.
+        Hermes дороговат, а красивый ремешок для ваших Apple Watch хочется? Мы приготовили для вас свою линейку!
+    +news-item('/', '/', '2 июня 2018')
+      .news-item__text.
+        Как ухаживать за металлической фурнитурой на кожаных сумках и одежде.
+  +subscribe()
+    +btn('Подписаться', 'subscribe', true)(type='submit')
 
 block footer
   +page-footer()
-    p «Подвал»
+    +socials()
+      +socials-item('Vkontakte', '/', 'white')
+      +socials-item('Instagram', '/', 'white')
+      +socials-item('Facebook', '/', 'white')
 
 //- block page-bottom
-//-   script(src="js/some.js")
+//-   script(src='js/some.js')

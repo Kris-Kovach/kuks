@@ -26,7 +26,7 @@ const newer = require('gulp-newer');
 let projectConfig = require('./projectConfig.json');
 let dirs = projectConfig.dirs;
 let lists = getFilesList(projectConfig);
-// console.log(lists);
+console.log(lists);
 
 // Получение адреса репозитория
 let repoUrl = require('./package.json').repository.url.replace(/\.git$/g, '');
@@ -417,7 +417,7 @@ gulp.task('img:opt', function (callback) {
 gulp.task('build', gulp.series(
   'clean',
   gulp.parallel('sprite:svg', 'sprite:png', 'copy:favicon', 'copy:favicon:data'),
-  gulp.parallel('style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'),
+  gulp.parallel('style', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'),
   'pug'
 ));
 
@@ -461,9 +461,9 @@ gulp.task('serve', gulp.series('build', function() {
   gulp.watch(stylePaths, gulp.series('style'));
 
   // Стили, которые нужно компилировать отдельно
-  if(projectConfig.singleCompiled.length) {
-    gulp.watch(projectConfig.singleCompiled, gulp.series('style:single'));
-  }
+  // if(projectConfig.singleCompiled.length) {
+  //   gulp.watch(projectConfig.singleCompiled, gulp.series('style:single'));
+  // }
 
   // CSS-файлы, которые нужно просто копировать
   if(projectConfig.copiedCss.length) {
@@ -532,7 +532,7 @@ function getFilesList(config){
     'js': [],
     'img': [],
     'pug': [],
-    'blocksDirs': [],
+    'blocksDirs': []
   };
 
   // Обходим массив с блоками проекта

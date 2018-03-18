@@ -1,14 +1,10 @@
-// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
+// В этом файле должны быть стили для БЭМ-блока top-nav, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.main-nav {
+.top-nav {
   $block-name:                &; // #{$block-name}__element
-  margin-left: auto;
-  margin-right: 55px;
-  padding-left: 20px;
-  max-width: calc(100% - 234px); // logo + cart width
-  padding-top: 5px;
+  padding-top: 3px;
 
   &__list {
     margin-top: 0;
@@ -16,11 +12,10 @@
     padding: 0;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
   }
 
   &__item {
-    margin-right: 52px;
+    margin-right: 40px;
 
     &:last-child {
       margin-right: 0;
@@ -29,20 +24,19 @@
 
   &__link {
     display: block;
-    font-weight: 700;
     color: #fff;
-    text-decoration: none;
-    font-size: 16px;
     text-transform: uppercase;
+    font-size: 11px;
+    text-decoration: none;
+    opacity: 0.5;
     line-height: 1.2;
-    padding: 5px 0;
 
     &:hover,
     &:active,
     &:focus,
     &:visited {
       color: #fff;
-      opacity: 0.7;
+      opacity: 0.3;
     }
   }
 }

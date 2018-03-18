@@ -1,0 +1,28 @@
+//- Все примеси в этом файле должны начинаться c имени блока (main-content)
+
+mixin main-content(title, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-content('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-content--' + modsList[i].trim();
+      }
+    }
+
+  section.main-content
+    .main-content__inner
+      h1.main-content__title.title= title
+      .main-content__subtitle.subtitle
+        span Созданы с огромной любовью&nbsp;
+        span.main-content__heart &hearts;
+        span  для ценителей индивидуальности&nbsp;
+      block

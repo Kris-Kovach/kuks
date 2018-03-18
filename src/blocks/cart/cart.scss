@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока cart, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.cart {
+  $block-name:                &; // #{$block-name}__element
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+  position: relative;
+  width: 50px;
+  text-decoration: none;
+  padding-left: 25px;
+  padding-right: 15px;
+  line-height: 1.2;
+
+  &:after {
+    position: absolute;
+    content: '';
+    background: url('../img/icon-arrow.svg') center center no-repeat;
+    background-size: contain;
+    width: 9px;
+    height: 4px;
+    top: 16px;
+    right: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
+
+  &__number {
+    color: #fff;
+  }
+}

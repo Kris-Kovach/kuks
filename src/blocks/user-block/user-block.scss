@@ -1,0 +1,73 @@
+// В этом файле должны быть стили для БЭМ-блока user-block, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.user-block {
+  $block-name:                &; // #{$block-name}__element
+  display: flex;
+  align-items: bottom;
+
+  &__phone {
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 45px;
+    line-height: 1.1;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: #fff;
+      opacity: 0.3;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__login {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-decoration: none;
+    padding-left: 17px;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: #fff;
+      opacity: 0.3;
+    }
+  }
+
+  &__change-lang {
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-decoration: none;
+    margin-left: 32px;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: #fff;
+      opacity: 0.3;
+    }
+  }
+}

@@ -1,71 +1,31 @@
 {
   "blocks": {
     "page": [],
-    "typo": [],
-    "sprite-svg": [],
-    "sprite-png": [
-      "__demo"
-    ],
     "page-header": [],
     "page-footer": [],
     "logo": [],
+    "sprite-svg": [],
+    "top-nav": [],
+    "user-block": [],
     "main-nav": [],
-    "close": [],
-    "burger": [],
-    "code": [],
-    "thumb": [],
-    "alert": [],
-    "menu": [],
-    "label": [],
-    "loader": [],
-    "table": [],
-    "table-responsive": [],
-    "pagination": [],
-    "breadcrumbs": [],
-    "progress": [],
-    "pie-chart": [],
-    "embed-responsive": [],
-    "comment": [],
-    "tooltip": [],
-    "btn": [],
-    "field-text": [
-      "--error"
-    ],
-    "field-checkbox": [
-      "__input-wrap--error"
-    ],
-    "field-radio": [
-      "__input-wrap--error"
-    ],
-    "field-toggler": [],
-    "field-file": [
-      "--error"
-    ],
-    "field-range": [],
-    "field-select": [
-      "--error"
-    ],
-    "field-actions": [],
-    "fields-group": [],
-    "form": [],
-    "is-mobile": [],
-    "scroll-link": [],
-    "to-top": [],
-    "dropdown": [],
+    "cart": [],
     "owl-carousel": [],
-    "swipe": [],
-    "nouislider": [],
-    "off-canvas": [],
-    "modal": [],
-    "tabs": [],
-    "object-fit-polyfill": [],
-    "or": [],
-    "baron": []
+    "promo-slider": [],
+    "block-center": [],
+    "block-descr": [],
+    "block-right": [],
+    "btn": [],
+    "new": [],
+    "bg-gallery": [],
+    "socials": [],
+    "news": [],
+    "subscribe": [],
+    "main-content": []
   },
   "addCssBefore": [
-    "./src/scss/functions.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
+    "./src/scss/fonts.scss",
     "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
     "../../node_modules/nouislider/distribute/nouislider.css"
   ],

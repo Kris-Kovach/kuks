@@ -1,0 +1,35 @@
+// В этом файле должны быть стили для БЭМ-блока new-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.new {
+  $block-name:                &; // #{$block-name}__element
+  position: relative;
+  background: #520d41;
+
+  &__title {
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 23px;
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    color: #fff;
+    font-style: italic;
+    font-size: 22px;
+    text-align: center;
+    opacity: 0.6;
+  }
+
+  &__item-wrap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,41 @@
+//- Все примеси в этом файле должны начинаться c имени блока (socials)
+
+mixin socials(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +socials('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' socials--' + modsList[i].trim();
+      }
+    }
+
+  .socials(class=allMods)&attributes(attributes)
+    block
+
+mixin socials-item(text, href, mods)
+
+  //- Принимает:
+  //-   text   {string} - содержимое пункта
+  //-   href   {string} - ссылка этого пункта (если пустая, то это не ссылка, а span)
+  //-   mods   {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' socials--' + modsList[i].trim();
+      }
+    }
+
+  a.socials__item(class=allMods, href=href)&attributes(attributes)!= text
+    block

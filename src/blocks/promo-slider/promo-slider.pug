@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (promo-slider)
+
+mixin promo-slider(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +promo-slider('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' promo-slider--' + modsList[i].trim();
+      }
+    }
+
+  .promo-slider.owl-carousel(class=allMods)&attributes(attributes)
+    div.promo-slider__item.promo-slider__item--1
+    div.promo-slider__item.promo-slider__item--2
+    div.promo-slider__item.promo-slider__item--3
