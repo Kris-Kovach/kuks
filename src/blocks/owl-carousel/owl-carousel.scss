@@ -3,8 +3,40 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .owl-carousel {
-  // По умолчанию в сборку берется стилевой файл этого блока, предоставляемый
-  // автором пакета (см. файл настройки проекта, там подключается
-  // node_modules/owl.carousel/dist/assets/owl.carousel.css).
-  // Надо стилизовать — копипастить из исходника и убирать исходник из сборки.
+
 }
+
+// Стили для owl-carousel
+#new-items {
+  .owl-dots {
+    position: absolute;
+    bottom: -84px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .owl-dot{
+    height: 14px;
+    margin-right: 17px;
+    outline: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+      border: 2px solid #fff;
+      background: transparent;
+    }
+
+    &.active span {
+      background: #fff;
+    }
+  }
+}
+

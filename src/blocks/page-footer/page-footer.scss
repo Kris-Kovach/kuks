@@ -3,6 +3,184 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .page-footer {
-
   $block-name:                &; // #{$block-name}__element
+  padding-top: 95px;
+  background: $gray;
+  color: #fff;
+
+  &__top {
+    padding-bottom: 88px;
+    border-bottom: 1px solid #fff;
+  }
+
+  &__top-inner {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__bottom {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+
+  &__bottom-inner {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 42px;
+
+    img {
+      width: 140px;
+      height: 30px;
+    }
+  }
+
+  &__block {
+    max-width: 18%;
+    margin-right: 8.33%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--contacts {
+      max-width: 31%;
+      margin-left: auto;
+    }
+  }
+
+  &__block-title {
+    display: block;
+    padding-top: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 42px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 42px;
+    padding-top: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  &__address {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    font-weight: 300;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 18px;
+      width: 12px;
+      background: url('../img/icon-address.svg') center center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__nav-item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+  }
+
+  &__dev {
+    display: flex;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.7;
+      color: #fff;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+
+    span {
+      padding-top: 3px;
+    }
+
+    img {
+      width: 74px;
+      height: 21px;
+    }
+  }
 }

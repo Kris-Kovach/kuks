@@ -20,14 +20,19 @@ mixin bg-gallery(text, mods)
 
   section.bg-gallery(class=allMods)&attributes(attributes)
     .bg-gallery__inner
-      img.bg-gallery__img.bg-gallery__img--1(src="/")
-      img.bg-gallery__img.bg-gallery__img--2(src="/")
-      img.bg-gallery__img.bg-gallery__img--3(src="/")
-      img.bg-gallery__img.bg-gallery__img--4(src="/")
-      img.bg-gallery__img.bg-gallery__img--5(src="/")
-      img.bg-gallery__img.bg-gallery__img--6(src="/")
+      .bg-gallery__imgs
+        .bg-gallery__top
+          img.bg-gallery__img.bg-gallery__img--1(src='img/bg-gallery-1.jpg')
+          img.bg-gallery__img.bg-gallery__img--2(src='img/bg-gallery-2.jpg')
+          img.bg-gallery__img.bg-gallery__img--3(src='img/bg-gallery-3.jpg')
+        .bg-gallery__bottom
+          img.bg-gallery__img.bg-gallery__img--4(src='img/bg-gallery-4.jpg')
+          img.bg-gallery__img.bg-gallery__img--5(src='img/bg-gallery-5.jpg')
+          img.bg-gallery__img.bg-gallery__img--6(src='img/bg-gallery-6.jpg')
+          img.bg-gallery__img.bg-gallery__img--7(src='img/bg-gallery-7.jpg')
 
-    .bg-gallery__content
-      .bg-gallery__title # KUKS
-      p.bg-gallery__text Давайте подружимся?
-      block
+      .bg-gallery__content-wrap
+        .bg-gallery__content
+          .bg-gallery__title #KUKS
+          p.bg-gallery__text Давайте подружимся?
+          block

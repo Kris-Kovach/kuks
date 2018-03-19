@@ -20,7 +20,7 @@ mixin subscribe(text, mods)
 
   .subscribe(class=allMods)&attributes(attributes)
     .subscribe__inner!= text
-      span.subscribe__text Оставьте свою почту, мы будем оповещать вас о самом важном &mdash;
+      span.subscribe__text Оставьте свою почту, мы будем оповещать вас о самом важном &mdash;&nbsp;
       form.subscribe__form
         input.input-field.subscribe__input-field(type="text", name="email")
         block

@@ -12,8 +12,9 @@ mixin new(mods)
       }
     }
 
-  section.new(class=allMods)&attributes(attributes)
-    block
+  section.new(class=allMods)
+    .new__inner
+      block
 
 mixin new-item(mods)
 
@@ -27,7 +28,7 @@ mixin new-item(mods)
       }
     }
 
-  .new-item(class=allMods)&attributes(attributes)
+  .new__item(class=allMods)&attributes(attributes)
     block
 
 mixin new-item-img (href, src, mods)
@@ -46,8 +47,8 @@ mixin new-item-img (href, src, mods)
         }
       }
 
-  a.new-item__img-wrap(class=allMods, href=href)&attributes(attributes)
-    img.new-item__img(class=allMods, src=src)&attributes(attributes)
+  a.new__img-wrap(class=allMods, href=href)&attributes(attributes)
+    img.new__img(class=allMods, src=src)&attributes(attributes)
 
 mixin new-item-content(title, subtitle, price, mods)
 
@@ -65,9 +66,9 @@ mixin new-item-content(title, subtitle, price, mods)
         }
       }
 
-  .new-item__content
-    .new-item__title= title
-    .new-item__subtitle= subtitle
+  .new__content
+    .new__item-title= title
+    .new__item-subtitle= subtitle
     block
-    .new-item__price= price
-      span.b-rub Ь
+    .new__price= price
+      span.b-rub &nbsp;Ь

@@ -1,16 +1,12 @@
 $(document).ready(function(){
 
   $("#new-items").owlCarousel({
-    items: 3,
+    items: 1,
     nav: false,
+    dots: false,
     loop: true,
     center: false,
     responsive : {
-      0 : {
-        items: 1,
-        nav: false,
-        loop: true
-      },
       768 : {
         items: 3,
         dots: true
@@ -19,13 +15,10 @@ $(document).ready(function(){
         items: 3,
         dots: true
       },
-      1200 : {
+      1260 : {
         items: 3,
-        dots: true
-      },
-      1800 : {
-        items: 3,
-        dots: true
+        dots: true,
+        margin: 45
       }
     }
   });

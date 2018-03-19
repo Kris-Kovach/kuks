@@ -1,8 +1,104 @@
-// В этом файле должны быть стили для БЭМ-блока bg-gallery, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока bg-gallery, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .bg-gallery {
-
   $block-name:                &; // #{$block-name}__element
+  padding-top: 86px;
+  padding-bottom: 95px;
+  background: #fff;
+
+  &__inner {
+    @include container();
+    position: relative;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 28px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__img {
+    object-fit: cover;
+
+    &--1 {
+      width: 460px;
+      height: 460px;
+    }
+
+    &--2 {
+      width: 400px;
+      height: 400px;
+    }
+
+    &--3 {
+      width: 300px;
+      height: 300px;
+    }
+
+    &--4 {
+      width: 224px;
+      height: 224px;
+    }
+
+    &--5 {
+      width: 370px;
+      height: 370px;
+    }
+
+    &--6 {
+      width: 290px;
+      height: 290px;
+    }
+
+    &--7 {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  &__content-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 475px;
+    max-height: 315px;
+    overflow: hidden;
+    padding: 16px;
+    background: rgba(242, 242, 242, 0.9);
+  }
+
+  &__content {
+    padding: 46px 10px 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: $gray;
+  }
+
+  &__title {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-top: 0;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
 }

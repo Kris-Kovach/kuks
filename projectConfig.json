@@ -23,6 +23,7 @@
     "main-content": []
   },
   "addCssBefore": [
+    "./src/scss/global.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/fonts.scss",

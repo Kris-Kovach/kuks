@@ -31,7 +31,15 @@
 }
 
 @font-face {
-  font-family: 'PTRoubleSans';
+  font-family: 'Muller';
+  src: url('../fonts/MullerBoldItalic.woff2') format('woff2'),
+  url('../fonts/MullerBoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Rouble Sans';
   src: url('../fonts/RoubleSans.woff2') format('woff2'),
   url('../fonts/RoubleSans.woff') format('woff');
   font-weight: 400;

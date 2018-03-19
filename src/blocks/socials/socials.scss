@@ -1,8 +1,18 @@
-// В этом файле должны быть стили для БЭМ-блока socials, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока socials, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .socials {
-
   $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
