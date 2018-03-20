@@ -14,8 +14,7 @@
     position: relative;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: #450010;
-    transition: background-color 1000ms linear;
+    background-color: #9b016b;
 
     &:after {
       position: absolute;
@@ -24,15 +23,18 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('../img/letters.svg') top left repeat-x;
+      background: url('../img/bg-header.png') top left repeat-x;
       background-size: auto auto;
+      opacity: 0.05;
     }
   }
 
   &__top-inner {
     @include container();
+    position: relative;
     display: flex;
     justify-content: space-between;
+    z-index: 10;
   }
 
   &__bottom {

@@ -11,6 +11,7 @@
     @include container();
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
 
   &__text {
@@ -21,7 +22,7 @@
 
   &__form {
     display: flex;
-    width: 40%;
+    width: 38%;
   }
 
   &__input-field {

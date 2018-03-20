@@ -131,15 +131,6 @@ a {
   text-decoration-skip: ink;
   -webkit-text-decoration-skip: objects;
   transition: color 0.3s;
-
-  &:hover,
-  &:focus {
-    color: $link-color--hover;
-  }
-
-  &:visited {
-    color: $link-color--hover;
-  }
 }
 
 hr {

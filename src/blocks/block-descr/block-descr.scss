@@ -13,14 +13,11 @@
   text-align: center;
 
   .btn--white {
+
     &:hover,
     &:active {
       background: #fff;
       color: rgb(82, 14, 65);
-    }
-
-    &:visited {
-      color: #fff;
     }
   }
 
@@ -28,6 +25,7 @@
     background: rgba(0, 87, 104, 0.9);
 
     .btn--white {
+
       &:hover,
       &:active {
         color: rgb(0, 87, 104);
