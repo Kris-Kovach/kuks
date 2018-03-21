@@ -5,12 +5,24 @@
 .block-descr {
   $block-name:                &; // #{$block-name}__element
   color: #fff;
-  width: 490px;
-  padding: 46px 10px 50px;
-  max-height: 570px;
+  padding: 26px 10px 30px;
+  max-width: 320px;
+  max-height: 500px;
   overflow: hidden;
   background: rgba(82, 14, 65, 0.9);
   text-align: center;
+
+  @media (min-width: $screen-md) {
+    max-width: none;
+    width: 400px;
+    padding: 26px 10px 35px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 490px;
+    max-height: 570px;
+    padding: 46px 10px 50px;
+  }
 
   .btn--white {
 
@@ -35,13 +47,23 @@
 
   &__title {
     position: relative;
-    padding-bottom: 30px;
-    margin-bottom: 35px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4em;
+
+    @media (min-width: $screen-sm) {
+      font-size: 22px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 30px;
+      padding-bottom: 30px;
+      margin-bottom: 35px;
+    }
 
     &:after {
       position: absolute;
@@ -57,9 +79,17 @@
 
   &__text {
     margin-top: 0;
-    padding: 0 90px;
-    margin-bottom: 33px;
+    margin-bottom: 25px;
     line-height: 1.55;
     font-size: 18px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 0 90px;
+      margin-bottom: 33px;
+    }
   }
 }

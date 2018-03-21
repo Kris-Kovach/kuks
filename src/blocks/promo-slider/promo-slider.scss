@@ -7,7 +7,15 @@
   padding-top: 47px;
 
   &__item {
-    height: 745px;
+    height: 500px;
+
+    @media (min-width: $screen-lg) {
+      height: 600px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 745px;
+    }
 
     &--1 {
       background: url('../img/promo-bg-1.jpg') top center no-repeat;
@@ -32,9 +40,11 @@
     bottom: 27px;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
   }
 
-  .owl-dot{
+  .owl-dot {
     height: 14px;
     margin-right: 17px;
     outline: none;

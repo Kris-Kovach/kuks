@@ -20,7 +20,9 @@
     "socials": [],
     "news": [],
     "subscribe": [],
-    "main-content": []
+    "main-content": [],
+    "top-nav-toggler": [],
+    "main-nav-toggler": []
   },
   "addCssBefore": [
     "./src/scss/global.scss",

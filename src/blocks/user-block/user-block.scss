@@ -5,7 +5,16 @@
 .user-block {
   $block-name:                &; // #{$block-name}__element
   display: flex;
-  align-items: bottom;
+  align-items: flex-end;
+
+  @media (min-width: $screen-md) {
+    justify-content: flex-end;
+    width: 37%;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: 23%;
+  }
 
   &__phone {
     display: inline-block;
@@ -13,9 +22,14 @@
     color: #fff;
     opacity: 0.5;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     margin-right: 45px;
-    line-height: 1.1;
+    line-height: 1.2;
+
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+      line-height: 1;
+    }
 
     &:hover,
     &:active,

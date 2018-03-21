@@ -3,15 +3,23 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .block-center {
-  $block-name:                &; // #{$block-name}__element
+  $block-name: &; // #{$block-name}__element
   position: relative;
   background: #fff;
   height: 570px;
   overflow: hidden;
-  margin-bottom: 98px;
   max-width: 1365px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 35px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 98px;
+  }
 
   &__imgs {
     position: absolute;
@@ -25,8 +33,20 @@
 
   &__img {
     object-fit: cover;
-    width: 49%;
+    width: 100%;
     height: 100%;
+
+    @media (max-width: $screen-sm-max) {
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      width: 49%;
+      height: 100%;
+    }
   }
 
   &__inner {

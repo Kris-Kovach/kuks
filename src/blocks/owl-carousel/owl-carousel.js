@@ -3,21 +3,20 @@ $(document).ready(function(){
   $("#new-items").owlCarousel({
     items: 1,
     nav: false,
-    dots: false,
+    dots: true,
     loop: true,
     center: false,
+    margin: 25,
     responsive : {
       768 : {
-        items: 3,
-        dots: true
+        items: 2
       },
       992 : {
         items: 3,
-        dots: true
+        margin: 25
       },
       1260 : {
         items: 3,
-        dots: true,
         margin: 45
       }
     }

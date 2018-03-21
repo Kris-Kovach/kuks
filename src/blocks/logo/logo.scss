@@ -4,14 +4,23 @@
 
 .logo {
 
-  $block-name:                &; // #{$block-name}__element
-
+  $block-name: &; // #{$block-name}__element
   display: inline-block;
   white-space: nowrap;
+  padding-top: 3px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 0;
+  }
 
   img {
     display: block;
-    width: 183px;
-    height: 33px;
+    width: 110px;
+    height: 21px;
+
+    @media (min-width: $screen-lg) {
+      width: 183px;
+      height: 33px;
+    }
   }
 }

@@ -435,7 +435,7 @@ gulp.task('deploy', function() {
   }
   return gulp.src(dirs.buildPath + '**/*')
     .pipe(ghPages())
-    .pipe(gulpIf(ghPagesUrl, console.log('---------- ' + ghPagesUrl)));
+    // .pipe(gulpIf(ghPagesUrl, console.log('---------- ' + ghPagesUrl)));
 });
 
 // Локальный сервер, слежение

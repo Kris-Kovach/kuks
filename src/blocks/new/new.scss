@@ -5,9 +5,13 @@
 .new {
   $block-name:                &; // #{$block-name}__element
   position: relative;
-  padding-top: 64px;
+  padding-top: 46px;
   padding-bottom: 128px;
   background: #520d41;
+
+  @media (min-width: $screen-md) {
+    padding-top: 64px;
+  }
 
   &:after {
     position: absolute;
@@ -29,28 +33,57 @@
   &__title {
     font-weight: 300;
     margin-top: 0;
-    margin-bottom: 23px;
-    font-size: 80px;
+    margin-bottom: 15px;
+    font-size: 36px;
     color: #fff;
     line-height: 1.2;
     letter-spacing: 0.4em;
     text-transform: uppercase;
     text-align: center;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 23px;
+      font-size: 60px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 80px;
+    }
   }
 
   &__subtitle {
-    margin-bottom: 54px;
+    margin-bottom: 40px;
     font-weight: 300;
     color: #fff;
     font-style: italic;
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     opacity: 0.6;
+
+    @media (min-width: $screen-md) {
+      font-size: 22px;
+      margin-bottom: 54px;
+    }
   }
 
-  &__item-wrap {
+  &__item {
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    background: $gray--lighter;
+
+    @media (min-width: $screen-md) {
+      max-width: none;
+      min-height: 566px;
+    }
+
+    @media (min-width: $screen-lg) {
+      min-height: 588px;
+    }
+
+    @media (min-width: $screen-xl) {
+      min-height: 662px;
+    }
   }
 
   &__img-wrap {
@@ -59,23 +92,39 @@
 
   &__img {
     width: 100%;
-    height: 360px;
+    height: 260px;
     object-fit: cover;
+
+    @media (min-width: $screen-sm) {
+      height: 290px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 360px;
+    }
   }
 
   &__content {
-    padding: 42px 36px 38px;
+    padding: 32px 30px 28px;
     background: $gray--lighter;
     color: $gray;
+
+    @media (min-width: $screen-xl) {
+      padding: 42px 36px 38px;
+    }
   }
 
   &__item-title {
-    font-size: 26px;
+    font-size: 22px;
     line-height: 1.2;
     letter-spacing: 0.2em;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 7px;
+
+    @media (min-width: $screen-xl) {
+      font-size: 26px;
+    }
   }
 
   &__item-subtitle {

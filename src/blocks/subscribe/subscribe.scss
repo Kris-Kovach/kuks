@@ -5,27 +5,78 @@
 .subscribe {
   $block-name:                &; // #{$block-name}__element
   background: $gray--lighter;
-  padding-bottom: 76px;
+  padding-bottom: 55px;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 75px;
+  }
 
   &__inner {
     @include container();
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
   }
 
   &__text {
     font-weight: 700;
     font-size: 23px;
     font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 62%;
+      max-width: 60%;
+      font-size: 23px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__symbols {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: inline;
+    }
   }
 
   &__form {
-    display: flex;
-    width: 38%;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 60%;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 40%;
+    }
   }
 
   &__input-field {
+    width: 100%;
     border: 1px solid #000;
     background: transparent;
     color: #000;
@@ -33,7 +84,14 @@
     line-height: 1.6;
     padding: 10px 12px;
     outline: none;
-    width: calc(100% - 189px);
+    margin-bottom: 20px;
+    border-radius: 0;
+    -webkit-appearance: none;
+
+    @media (min-width: $screen-md) {
+      width: calc(100% - 189px);
+      margin-bottom: 0;
+    }
 
     &:focus {
       border: 1px solid #000;

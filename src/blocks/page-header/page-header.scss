@@ -38,9 +38,14 @@
   }
 
   &__bottom {
-    padding-top: 27px;
-    padding-bottom: 27px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     background-color: transparent;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 27px;
+      padding-bottom: 27px;
+    }
   }
 
   &__bottom-inner {

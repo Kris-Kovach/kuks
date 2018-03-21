@@ -8,6 +8,8 @@
   text-decoration: none;
   outline: none;
   border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
 
   &--white {
     border: 3px solid #fff;
@@ -37,8 +39,11 @@
     letter-spacing: 0.2em;
     font-size: 16px;
     border: 1px solid #000;
-    border-left: 0;
     width: 189px;
+
+    @media (min-width: $screen-md) {
+      border-left: 0;
+    }
 
     &:hover,
     &:active,

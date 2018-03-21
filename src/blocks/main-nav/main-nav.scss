@@ -3,27 +3,67 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .main-nav {
-  $block-name:                &; // #{$block-name}__element
-  margin-left: auto;
-  margin-right: 55px;
-  padding-left: 20px;
-  max-width: calc(100% - 234px); // logo + cart width
-  padding-top: 5px;
+  $block-name: &; // #{$block-name}__element
+  display: none;
+
+  @media (max-width: $screen-sm-max) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 105px 20px 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    text-align: center;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    display: block;
+    margin-left: auto;
+    margin-right: 22px;
+    padding-left: 10px;
+    max-width: calc(100% - 160px); // logo + cart width
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 5px;
+    margin-right: 55px;
+    padding-left: 20px;
+    max-width: calc(100% - 234px); // logo + cart width
+  }
 
   &__list {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+
+    @media (min-width: $screen-md) {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
-    margin-right: 52px;
+    margin-bottom: 5px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-right: 52px;
+    }
 
     &:last-child {
       margin-right: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -36,6 +76,15 @@
     text-transform: uppercase;
     line-height: 1.2;
     padding: 5px 0;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+    }
 
     &:hover,
     &:active,
