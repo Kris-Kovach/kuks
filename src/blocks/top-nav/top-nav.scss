@@ -6,18 +6,19 @@
   $block-name: &; // #{$block-name}__element
 
   @media (max-width: $screen-sm-max) {
-    display: none;
     position: absolute;
     top: -15px;
-    left: 0;
-    width: 100%;
-    padding: 50px 20px 30px;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    min-height: 330px;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
-    text-align: center;
+    transition: 0.5s;
+    overflow-x: hidden;
 
     &--visible {
-      display: block;
+      left: 0;
     }
   }
 
@@ -34,6 +35,10 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 50px 50px 30px;
+    }
 
     @media (min-width: $screen-md) {
       list-style: none;

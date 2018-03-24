@@ -18,6 +18,7 @@
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
+  overflow-x: hidden;
 
   &__inner {
     min-height: 100vh;
