@@ -7,6 +7,7 @@ $(document).ready(function(){
     loop: true,
     center: false,
     margin: 25,
+    dotsSpeed: 1000,
     responsive : {
       768 : {
         items: 2
@@ -27,7 +28,8 @@ $(document).ready(function(){
     nav: false,
     dots: true,
     loop: true,
-    center: false
+    center: false,
+    dotsSpeed: 1000
   })
 
 });

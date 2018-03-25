@@ -21,24 +21,42 @@
 
     @media (min-width: $screen-md) {
       width: 32%;
-      margin-bottom: 25px;
+      margin-bottom: 16px;
     }
 
     @media (min-width: $screen-lg) {
+      margin-bottom: 20px;
 
       &:hover img {
         transform: scale(1.1);
       }
     }
 
+    @media (min-width: $screen-xl) {
+      margin-bottom: 25px;
+    }
+
     img {
       object-fit: cover;
       width: 100%;
-      //height: 200px;
+      height: 85px;
+
+
+      @media (min-width: $screen-sm) {
+        height: 135px;
+      }
+
+      @media (min-width: $screen-md) {
+        height: 155px;
+      }
 
       @media (min-width: $screen-lg) {
+        height: 185px;
         transform: scale(1);
         transition: all 0.4s ease-in-out;
+      }
+
+      @media (min-width: $screen-xl) {
         height: 245px;
       }
     }

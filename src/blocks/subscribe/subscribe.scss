@@ -7,6 +7,10 @@
   background: $gray--lighter;
   padding-bottom: 55px;
 
+  &--white {
+    background-color: #fff;
+  }
+
   @media (min-width: $screen-xl) {
     padding-bottom: 75px;
   }

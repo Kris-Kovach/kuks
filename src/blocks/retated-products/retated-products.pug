@@ -18,8 +18,8 @@ mixin related-products(mods)
       }
     }
 
-  .retated-products(class=allMods)&attributes(attributes)
-    .retated-products__inner
+  .related-products(class=allMods)&attributes(attributes)
+    .related-products__inner
       block
 
 mixin retated-products-title(text, mods)
@@ -40,7 +40,7 @@ mixin retated-products-title(text, mods)
       }
     }
 
-  h2.retated-products__title(class=allMods)!= text
+  h2.related-products__title(class=allMods)!= text
 
 mixin related-products-item(mods)
 
@@ -60,7 +60,7 @@ mixin related-products-item(mods)
       }
     }
 
-  .retated-products__item(class=allMods)
+  .related-products__item(class=allMods)
     block
 
 mixin related-products-img (href, src, mods)
@@ -105,7 +105,7 @@ mixin related-products-content(title, href, subtitle, price, mods)
     .related-products__item-subtitle= subtitle
     block
 
-mixin related-products-price-block(price, priceOld, mods)
+mixin related-products-price-block(price, mods, priceOld)
 
   //- Принимает:
   //-   price   {string} - цена
@@ -123,11 +123,11 @@ mixin related-products-price-block(price, priceOld, mods)
 
   .related-products__price-block(class=allMods)
 
-    if (typeof(priceOld) !== 'undefined')
+    if (typeof(priceOld) !== 'undefined' && priceOld)
       span.related-products__price= price
-        span.b-rub &nbsp;
+        span.b-rub &nbsp;Ь
       span.related-products__price--old= priceOld
-        span.b-rub &nbsp;
+        span.b-rub &nbsp;Ь
     else
       span.related-products__price= price
-      span.b-rub &nbsp;
+      span.b-rub &nbsp;Ь
