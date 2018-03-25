@@ -1,0 +1,24 @@
+// В этом файле должны быть стили для БЭМ-блока retated-products, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.retated-products {
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container();
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+}

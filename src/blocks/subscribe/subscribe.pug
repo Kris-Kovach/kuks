@@ -1,6 +1,6 @@
 //- Все примеси в этом файле должны начинаться c имени блока (subscribe)
 
-mixin subscribe(text, mods)
+mixin subscribe(mods)
 
   //- Принимает:
   //-   text    {string} - текст
@@ -19,7 +19,7 @@ mixin subscribe(text, mods)
     }
 
   .subscribe(class=allMods)&attributes(attributes)
-    .subscribe__inner!= text
+    .subscribe__inner
       .subscribe__text Оставьте свою почту, мы будем оповещать вас о&nbsp;самом важном
         span.subscribe__symbols  &mdash;&nbsp;
       form.subscribe__form

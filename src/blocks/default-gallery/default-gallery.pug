@@ -1,0 +1,44 @@
+//- Все примеси в этом файле должны начинаться c имени блока (default-gallery)
+
+mixin default-gallery(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +default-gallery('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' default-gallery--' + modsList[i].trim();
+      }
+    }
+
+  .default-gallery(class=allMods)&attributes(attributes)
+    .default-gallery__inner
+      block
+
+mixin default-gallery-item(src, name, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +default-gallery('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+      var allMods = '';
+      if(typeof(mods) !== 'undefined' && mods) {
+        var modsList = mods.split(',');
+          for (var i = 0; i < modsList.length; i++) {
+            allMods = allMods + ' default-gallery__title--' + modsList[i].trim();
+        }
+      }
+
+  a.default-gallery__item(href=src data-fancybox=name class=allMods)
+    img(src=src alt="")

@@ -28,6 +28,7 @@
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.2.5",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^8.0.0",
     "browser-sync": "^2.18.8",
@@ -35,6 +36,7 @@
     "cross-env": "^5.0.0",
     "css-mqpacker": "^6.0.0",
     "del": "^3.0.0",
+    "fancybox": "^3.0.1",
     "gulp": "^4.0.0",
     "gulp-cheerio": "^0.6.2",
     "gulp-cleancss": "^0.2.2",

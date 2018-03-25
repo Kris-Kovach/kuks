@@ -2,11 +2,11 @@
 //- ВНИМАНИЕ! Примесь возвращает только разметку.
 //- Не забудьте включить и настроить карусель в owl-carousel/owl-carousel.js
 
-mixin owl-carousel(id, mods)
+mixin owl-carousel(id)
 
   //- Принимает:
   //-   id      {string} - идентификатор
-  //-   mods    {string} - список модификаторов
+  //-   class    {string} - список модификаторов
   //- Вызов:
         +owl-carousel('promo')
           div слайд1
@@ -18,15 +18,5 @@ mixin owl-carousel(id, mods)
           div слайд7
           div слайд8
 
-  -
-    // список модификаторов
-    var allMods = '';
-    if(typeof(mods) !== 'undefined' && mods) {
-      var modsList = mods.split(',');
-      for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' owl-carousel--' + modsList[i].trim();
-      }
-    }
-
-  .owl-carousel(id=id, class=allMods)&attributes(attributes)
+  .owl-carousel(id=id, class=id)&attributes(attributes)
     block

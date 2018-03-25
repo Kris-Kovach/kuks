@@ -1,15 +1,6 @@
 .page-header {
   position: relative;
 
-  &--absolute {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 10;
-  }
-
   &__top {
     position: relative;
     padding-top: 15px;
@@ -45,6 +36,26 @@
     @media (min-width: $screen-lg) {
       padding-top: 27px;
       padding-bottom: 27px;
+    }
+  }
+
+  &--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &--dark {
+
+    .page-header__top {
+      background: #181818;
+    }
+
+    .page-header__bottom {
+      background: #1e1e1e;
     }
   }
 

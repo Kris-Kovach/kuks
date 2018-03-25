@@ -1,0 +1,21 @@
+//- Все примеси в этом файле должны начинаться c имени блока (default-text)
+
+mixin default-text(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +default-text('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' default-text--' + modsList[i].trim();
+      }
+    }
+
+  article.default-text(class=allMods)&attributes(attributes)
+    block

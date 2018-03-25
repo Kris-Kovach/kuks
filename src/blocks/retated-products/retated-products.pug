@@ -1,0 +1,133 @@
+//- Все примеси в этом файле должны начинаться c имени блока (retated-products)
+
+mixin related-products(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +retated-products('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' retated-products--' + modsList[i].trim();
+      }
+    }
+
+  .retated-products(class=allMods)&attributes(attributes)
+    .retated-products__inner
+      block
+
+mixin retated-products-title(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +retated-products('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' retated-products__title--' + modsList[i].trim();
+      }
+    }
+
+  h2.retated-products__title(class=allMods)!= text
+
+mixin related-products-item(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +retated-products('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' related-products__item--' + modsList[i].trim();
+      }
+    }
+
+  .retated-products__item(class=allMods)
+    block
+
+mixin related-products-img (href, src, mods)
+
+  //- Принимает:
+  //-   src   {string} - ссылка на изображение
+  //-   href   {string} - ссылка этого пункта
+  //-   mods   {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' related-products__img--' + modsList[i].trim();
+      }
+    }
+
+  a.related-products__img(class=allMods, href=href)&attributes(attributes)
+    img(class=allMods, src=src alt="")&attributes(attributes)
+
+mixin related-products-content(title, href, subtitle, price, mods)
+
+  //- Принимает:
+  //-   title   {string} - заголовок карточки
+  //-   href   {string} - ссылка этого пункта
+  //-   subtitle   {string} - подзаголовок карточки
+  //-   price   {string} - цена
+  //-   mods   {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' related-products__content--' + modsList[i].trim();
+      }
+    }
+
+  .related-products__content(class=allMods)
+    a.related-products__item-title(href=href)= title
+    .related-products__item-subtitle= subtitle
+    block
+
+mixin related-products-price-block(price, priceOld, mods)
+
+  //- Принимает:
+  //-   price   {string} - цена
+  //-   priceOld   {string} - старая цена, если есть
+  //-   mods   {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' related-products__price-block--' + modsList[i].trim();
+      }
+    }
+
+  .related-products__price-block(class=allMods)
+
+    if (typeof(priceOld) !== 'undefined')
+      span.related-products__price= price
+        span.b-rub &nbsp;
+      span.related-products__price--old= priceOld
+        span.b-rub &nbsp;
+    else
+      span.related-products__price= price
+      span.b-rub &nbsp;
