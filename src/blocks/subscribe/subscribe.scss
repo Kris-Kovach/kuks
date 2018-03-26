@@ -46,7 +46,7 @@
 
     @media (min-width: $screen-xl) {
       width: 62%;
-      max-width: 60%;
+      max-width: 62%;
       font-size: 23px;
       margin-bottom: 0;
     }
@@ -75,7 +75,7 @@
     }
 
     @media (min-width: $screen-xl) {
-      width: 40%;
+      width: 38%;
     }
   }
 
@@ -90,7 +90,6 @@
     outline: none;
     margin-bottom: 20px;
     border-radius: 0;
-    -webkit-appearance: none;
 
     @media (min-width: $screen-md) {
       width: calc(100% - 189px);
