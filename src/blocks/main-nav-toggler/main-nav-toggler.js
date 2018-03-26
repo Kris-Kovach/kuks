@@ -20,6 +20,7 @@ $(document).ready(function () {
   });
 
   mainNavLink.on('click', function (evt) {
+    subNav.removeClass('main-nav__submenu--visible');
 
     if ($(this).next('.main-nav__submenu').length) {
       evt.preventDefault();
