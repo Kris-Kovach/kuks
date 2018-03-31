@@ -17,9 +17,7 @@ $(document).ready(function () {
   };
 
   var setFilterState = function () {
-    if ($(window).width() < 1024) {
-      filter.addClass('filter--hidden');
-    } else {
+    if ($(window).width() > 1024) {
       filter.removeClass('filter--hidden');
     }
   };
