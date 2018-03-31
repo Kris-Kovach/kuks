@@ -27,7 +27,12 @@
     "default-gallery": [],
     "retated-products": [],
     "default-page": [],
-    "default-text": []
+    "default-text": [],
+    "card": [],
+    "catalog": [],
+    "filter": [],
+    "select-field": [],
+    "range-field": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -35,6 +40,9 @@
     "./src/scss/mixins.scss",
     "./src/scss/fonts.scss",
     "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+    "../../node_modules/select2/dist/css/select2.css",
+    "../../node_modules/ion-rangeslider/css/ion.rangeSlider.css",
+    "../../node_modules/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css",
     "./src/scss/plugins/jquery.fancybox.scss"
   ],
   "addCssAfter": [
@@ -49,6 +57,8 @@
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js",
     "./node_modules/object-fit-images/dist/ofi.js",
+    "./node_modules/select2/dist/js/select2.js",
+    "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./src/js/jquery.fancybox.js"
   ],
   "addJsAfter": [

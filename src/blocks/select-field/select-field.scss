@@ -1,0 +1,63 @@
+// В этом файле должны быть стили для БЭМ-блока select-field, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.select-field {
+  $block-name: &; // #{$block-name}__element
+}
+
+// Стили для плагина Select 2
+.select-field-wrap {
+  margin-bottom: 32px;
+
+  .select2-container--default .select2-selection--single {
+    border: 0;
+    border-bottom: 2px solid $gray;
+    border-radius: 0;
+    background: transparent;
+    outline: 0;
+  }
+
+  .select2-container .select2-selection--single {
+    height: 48px;
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 48px;
+    color: $gray;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 48px;
+    color: $gray;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 44px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: 0;
+    background: url('../img/select-arrow.svg') center center no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 5px;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $gray--light;
+}
+
+.select2-dropdown {
+  border: 2px solid $gray;
+  border-radius: 0;
+}

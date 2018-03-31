@@ -1,0 +1,39 @@
+//- Все примеси в этом файле должны начинаться c имени блока (filter)
+
+mixin filter(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +filter('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' filter--' + modsList[i].trim();
+      }
+    }
+
+  .filter(class=allMods)&attributes(attributes)
+    .filter__label Фильтр
+    .filter__inner
+      button.filter__close
+        span Закрыть
+      form.filter__form
+        +select-field('collection', 'Коллекция')
+          option
+          option Значение
+          option Значение
+        +select-field('color', 'Цвет')
+          option
+          option Значение
+        +select-field('size', 'Размер')
+          option
+          option Значение
+        +range-field('price', 'Цена')(data-min='8499' data-max='28499')
+        button(type='submit' value='').filter__submit.btn Показать
+          span.filter__results (23)

@@ -1,0 +1,158 @@
+// В этом файле должны быть стили для БЭМ-блока filter, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.filter {
+  $block-name: &; // #{$block-name}__element
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background: #f3f3f3;
+  z-index: 1000;
+  width: 100%;
+  padding: 50px 30px 40px;
+
+  @media (min-width: $screen-md) {
+    width: 355px;
+    padding: 50px 50px 50px 68px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: calc(100% - 30px);
+  }
+
+  &__label {
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: 13px;
+    width: auto;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $gray;
+    padding-right: 37px;
+    cursor: pointer;
+
+    @media (min-width: $screen-md) {
+      top: 60px;
+      left: -30px;
+      transform: rotate(-90deg);
+    }
+
+    @media (min-width: $screen-lg) {
+      left: -37px;
+    }
+
+    @media (min-width: $screen-xl) {
+      left: -30px;
+    }
+
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: -2px;
+      right: 0;
+      width: 21px;
+      height: 22px;
+      background: url('../img/icon-filter.svg') center center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &--hidden {
+    height: 35px;
+    width: 142px;
+    padding: 0;
+
+    @media (min-width: $screen-md) {
+      width: 50px;
+      height: 142px;
+      padding: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 142px;
+      width: 35px;
+      padding: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 50px;
+      height: 142px;
+      padding: 0;
+    }
+
+    .filter__inner {
+      display: none;
+    }
+
+    .filter__label {
+      display: inline-block;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 25px;
+    height: 25px;
+    z-index: 1500;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    background-color: transparent;
+    font-size: 0;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+
+    span {
+      display: inline-block;
+      background-color: transparent;
+      position: relative;
+
+      &:before,
+      &:after {
+        display: inline-block;
+        width: 25px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        content: '';
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+    }
+  }
+
+  &__submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid $gray;
+    background: transparent;
+    padding: 10px 20px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+  }
+
+  .range-field-wrap {
+    margin-bottom: 55px;
+  }
+}

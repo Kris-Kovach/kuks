@@ -24,6 +24,14 @@
 
 @font-face {
   font-family: 'Muller';
+  src: url('../fonts/MullerExtraBold.woff2') format('woff2'),
+  url('../fonts/MullerExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
   src: url('../fonts/MullerBold.woff2') format('woff2'),
   url('../fonts/MullerBold.woff') format('woff');
   font-weight: 700;
