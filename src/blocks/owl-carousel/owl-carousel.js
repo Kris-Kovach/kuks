@@ -30,6 +30,28 @@ $(document).ready(function(){
     loop: true,
     center: false,
     dotsSpeed: 1000
-  })
+  });
 
+  $('#product-slider').owlCarousel({
+    items: 1,
+    dots: true,
+    dotsData: true,
+    dotsContainer: '.product__thumbs',
+    dotClass: 'product__thumb',
+    loop: true,
+    dotsSpeed: 1000,
+    onTranslated: function() {
+      $zoom.destroy().magnify();
+    }
+  });
+
+  var $zoom = $('.product__img img').magnify({
+    limitBounds: true
+  });
+
+  // Переключение слайда по клику на миниатюру фото на основании индекса элемента
+
+  $('.product__thumb').click(function () {
+    $('#product-slider').trigger('to.owl.carousel', [$(this).index(), 1000]);
+  });
 });

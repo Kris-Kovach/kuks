@@ -32,7 +32,8 @@
     "catalog": [],
     "filter": [],
     "select-field": [],
-    "range-field": []
+    "range-field": [],
+    "product": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -43,6 +44,7 @@
     "../../node_modules/select2/dist/css/select2.css",
     "../../node_modules/ion-rangeslider/css/ion.rangeSlider.css",
     "../../node_modules/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css",
+    "../../node_modules/magnify/dist/css/magnify.css",
     "./src/scss/plugins/jquery.fancybox.scss"
   ],
   "addCssAfter": [
@@ -59,6 +61,8 @@
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/select2/dist/js/select2.js",
     "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
+    "./node_modules/magnify/dist/js/jquery.magnify.js",
+    "./node_modules/magnify/dist/js/jquery.magnify-mobile.js",
     "./src/js/jquery.fancybox.js"
   ],
   "addJsAfter": [

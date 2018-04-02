@@ -13,10 +13,10 @@ mixin select-field(name, placeholder, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' select-field--' + modsList[i].trim();
+        allMods = allMods + ' select-field-wrap--' + modsList[i].trim();
       }
     }
 
-  .select-field-wrap
-    select.select-field(class=allMods name=name data-placeholder=placeholder)&attributes(attributes)
+  .select-field-wrap(class=allMods)&attributes(attributes)
+    select.select-field(name=name data-placeholder=placeholder)&attributes(attributes)
       block

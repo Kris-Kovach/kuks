@@ -1,0 +1,132 @@
+extends pug/layout.pug
+
+block meta
+  title Сумка Marta
+  meta(name='description', content='')
+
+block header
+  +page-header('dark')
+    div#header-top.page-header__top
+      .page-header__top-inner
+        +top-nav-toggler()
+        +top-nav()
+        +user-block()
+    .page-header__bottom
+      .page-header__bottom-inner
+        +logo('/')
+          img(src='img/logo.svg', alt='Kuks',)
+        +main-nav-toggler()
+        +main-nav()
+        +cart()
+
+
+block content
+  +product()
+    section.product__section.product__section--dark
+      .product__inner
+        .product__column
+          +owl-carousel('product-slider')(class='product__slider')
+            .product__img(data-dot='<img src="img/product-1.jpg" alt="Bag">')
+              img(src='img/product-1.jpg' data-magnify-src="img/product-1.jpg" alt='Bag')
+            .product__img(data-dot='<img src="img/product-2.jpg" alt="Bag">')
+              img(src='img/product-2.jpg' data-magnify-src="img/product-2.jpg" alt='Bag')
+            .product__img(data-dot='<img src="img/product-3.jpg" alt="Bag">')
+              img(src='img/product-3.jpg' data-magnify-src="img/product-3.jpg" alt='Bag')
+            .product__img(data-dot='<img src="img/product-4.jpg" alt="Bag">')
+              img(src='img/product-4.jpg' data-magnify-src="img/product-4.jpg" alt='Bag')
+        .product__column.product__info
+          +breadcrumbs('white')
+            +breadcrumbs-item('Женское', '/')
+            +breadcrumbs-item('Сумки и клатчи', '/')
+            +breadcrumbs-item('Marta')
+          h1.product__title Marta
+          .product__subtitle Женская сумка
+          .product__descr
+            p.
+              Сумка выполнена из натуральной кожи. Закрывается на
+              металлическую молнию. Сумка на подкладе из плотного хлопка. Внутри два кармана: карман на молнии и
+              объемный карман для телефона и мелочей. Ручки в руку (длина - 30 см). К сумке
+              прилагается съемная ручка на плечо длиной 52 см.
+          .product__checkout
+            +select-field('size', '', 'white')(class='product__size')
+              option XXL
+              option XL
+              option L
+            .product__price-info
+              .product__price.product__price--old 8 499&nbsp;
+                span.b-rub Ь
+              .product__purchase
+                .product__price 12 219&nbsp;
+                  span.b-rub Ь
+                +btn('Купить', 'purchase')
+            .product__note Обращаем ваше внимание, что стоимость данной модели зависит от размера!
+    section.product__section.product__section--gray
+      .product__inner
+        .product__column
+          .product__thumbs
+          .product__video
+            iframe(src='https://www.youtube.com/embed/p8r2mLhRFBQ' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen)
+        .product__column
+          .product__block
+            h2.product__block-title Описание
+            .product__measurements
+              .product__measurement
+                .product__unit Ширина
+                .product__value 44 см.
+              .product__measurement
+                .product__unit Высота
+                .product__value 28 см.
+              .product__measurement
+                .product__unit Глубина
+                .product__value 12 см.
+              .product__measurement
+                .product__unit Вес
+                .product__value 824 гр.
+            .product__materials
+              .product__material
+                .product__unit Материал
+                .product__value.product__value--small 100% натуральная кожа
+              .product__material
+                .product__unit Подклад
+                .product__value.product__value--small 90% хлопок, 10% полиэстер
+          .product__block
+            h2.product__block-title Доставка и оплата
+            p.
+              К оплате принимаются карты «Виза», «Мастеркард» и «Мир», При
+              курьерской доставке по Петербургу возможна оплата наличными. Для
+              организаций предусмотрена оплата по безналичному расчету. До
+              момента получения платежа товары не резервируются.
+            p.
+              Обращаем внимание: при заказе на сумму свыше 3500 рублей
+              курьерская доставка по Москве бесплатна.
+              Мы доставляем товары по всему миру. Способ доставки
+              (курьером, почтой или самовывоз) выбирается при оформлении заказа.
+            p.
+              Если покупка по какой-либо причине не понравилась, мы без
+              вопросов примем ее обратно.
+          .product__block
+            h2.product__block-title Другие цвета
+            ul.product__colors
+              li.product__color
+                img(src='img/color-1.jpg' alt='Some alt')
+              li.product__color
+                img(src='img/color-2.jpg' alt='Some alt')
+              li.product__color
+                img(src='img/color-3.jpg' alt='Some alt')
+              li.product__color
+                img(src='img/color-4.jpg' alt='Some alt')
+  +subscribe('white')
+    +btn('Подписаться', 'subscribe', true)(type='submit')
+
+block footer
+  +page-footer()
+    +socials()
+      +socials-item('Vkontakte', '/')
+        svg(width='32', height='32')
+          use(xlink:href='img/sprite-svg.svg#icon-vk')
+      +socials-item('Instagram', '/')
+        svg(width='32', height='32')
+          use(xlink:href='img/sprite-svg.svg#icon-insta')
+      +socials-item('Facebook', '/')
+        svg(width='32', height='32')
+          use(xlink:href='img/sprite-svg.svg#icon-fb')

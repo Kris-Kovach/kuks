@@ -59,4 +59,19 @@
       }
     }
   }
+
+  &--white {
+
+    .breadcrumbs__item {
+
+      > a {
+        color: #fff;
+
+        &:after {
+          background: url('../img/icon-arrow--white.svg') center center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
 }

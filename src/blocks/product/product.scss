@@ -1,0 +1,215 @@
+// В этом файле должны быть стили для БЭМ-блока product, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product {
+  $block-name: &; // #{$block-name}__element
+
+  &__inner {
+    @include container();
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+    }
+  }
+
+  &__section {
+    background: #fff;
+
+    &--dark {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background: #6f6c67;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &--gray {
+      background: $gray--lighter;
+    }
+  }
+
+  &__column {
+    position: relative;
+    z-index: 10;
+
+    @media (min-width: $screen-lg) {
+      width: 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    background: #6f6c67;
+    color: #fff;
+
+    @media (min-width: $screen-lg) {
+      padding-left: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 60px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    height: 100%;
+
+    .owl-stage-outer,
+    .owl-stage,
+    .owl-item {
+      height: 100%;
+    }
+  }
+
+  .magnify {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    height: 100%;
+    font-size: 0;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    width: 100%;
+
+    @media (min-width: $screen-lg) {
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 22px;
+    font-style: italic;
+    opacity: 0.5;
+  }
+
+  &__descr {
+    font-weight: 300;
+    font-style: italic;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__size {
+    width: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__price {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+
+    &--old {
+      font-size: 20px;
+      opacity: 0.5;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__note {
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &__thumbs {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__thumb {
+    position: relative;
+    font-size: 0;
+    width: 48%;
+    margin-bottom: 20px;
+    z-index: 500;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 28px;
+    }
+
+    img {
+      width: 100%;
+      height: 224px;
+      object-fit: cover;
+      cursor: pointer;
+
+      @media (min-width: $screen-xl) {
+        height: 290px;
+      }
+    }
+  }
+
+  &__video {
+
+    iframe {
+      max-width: 100%;
+      width: 100%;
+      height: 345px;
+    }
+  }
+
+  &__colors {
+    display: flex;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: 0;
+  }
+
+  &__color {
+    font-size: 0;
+    width: 90px;
+    height: 90px;
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .breadcrumbs {
+
+    @media (min-width: $screen-lg) {
+      justify-content: flex-start;
+    }
+  }
+}
