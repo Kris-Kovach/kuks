@@ -3,7 +3,7 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .news {
-  $block-name:                &; // #{$block-name}__element
+  $block-name: &; // #{$block-name}__element
   background: $gray--lighter;
   text-align: center;
   padding-top: 34px;
@@ -17,6 +17,17 @@
   @media (min-width: $screen-lg) {
     padding-top: 74px;
     padding-bottom: 65px;
+  }
+
+  &--white {
+    background-color: #fff;
+
+    .news__items {
+
+      @media (min-width: $screen-lg) {
+        padding-bottom: 20px;
+      }
+    }
   }
 
   &__inner {
@@ -78,10 +89,6 @@
       &:nth-child(4n) {
         margin-right: 0;
       }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 
@@ -126,6 +133,22 @@
 
     @media (min-width: $screen-md) {
       text-align: left;
+    }
+  }
+
+  h1 {
+    width: 100%;
+
+    @media (min-width: $screen-lg) {
+      text-align: left;
+      margin-bottom: 22px;
+    }
+  }
+
+  .breadcrumbs {
+
+    @media (min-width: $screen-lg) {
+      justify-content: flex-start;
     }
   }
 }

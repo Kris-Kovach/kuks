@@ -9,7 +9,6 @@
   outline: none;
   border: none;
   border-radius: 0;
-  -webkit-appearance: none;
 
   &--white {
     border: 3px solid #fff;
@@ -50,6 +49,32 @@
     &:focus {
       background-color: transparent;
       color: #000;
+    }
+  }
+
+  &--earlier {
+    position: relative;
+    font-weight: 700;
+    font-size: 26px;
+    color: #000;
+    padding-left: 58px;
+    transition: all 0.3s;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background: url('../img/arrow-down.svg') center center no-repeat;
+      background-size: contain;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.7;
     }
   }
 }

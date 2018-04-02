@@ -1,28 +1,42 @@
 //- Все примеси в этом файле должны начинаться c имени блока (news)
 
-mixin news(text, mods)
+mixin news(mods)
 
   //- Принимает:
-  //-   text    {string} - текст
   //-   mods    {string} - список модификаторов
   //- Вызов:
-        +news('Текст', 'some-mod')
+        +news('some-mod')
 
+  -
+  // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+    for (var i = 0; i < modsList.length; i++) {
+    allMods = allMods + ' news--' + modsList[i].trim();
+    }
+    }
+
+  .news(class=allMods)&attributes(attributes)
+    .news__inner
+      block
+
+mixin news-title(text, mods)
+
+  //- Принимает:
+  //-   text   {string} - содержимое пункта
+  //-   mods   {string} - список модификаторов
   -
     // список модификаторов
     var allMods = '';
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' news--' + modsList[i].trim();
+        allMods = allMods + ' news__title---' + modsList[i].trim();
       }
     }
 
-  .news(class=allMods)&attributes(attributes)
-    .news__inner!= text
-      h2.news__title Новости
-      .news__items
-        block
+  h2.news__title= text
 
 mixin news-item(href, src, date, mods)
 
@@ -32,15 +46,15 @@ mixin news-item(href, src, date, mods)
   //-   mods   {string} - список модификаторов
   -
     // список модификаторов
-      var allMods = '';
-      if(typeof(mods) !== 'undefined' && mods) {
-        var modsList = mods.split(',');
-        for (var i = 0; i < modsList.length; i++) {
-          allMods = allMods + ' socials--' + modsList[i].trim();
-        }
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' news__item--' + modsList[i].trim();
       }
+    }
 
-  a.news__item(class=allMods, href=href)&attributes(attributes)!= text
+  a.news__item(class=allMods, href=href)&attributes(attributes)
     img.news__img(src=src)
     block
     .news__date(datetime="2018-08-07")= date

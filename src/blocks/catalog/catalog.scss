@@ -46,7 +46,7 @@
       max-width: none;
     }
 
-    @media (min-width: $screen-md) and (max-width: $screen-lg-max){
+    @media (min-width: $screen-md) and (max-width: $screen-lg-max) {
 
       &:nth-child(2n) {
         margin-right: 0;

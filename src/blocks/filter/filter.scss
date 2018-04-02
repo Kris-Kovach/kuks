@@ -34,6 +34,7 @@
     color: $gray;
     padding-right: 37px;
     cursor: pointer;
+    transition: color 0.3s;
 
     @media (min-width: $screen-md) {
       top: 60px;
@@ -50,7 +51,6 @@
       left: -30px;
     }
 
-
     &:after {
       position: absolute;
       content: '';
@@ -60,6 +60,11 @@
       height: 22px;
       background: url('../img/icon-filter.svg') center center no-repeat;
       background-size: contain;
+    }
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
     }
   }
 
@@ -111,6 +116,7 @@
     border: 0;
     cursor: pointer;
     outline: 0;
+    transition: all 0.3s;
 
     span {
       display: inline-block;
@@ -136,6 +142,11 @@
         transform: rotate3d(0, 0, 1, 45deg);
       }
     }
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   &__submit {
@@ -150,6 +161,13 @@
     font-size: 12px;
     letter-spacing: 0.2em;
     font-weight: 800;
+    transition: all 0.3s;
+
+    &:hover,
+    &:active {
+      background-color: #000;
+      color: #fff;
+    }
   }
 
   .range-field-wrap {

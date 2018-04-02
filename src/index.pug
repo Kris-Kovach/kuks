@@ -110,18 +110,20 @@ block content
           use(xlink:href="img/sprite-svg.svg#icon-fb--gray")
 
   +news()
-    +news-item('/', 'img/news-1.jpg', '28 января 2018')
-      .news__subtitle.
-        С 10 февраля можно будет купить наши товары на сайте Ламбады.
-    +news-item('/', 'img/news-2.jpg', '22 февраля 2018')
-      .news__subtitle.
-        Как отличить хорошую и качественную кожу. Какая прослужит дольше?
-    +news-item('/', 'img/news-3.jpg', '23 марта 2018')
-      .news__subtitle.
-        Hermes дороговат, а красивый ремешок для ваших Apple Watch хочется? Мы приготовили для вас свою линейку!
-    +news-item('/', 'img/news-4.jpg', '2 июня 2018')
-      .news__subtitle.
-        Как ухаживать за металлической фурнитурой на кожаных сумках и одежде.
+    +news-title('Новости')
+    .news__items
+      +news-item('/', 'img/news-1.jpg', '28 января 2018')
+        .news__subtitle.
+          С 10 февраля можно будет купить наши товары на сайте Ламбады.
+      +news-item('/', 'img/news-2.jpg', '22 февраля 2018')
+        .news__subtitle.
+          Как отличить хорошую и качественную кожу. Какая прослужит дольше?
+      +news-item('/', 'img/news-3.jpg', '23 марта 2018')
+        .news__subtitle.
+          Hermes дороговат, а красивый ремешок для ваших Apple Watch хочется? Мы приготовили для вас свою линейку!
+      +news-item('/', 'img/news-4.jpg', '2 июня 2018')
+        .news__subtitle.
+          Как ухаживать за металлической фурнитурой на кожаных сумках и одежде.
 
   +subscribe()
     +btn('Подписаться', 'subscribe', true)(type='submit')
