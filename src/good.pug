@@ -26,8 +26,8 @@ block content
       .product__inner
         .product__column
           +owl-carousel('product-slider')(class='product__slider')
-            .product__img(data-dot='<img src="img/product-1.jpg" alt="Bag">')
-              img(src='img/product-1.jpg' data-magnify-src="img/product-1.jpg" alt='Bag')
+            .product__img(data-dot='<img src="img/test-bag.jpeg" alt="Bag">')
+              img(src='img/test-bag.jpeg' data-magnify-src="img/test-bag.jpeg" alt='Bag')
             .product__img(data-dot='<img src="img/product-2.jpg" alt="Bag">')
               img(src='img/product-2.jpg' data-magnify-src="img/product-2.jpg" alt='Bag')
             .product__img(data-dot='<img src="img/product-3.jpg" alt="Bag">')
@@ -53,20 +53,21 @@ block content
               option XL
               option L
             .product__price-info
-              .product__price.product__price--old 8 499&nbsp;
-                span.b-rub Ь
+              .product__price.product__price--old
+                span.product__price-value  8 499
+                span.b-rub &nbsp;Ь
               .product__purchase
                 .product__price 12 219&nbsp;
                   span.b-rub Ь
                 +btn('Купить', 'purchase')
-            .product__note Обращаем ваше внимание, что стоимость данной модели зависит от размера!
+          .product__note Обращаем ваше внимание, что стоимость данной модели зависит от размера!
     section.product__section.product__section--gray
       .product__inner
         .product__column
           .product__thumbs
           .product__video
             iframe(src='https://www.youtube.com/embed/p8r2mLhRFBQ' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen)
-        .product__column
+        .product__column.product__about
           .product__block
             h2.product__block-title Описание
             .product__measurements
@@ -115,6 +116,28 @@ block content
                 img(src='img/color-3.jpg' alt='Some alt')
               li.product__color
                 img(src='img/color-4.jpg' alt='Some alt')
+
+  +related-products()
+    +retated-products-title('Рекомендуем')
+    .related-products__items
+      +card()
+        +card-img('/', 'img/new-1.jpg')
+        +card-content('Strap', '/', 'Ремень для сумки')
+          +card-price-block('2 499')
+      +card()
+        +card-label()
+        +card-img('/', 'img/new-2.jpg')
+        +card-content('Valentine', '/', 'Сумка женская')
+          +card-price-block('8 499', 'sale', '8 499')
+      +card()
+        +card-img('/', 'img/new-3.jpg')
+        +card-content('Helen', '/', 'Сумка женская')
+          +card-price-block('8 499')
+      +card()
+        +card-img('/', 'img/related-products-1.jpg')
+        +card-content('Love', '/', 'Сумка женская')
+          +card-price-block('8 499')
+
   +subscribe('white')
     +btn('Подписаться', 'subscribe', true)(type='submit')
 

@@ -55,19 +55,50 @@
   &--white {
 
     .select2-container--default .select2-selection--single {
-      border: 2px solid #fff;
+      border: 3px solid $gray;
+
+      @media (min-width: $screen-lg) {
+        border: 3px solid #fff;
+      }
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__placeholder {
+      line-height: 60px;
+    }
+
+    .select2-container .select2-selection--single {
+      height: 60px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      height: 54px;
+      width: 26px;
     }
 
     .select2-container--default .select2-selection--single .select2-selection__arrow b {
-      background: url('../img/select-arrow--white.svg') center center no-repeat;
-      background-size: contain;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 9px;
+
+      @media (min-width: $screen-lg) {
+        background: url('../img/select-arrow--white.svg') center center no-repeat;
+        background-size: contain;
+      }
     }
 
     .select2-container--default .select2-selection--single .select2-selection__rendered {
       padding-left: 15px;
       font-size: 30px;
-      color: #fff;
+      color: $gray;
       letter-spacing: 0.1em;
+      line-height: 60px;
+
+      @media (min-width: $screen-lg) {
+        color: #fff;
+      }
     }
   }
 }

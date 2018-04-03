@@ -79,9 +79,10 @@
   }
 
   &--purchase {
-    border: 2px solid #fff;
+    padding: 7px 25px;
+    border: 3px solid $gray;
     background-color: #fff;
-    color: #6f6c67;
+    color: $gray;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 800;
@@ -91,8 +92,22 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: #6f6c67;
+      background-color: $gray;
       color: #fff;
+    }
+
+
+    @media (min-width: $screen-lg) {
+      border: 3px solid #fff;
+      border-left: 0;
+      color: #6f6c67;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #6f6c67;
+        color: #fff;
+      }
     }
   }
 }
