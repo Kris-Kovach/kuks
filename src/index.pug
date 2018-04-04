@@ -50,12 +50,14 @@ block content
     +owl-carousel('new-items')
       div.new__item-wrap
         +new-item()
+          +card-label()
           +new-item-img('/', 'img/new-1.jpg')
           +new-item-content('Strap', 'Ремень для сумки', '2 499')
             p.new__descr.
               Классическая сумка для небольших
               мелочей, которая прекрасно подойдет для похода в любое место куда вам
               захочется с ней пойти.
+            +new-price-block('8499', 'sale', '12999')
       div.new__item-wrap
         +new-item()
           +new-item-img('/', 'img/new-2.jpg')
@@ -64,6 +66,7 @@ block content
               Классическая сумка для небольших
               мелочей, которая прекрасно подойдет для похода в любое место куда вам
               захочется с ней пойти.
+            +new-price-block('8499')
       div.new__item-wrap
         +new-item()
           +new-item-img('/', 'img/new-3.jpg')
@@ -72,6 +75,7 @@ block content
               Классическая сумка для небольших
               мелочей, которая прекрасно подойдет для похода в любое место куда вам
               захочется с ней пойти.
+            +new-price-block('8499')
       div.new__item-wrap
         +new-item()
           +new-item-img('/', 'img/new-3.jpg')
@@ -80,6 +84,7 @@ block content
               Классическая сумка для небольших
               мелочей, которая прекрасно подойдет для похода в любое место куда вам
               захочется с ней пойти.
+            +new-price-block('8499')
       div.new__item-wrap
         +new-item()
           +new-item-img('/', 'img/new-3.jpg')
@@ -88,14 +93,17 @@ block content
               Классическая сумка для небольших
               мелочей, которая прекрасно подойдет для похода в любое место куда вам
               захочется с ней пойти.
+            +new-price-block('8499')
       div.new__item-wrap
         +new-item()
+          +card-label()
           +new-item-img('/', 'img/new-3.jpg')
           +new-item-content('Helen', 'Сумка женская', '12 219')
             p.new__descr.
               Классическая сумка для небольших
               мелочей, которая прекрасно подойдет для похода в любое место куда вам
               захочется с ней пойти.
+            +new-price-block('8499', 'sale', '12999')
 
   +bg-gallery()
     +socials()

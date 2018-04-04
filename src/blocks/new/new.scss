@@ -66,6 +66,19 @@
     }
   }
 
+  &__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff2734;
+    color: #fff;
+    padding: 2px 13px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
   &__item {
     max-width: 300px;
     margin-left: auto;
@@ -147,5 +160,27 @@
     font-size: 22px;
     line-height: 1.2;
     letter-spacing: 0.1em;
+  }
+
+
+  &__price-block {
+
+    &--sale {
+
+      .new__price {
+        color: #ff2734;
+        padding-right: 20px;
+
+        &--old {
+          font-weight: 700;
+          color: $font-color;
+          text-decoration: line-through;
+
+          .b-rub {
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 }

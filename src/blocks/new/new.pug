@@ -31,6 +31,22 @@ mixin new-item(mods)
   .new__item(class=allMods)&attributes(attributes)
     block
 
+mixin card-label (mods)
+
+  //- Принимает:
+  //-   mods   {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card__label--' + modsList[i].trim();
+      }
+    }
+
+  span.new__label(class=allMods, href=href)&attributes(attributes) sale
+
 mixin new-item-img (href, src, mods)
 
   //- Принимает:
@@ -70,5 +86,30 @@ mixin new-item-content(title, subtitle, price, mods)
     .new__item-title= title
     .new__item-subtitle= subtitle
     block
-    .new__price= price
-      span.b-rub &nbsp;Ь
+
+mixin new-price-block(price, mods, priceOld)
+
+  //- Принимает:
+  //-   price   {string} - цена
+  //-   priceOld   {string} - старая цена, если есть
+  //-   mods   {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' new__price-block--' + modsList[i].trim();
+      }
+    }
+
+  .new__price-block(class=allMods)
+
+    if (typeof(priceOld) !== 'undefined' && priceOld)
+      span.new__price= price
+        span.b-rub &nbsp;Ь
+      span.new__price--old= priceOld
+        span.b-rub &nbsp;Ь
+    else
+      span.new__price= price
+        span.b-rub &nbsp;Ь

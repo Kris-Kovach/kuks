@@ -46,7 +46,7 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     if ($(window).width() > 768) {
-      $('body').toggleClass('fixed');
+      $('body').removeClass('fixed');
     }
   });
 });
