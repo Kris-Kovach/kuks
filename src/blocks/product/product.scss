@@ -15,12 +15,18 @@
   }
 
   &__section {
+    padding-top: 35px;
     background: #fff;
 
     &:last-child {
-      @media (min-width: $screen-lg) {
+
+      @media (min-width: $screen-xl) {
         padding-bottom: 114px;
       }
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 0;
     }
 
     &--dark {
@@ -49,7 +55,7 @@
 
   &__column {
     position: relative;
-    z-index: 10;
+    z-index: 5;
 
     @media (min-width: $screen-lg) {
       width: 50%;
@@ -73,9 +79,21 @@
     }
   }
 
+  &__slider-wrap {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   &__slider {
     width: 100%;
-    height: 100%;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+    }
   }
 
   .magnify {
@@ -91,6 +109,14 @@
       object-fit: cover;
       width: 100%;
       height: 290px;
+
+      @media (min-width: $screen-sm) {
+        height: 390px;
+      }
+
+      @media (min-width: $screen-md) {
+        height: 490px;
+      }
 
       @media (min-width: $screen-xl) {
         height: 580px;
@@ -153,7 +179,16 @@
   &__checkout {
     margin-bottom: 22px;
 
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: flex-end;
+    }
+
     @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    @media (min-width: $screen-xl) {
       display: flex;
       align-items: flex-end;
     }
@@ -167,20 +202,43 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       margin-bottom: 0;
       margin-left: 0;
       margin-right: 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
     }
   }
 
   &__price-info {
     text-align: center;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+      width: calc(100% - 145px);
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: auto;
+      max-width: calc(100% - 145px);
+    }
+
   }
 
   &__purchase {
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-sm) {
       display: flex;
     }
   }
@@ -190,12 +248,31 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
-    @media (min-width: $screen-lg) {
-      border: 3px solid #fff;
+    @media (min-width: $screen-sm) {
+      width: 60%;
+      padding: 0 20px;
+      border: 3px solid $gray;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    @media (min-width: $screen-md) {
       padding: 2px 20px;
       min-height: 60px;
       margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      border: 3px solid #fff;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: auto;
+      max-width: 60%;
     }
 
     .b-rub {
@@ -216,9 +293,18 @@
         text-decoration: line-through;
       }
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-sm) {
+        border: 0;
+      }
+
+      @media (min-width: $screen-md) {
         min-height: auto;
         padding: 0;
+        border: 0;
+      }
+
+
+      @media (min-width: $screen-lg) {
         border: 0;
       }
 
@@ -232,9 +318,19 @@
   }
 
   &__note {
+    margin-bottom: 15px;
     font-size: 13px;
     font-weight: 300;
     font-style: italic;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+    }
   }
 
   &__thumbs {
@@ -272,6 +368,11 @@
   }
 
   &__video {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+    }
 
     iframe {
       max-width: 100%;
@@ -288,20 +389,28 @@
     }
 
     @media (min-width: $screen-xl) {
-      padding-top: 62px;
+      padding-top: 45px;
       padding-left: 62px;
     }
   }
 
   &__block {
-    padding-bottom: 58px;
-    margin-bottom: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 25px;
     border-bottom: 3px solid #000;
 
+    @media (min-width: $screen-md) {
+      padding-bottom: 58px;
+      margin-bottom: 50px;
+    }
+
     &:last-child {
-      padding-bottom: 0;
       margin-bottom: 0;
       border-bottom: 0;
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
     }
 
     > p {
@@ -322,25 +431,41 @@
     font-size: 26px;
     line-height: 1.25;
     letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 15px;
 
     @media (min-width: $screen-lg) {
+      text-align: left;
       margin-bottom: 32px;
     }
   }
 
   &__measurements {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 15px;
 
     @media (min-width: $screen-md) {
-      display: flex;
-      flex-wrap: wrap;
       margin-bottom: 38px;
     }
   }
 
   &__measurement {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
+      width: 25%;
+    }
+
+    @media (min-width: $screen-lg) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: auto;
       margin-right: 80px;
 
       &:last-child {
@@ -351,7 +476,7 @@
 
   &__materials {
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -359,9 +484,19 @@
   }
 
   &__material {
+    text-align: center;
+    margin-bottom: 15px;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
       width: 45%;
+    }
+
+    @media (min-width: $screen-lg) {
+      text-align: left;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -382,18 +517,30 @@
 
   &__colors {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
     font-size: 0;
+
+    @media (min-width: $screen-lg) {
+      justify-content: flex-start;
+    }
   }
 
   &__color {
     font-size: 0;
-    width: 90px;
-    height: 90px;
-    margin-right: 25px;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+
+    @media (min-width: $screen-sm) {
+      width: 90px;
+      height: 90px;
+      margin-right: 25px;
+    }
 
     &:last-child {
       margin-right: 0;

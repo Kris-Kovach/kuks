@@ -8,5 +8,6 @@ $(document).ready(function () {
     topNavToggler.toggleClass('top-nav-toggler--close');
     topNav.toggleClass('top-nav--visible');
     mainNavToggler.toggleClass('main-nav-toggler--disabled');
+    $('body').toggleClass('fixed');
   });
 });

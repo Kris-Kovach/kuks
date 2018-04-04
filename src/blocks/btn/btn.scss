@@ -96,11 +96,17 @@
       color: #fff;
     }
 
+    @media (min-width: $screen-sm) {
+      border-left: 0;
+      width: 40%;
+    }
+
 
     @media (min-width: $screen-lg) {
       border: 3px solid #fff;
       border-left: 0;
       color: #6f6c67;
+      width: auto;
 
       &:hover,
       &:active,

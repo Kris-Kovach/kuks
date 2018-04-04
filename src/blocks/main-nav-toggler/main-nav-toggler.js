@@ -12,6 +12,7 @@ $(document).ready(function () {
     mainNavToggler.toggleClass('main-nav-toggler--close');
     mainNav.toggleClass('main-nav--visible');
     topNavToggler.toggleClass('top-nav-toggler--disabled');
+    $('body').toggleClass('fixed');
 
     setTimeout(function () {
       subNav.removeClass('main-nav__submenu--visible');
@@ -41,5 +42,11 @@ $(document).ready(function () {
   submenuToggler.on('click', function (evt) {
     evt.preventDefault();
     subNav.removeClass('main-nav__submenu--visible');
+  });
+
+  $(window).resize(function () {
+    if ($(window).width() > 768) {
+      $('body').toggleClass('fixed');
+    }
   });
 });
