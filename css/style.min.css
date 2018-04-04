@@ -940,6 +940,13 @@ h3 {
           box-shadow: none;
   border-radius: 0;
   border: 3px solid #fff; }
+.fixed {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
 @font-face {
   font-family: 'Muller';
   src: url("../fonts/MullerRegular.woff2") format("woff2"), url("../fonts/MullerRegular.woff") format("woff");
@@ -2840,9 +2847,6 @@ hr {
 .main-nav-toggler--disabled {
     pointer-events: none; }
 .main-nav-toggler--close {
-    position: fixed;
-    top: 16px;
-    left: 15px;
     z-index: 1500; }
 .main-nav-toggler--close > span {
       -webkit-transition: background 0.3s;
