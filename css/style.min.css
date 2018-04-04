@@ -2535,6 +2535,17 @@ hr {
     font-size: 18px;
     text-align: center;
     opacity: 0.6; }
+.new__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff2734;
+    color: #fff;
+    padding: 2px 13px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em; }
 .new__item {
     max-width: 300px;
     margin-left: auto;
@@ -2575,6 +2586,15 @@ hr {
     font-size: 22px;
     line-height: 1.2;
     letter-spacing: 0.1em; }
+.new__price-block--sale .new__price {
+    color: #ff2734;
+    padding-right: 20px; }
+.new__price-block--sale .new__price--old {
+      font-weight: 700;
+      color: #000000;
+      text-decoration: line-through; }
+.new__price-block--sale .new__price--old .b-rub {
+        font-size: 12px; }
 .bg-gallery {
   padding-top: 50px;
   padding-bottom: 55px;
