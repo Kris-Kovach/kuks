@@ -28,12 +28,13 @@ block content
     +block-right()
       img.block-right__img(src='img/promo-bg-1.jpg')
       .block-right__inner
-        +block-descr(style='background-color: #2e0e2a;')
+        +block-descr('wine-berry')
           +block-descr-title('Сумки и клатчи')
-          p.block-descr__text.
-            Основа всего!
-            Яркие, классические, большие и маленькие,
-            для города и для спорта.
+          p.block-descr__text
+            | Основа всего!
+            br
+            | Яркие, классические, большие и маленькие,
+            | для города и для спорта.
           +btn('Смотреть', 'white')(href='catalog.html')
 
     +block-double()
@@ -42,13 +43,13 @@ block content
           img.block-double__img(src='img/block-double-1.jpg')
           img.block-double__img(src='img/block-double-2.jpg')
         .block-double__item
-          +block-descr(style='background-color: #2e0e2a;')
+          +block-descr('gray, small')
             +block-descr-title('Рюкзаки')
             p.block-descr__text.
               Все нужное с собой!
             +btn('Смотреть', 'white')(href='catalog.html')
         .block-double__item
-          +block-descr(style='background-color: #2e0e2a;')
+          +block-descr('thunder, small')
             +block-descr-title('Аксессуары')
             p.block-descr__text.
               Жизненнонеобходимые мелочи
@@ -58,12 +59,13 @@ block content
     +block-left()
       img.block-left__img(src='img/block-left.jpg')
       .block-left__inner
-        +block-descr(style='background-color: #121212;')
+        +block-descr('dark-gray')
           +block-descr-title('Одежда')
-          p.block-descr__text.
-            Основа всего!
-            Яркие, классические, большие и маленькие,
-            для города и для спорта.
+          p.block-descr__text
+            | Основа всего!
+            br
+            | Яркие, классические, большие и маленькие,
+            | для города и для спорта.
           +btn('Смотреть', 'white')(href='catalog.html')
 
 

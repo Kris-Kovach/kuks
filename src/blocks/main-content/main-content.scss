@@ -17,7 +17,11 @@
     padding-bottom: 50px;
     background: #f2f2f2;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
+      padding-bottom: 65px;
+    }
+
+    @media (min-width: $screen-xl) {
       padding-bottom: 100px;
     }
   }

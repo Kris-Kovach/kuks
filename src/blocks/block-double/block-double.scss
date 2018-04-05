@@ -5,8 +5,8 @@
 .block-double {
   $block-name:                &; // #{$block-name}__element
   position: relative;
-  height: 570px;
   overflow: hidden;
+  height: 630px;
   max-width: 1365px;
   margin-left: auto;
   margin-right: auto;
@@ -14,11 +14,12 @@
   background: transparent;
 
   @media (min-width: $screen-md) {
-    padding-top: 110px;
+    height: 570px;
     margin-bottom: 60px;
   }
 
   @media (min-width: $screen-lg) {
+    padding-top: 110px;
     margin-bottom: 98px;
   }
 
@@ -29,15 +30,21 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
     @media (min-width: $screen-md) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    @media (min-width: $screen-lg) {
       top: -110px;
       width: 930px;
       left: 15px;
     }
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-xl) {
       width: 1228px;
     }
   }
@@ -45,43 +52,49 @@
   &__img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
-
-    @media (max-width: $screen-sm-max) {
-
-      &:last-child {
-        display: none;
-      }
-    }
+    height: 47%;
 
     @media (min-width: $screen-md) {
-      width: 47%;
+      width: 49%;
       height: 100%;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 47%;
     }
   }
 
   &__inner {
     @include container();
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
 
     @media (min-width: $screen-md) {
+      flex-direction: row;
       position: relative;
-      justify-content: space-between;
       align-items: flex-end;
     }
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 47%;
 
     @media (min-width: $screen-md) {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
+      flex-direction: row;
+      align-items: center;
       width: 47%;
       height: 100%;
+    }
+
+    @media (min-width: $container-lg) {
+      align-items: flex-end;
     }
   }
 }

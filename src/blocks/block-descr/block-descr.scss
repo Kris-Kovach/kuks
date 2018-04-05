@@ -7,12 +7,11 @@
   position: relative;
   color: #fff;
   padding: 26px 10px 30px;
+  width: 100%;
   max-width: 320px;
   max-height: 500px;
   overflow: hidden;
   text-align: center;
-  background: #520e41;
-  opacity: 0.9;
   z-index: 1000;
 
   @media (min-width: $screen-md) {
@@ -27,6 +26,18 @@
     padding: 46px 10px 50px;
   }
 
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #520e41;
+    opacity: 0.9;
+    z-index: -1;
+  }
+
   .btn--white {
 
     &:hover,
@@ -37,7 +48,10 @@
   }
 
   &--blue-stone {
-    background: #005768;
+
+    &:after {
+      background: #005768;
+    }
 
     .btn--white {
 
@@ -45,6 +59,130 @@
       &:active {
         color: #005768;
       }
+    }
+  }
+
+  &--wine-berry {
+
+    &:after {
+      background: #2e0e2a;
+    }
+
+    .btn--white {
+
+      &:hover,
+      &:active {
+        color: #2e0e2a;
+      }
+    }
+  }
+
+  &--gray {
+
+    &:after {
+      background: #1e1e1e;
+    }
+
+    .btn--white {
+
+      &:hover,
+      &:active {
+        color: #1e1e1e;
+      }
+    }
+  }
+
+  &--thunder {
+
+    &:after {
+      background: #3c2e36;
+    }
+
+    .btn--white {
+
+      &:hover,
+      &:active {
+        color: #3c2e36;
+      }
+    }
+  }
+
+  &--dark-gray {
+
+    &:after {
+      background: #121212;
+    }
+
+    .btn--white {
+
+      &:hover,
+      &:active {
+        color: #121212;
+      }
+    }
+  }
+
+  &--small {
+
+    @media (min-width: $screen-md) {
+      width: 380px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 380px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 460px;
+    }
+
+    .block-descr__title {
+      padding-bottom: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+
+      @media (min-width: $screen-md) {
+        padding-bottom: 0;
+        margin-bottom: 16px;
+        font-size: 24px;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .block-descr__text {
+      font-size: 14px;
+
+      @media (min-width: $screen-md) {
+        font-size: 16px;
+      }
+
+      @media (min-width: $screen-lg) {
+        font-size: 18px;
+        padding: 0 30px;
+      }
+    }
+
+    .btn--white {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.55;
+    font-size: 18px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 0 90px;
+      margin-bottom: 33px;
     }
   }
 
@@ -77,22 +215,6 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-    }
-  }
-
-  &__text {
-    margin-top: 0;
-    margin-bottom: 25px;
-    line-height: 1.55;
-    font-size: 18px;
-
-    @media (min-width: $screen-md) {
-      padding: 0 30px;
-    }
-
-    @media (min-width: $screen-lg) {
-      padding: 0 90px;
-      margin-bottom: 33px;
     }
   }
 }
