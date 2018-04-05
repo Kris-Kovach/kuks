@@ -1,8 +1,8 @@
-// В этом файле должны быть стили для БЭМ-блока block-right, его элементов,
+// В этом файле должны быть стили для БЭМ-блока block-left, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.block-right {
+.block-left {
   $block-name:                &; // #{$block-name}__element
   position: relative;
   height: 500px;
@@ -11,8 +11,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 35px;
-  background-color: transparent;
-
+  background: transparent;
 
   @media (min-width: $screen-md) {
     margin-bottom: 80px;
@@ -25,11 +24,12 @@
 
   &__img {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: 1;
 
     @media (min-width: $screen-md) {
       width: 68%;
@@ -44,7 +44,7 @@
     height: 100%;
 
     @media (min-width: $screen-md) {
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
   }
 }

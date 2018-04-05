@@ -24,14 +24,18 @@ block content
 
   +promo-slider()
 
-  +main-content('Авторские сумки')
+  +main-content()
+    .main-content__inner
+      +main-content-title('Авторские сумки')
+      +main-content-subtitle()
 
   +block-center()
     .block-center__imgs
       img.block-center__img(src='img/block-center-1.jpg')
       img.block-center__img(src='img/block-center-2.jpg')
     .block-center__inner
-      +block-descr('Тренды')
+      +block-descr()
+        +block-descr-title('Тренды')
         p.block-descr__text.
           Не знаете что хотите? Мы&nbsp;подобрали самые трендовые аксессуары сезона, вы точно не&nbsp;промахнетесь.
         +btn('Смотреть', 'white')(href='/')
@@ -39,7 +43,8 @@ block content
   +block-right()
     img.block-right__img(src='img/block-right-1.jpg')
     .block-right__inner
-      +block-descr('Для женщин', 'blue-stone')
+      +block-descr('blue-stone')
+        +block-descr-title('Для женщин')
         p.block-descr__text.
           Основой нашего ассортимента являются в первую очередь сумки, одежда и акссесуары для женщин
         +btn('Смотреть', 'white')(href='/')

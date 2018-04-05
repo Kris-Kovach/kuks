@@ -1,0 +1,88 @@
+extends pug/layout.pug
+
+block meta
+  title Женское
+  meta(name='description', content='')
+
+block header
+  +page-header('dark')
+    div#header-top.page-header__top
+      .page-header__top-inner
+        +top-nav-toggler()
+        +top-nav()
+        +user-block()
+    .page-header__bottom
+      .page-header__bottom-inner
+        +logo('/')
+          img(src='img/logo.svg', alt='Kuks',)
+        +main-nav-toggler()
+        +main-nav()
+        +cart()
+
+
+block content
+  +main-content('gray')
+    .main-content__inner
+      +main-content-title('Женское')
+
+    +block-right()
+      img.block-right__img(src='img/promo-bg-1.jpg')
+      .block-right__inner
+        +block-descr(style='background-color: #2e0e2a;')
+          +block-descr-title('Сумки и клатчи')
+          p.block-descr__text.
+            Основа всего!
+            Яркие, классические, большие и маленькие,
+            для города и для спорта.
+          +btn('Смотреть', 'white')(href='catalog.html')
+
+    +block-double()
+      .block-double__inner
+        .block-double__imgs
+          img.block-double__img(src='img/block-double-1.jpg')
+          img.block-double__img(src='img/block-double-2.jpg')
+        .block-double__item
+          +block-descr(style='background-color: #2e0e2a;')
+            +block-descr-title('Рюкзаки')
+            p.block-descr__text.
+              Все нужное с собой!
+            +btn('Смотреть', 'white')(href='catalog.html')
+        .block-double__item
+          +block-descr(style='background-color: #2e0e2a;')
+            +block-descr-title('Аксессуары')
+            p.block-descr__text.
+              Жизненнонеобходимые мелочи
+            +btn('Смотреть', 'white')(href='catalog.html')
+
+
+    +block-left()
+      img.block-left__img(src='img/block-left.jpg')
+      .block-left__inner
+        +block-descr(style='background-color: #121212;')
+          +block-descr-title('Одежда')
+          p.block-descr__text.
+            Основа всего!
+            Яркие, классические, большие и маленькие,
+            для города и для спорта.
+          +btn('Смотреть', 'white')(href='catalog.html')
+
+
+  +subscribe('white')
+    +btn('Подписаться', 'subscribe', true)(type='submit')
+
+block footer
+  +page-footer()
+    +socials()
+      +socials-item('Vkontakte', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-vk")
+      +socials-item('Instagram', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-insta")
+      +socials-item('Facebook', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-fb")
+
+
+
+

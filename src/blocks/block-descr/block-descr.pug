@@ -1,9 +1,8 @@
 //- Все примеси в этом файле должны начинаться c имени блока (block-descr)
 
-mixin block-descr(title, mods)
+mixin block-descr(mods)
 
   //- Принимает:
-  //-   text    {string} - текст
   //-   mods    {string} - список модификаторов
   //- Вызов:
         +block-descr('Заголовок', 'Текст', 'some-mod')
@@ -19,5 +18,24 @@ mixin block-descr(title, mods)
     }
 
   .block-descr(class=allMods)&attributes(attributes)
-    .block-descr__title= title
     block
+
+mixin block-descr-title(title, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +block-descr('Заголовок', 'Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' block-descr__title--' + modsList[i].trim();
+      }
+    }
+
+  .block-descr__title= title

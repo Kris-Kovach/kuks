@@ -1,6 +1,26 @@
 //- Все примеси в этом файле должны начинаться c имени блока (main-content)
 
-mixin main-content(title, mods)
+mixin main-content(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-content('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-content--' + modsList[i].trim();
+      }
+    }
+
+  .main-content(class=allMods)&attributes(attributes)
+    block
+
+mixin main-content-title(title, mods)
 
   //- Принимает:
   //-   text    {string} - текст
@@ -14,15 +34,31 @@ mixin main-content(title, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' main-content--' + modsList[i].trim();
+        allMods = allMods + ' main-content__title--' + modsList[i].trim();
       }
     }
 
-  section.main-content
-    .main-content__inner
-      h1.main-content__title.title= title
-      .main-content__subtitle.subtitle
-        span Созданы с огромной любовью&nbsp;
-        span.main-content__heart &hearts;
-        span  для ценителей индивидуальности&nbsp;
-      block
+
+  h1.main-content__title.title= title
+
+mixin main-content-subtitle(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-content('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+         allMods = allMods + ' main-content__subtitle--' + modsList[i].trim();
+      }
+    }
+
+  .main-content__subtitle.subtitle
+    span Созданы с огромной любовью&nbsp;
+    span.main-content__heart &hearts;
+    span  для ценителей индивидуальности&nbsp;

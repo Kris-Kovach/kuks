@@ -13,6 +13,15 @@
     margin-bottom: 62px;
   }
 
+  &--gray {
+    padding-bottom: 50px;
+    background: #f2f2f2;
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 100px;
+    }
+  }
+
   &__inner {
     @include container();
   }

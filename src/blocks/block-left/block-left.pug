@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (block-left)
+
+mixin block-left(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +block-left('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' block-left--' + modsList[i].trim();
+      }
+    }
+
+  .block-left(class=allMods)&attributes(attributes)
+    block

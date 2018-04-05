@@ -3,7 +3,7 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .block-descr {
-  $block-name:                &; // #{$block-name}__element
+  $block-name: &; // #{$block-name}__element
   position: relative;
   color: #fff;
   padding: 26px 10px 30px;
@@ -11,18 +11,9 @@
   max-height: 500px;
   overflow: hidden;
   text-align: center;
-
-  &:after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #520e41;
-    opacity: 0.9;
-    z-index: -1;
-  }
+  background: #520e41;
+  opacity: 0.9;
+  z-index: 1000;
 
   @media (min-width: $screen-md) {
     max-width: none;
@@ -46,10 +37,7 @@
   }
 
   &--blue-stone {
-
-    &:after {
-      background: #005768;
-    }
+    background: #005768;
 
     .btn--white {
 

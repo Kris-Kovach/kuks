@@ -1,0 +1,21 @@
+//- Все примеси в этом файле должны начинаться c имени блока (block-double)
+
+mixin block-double(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +block-double('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' block-double--' + modsList[i].trim();
+      }
+    }
+
+  .block-double(class=allMods)&attributes(attributes)
+    block
