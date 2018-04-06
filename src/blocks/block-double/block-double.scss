@@ -14,13 +14,14 @@
   background: transparent;
 
   @media (min-width: $screen-md) {
-    height: 570px;
+    height: 500px;
     margin-bottom: 60px;
   }
 
   @media (min-width: $screen-lg) {
+    height: 690px;
     padding-top: 110px;
-    margin-bottom: 98px;
+    margin-bottom: 100px;
   }
 
   &__imgs {

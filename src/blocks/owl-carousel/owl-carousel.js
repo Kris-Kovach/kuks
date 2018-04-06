@@ -40,13 +40,32 @@ $(document).ready(function(){
     dotClass: 'product__thumb',
     loop: true,
     dotsSpeed: 1000,
+    animateOut: 'fadeOut',
     onTranslated: function() {
-      $zoom.destroy().magnify();
+      if ($(window).width() >= 992) {
+        $zoom.destroy().magnify();
+      }
+
+      $(window).resize(function () {
+        if ($(window).width() >= 992) {
+          $zoom.destroy().magnify();
+        }
+      });
     }
   });
 
-  var $zoom = $('.product__img img').magnify({
-    limitBounds: true
+  if ($(window).width() >= 992) {
+    var $zoom = $('.product__img img').magnify({
+      limitBounds: true
+    });
+  }
+
+  $(window).resize(function () {
+    if ($(window).width() >= 992) {
+      var $zoom = $('.product__img img').magnify({
+          limitBounds: true
+      });
+    }
   });
 
   // Переключение слайда по клику на миниатюру фото на основании индекса элемента

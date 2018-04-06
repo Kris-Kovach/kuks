@@ -67,6 +67,11 @@ h3 {
   box-shadow: none;
   border-radius: 0;
   border: 3px solid #fff;
+
+  @media (min-width: $screen-lg) {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .fixed {
