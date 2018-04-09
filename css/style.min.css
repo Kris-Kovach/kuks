@@ -939,7 +939,7 @@ h3 {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 0;
-  border: 3px solid #fff; }
+  border: 0; }
 .fixed {
   position: fixed;
   overflow: hidden;
