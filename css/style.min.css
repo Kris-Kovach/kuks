@@ -934,12 +934,12 @@ h3 {
   font-size: 20px;
   margin-bottom: 7px; }
 .magnify > .magnify-lens {
-  width: 100px;
-  height: 100px;
+  width: 280px;
+  height: 280px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-radius: 0;
-  border: 0; }
+  border: 2px solid #fff;
+  border-radius: 50%; }
 .fixed {
   position: fixed;
   overflow: hidden;
@@ -2350,7 +2350,7 @@ hr {
   overflow: hidden;
   text-align: center;
   z-index: 1000; }
-.block-descr:after {
+.block-descr__bg {
     position: absolute;
     content: '';
     top: 0;
@@ -2360,17 +2360,6 @@ hr {
     background: #520e41;
     opacity: 0.9;
     z-index: -1; }
-.block-descr .btn--white:hover, .block-descr .btn--white:active {
-    background: #fff;
-    color: #520e41; }
-.block-descr--blue-stone:after {
-    background: #005768; }
-.block-descr--blue-stone .btn--white:hover, .block-descr--blue-stone .btn--white:active {
-    color: #005768; }
-.block-descr--wine-berry:after {
-    background: #2e0e2a; }
-.block-descr--wine-berry .btn--white:hover, .block-descr--wine-berry .btn--white:active {
-    color: #2e0e2a; }
 .block-descr--gray:after {
     background: #1e1e1e; }
 .block-descr--gray .btn--white:hover, .block-descr--gray .btn--white:active {
@@ -2462,7 +2451,9 @@ hr {
   text-decoration: none;
   outline: none;
   border: none;
-  border-radius: 0; }
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
 .btn--white {
     border: 3px solid #fff;
     background: transparent;
@@ -2473,8 +2464,7 @@ hr {
     text-transform: uppercase;
     letter-spacing: 0.2em; }
 .btn--white:hover, .btn--white:active, .btn--white:focus {
-      background-color: #fff;
-      color: transparent; }
+      opacity: 0.7; }
 .btn--subscribe {
     background: #000;
     color: #fff;
