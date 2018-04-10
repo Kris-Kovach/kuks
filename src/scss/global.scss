@@ -62,11 +62,11 @@ h3 {
 }
 
 .magnify > .magnify-lens {
-  width: 100px;
-  height: 100px;
+  width: 280px;
+  height: 280px;
   box-shadow: none;
-  border-radius: 0;
-  border: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
 
   @media (min-width: $screen-lg) {
     width: 200px;
