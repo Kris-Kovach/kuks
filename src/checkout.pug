@@ -1,0 +1,53 @@
+extends pug/layout.pug
+
+block meta
+  title Оформление заказа
+  meta(name='description', content='')
+
+block header
+  +page-header('dark')
+    div#header-top.page-header__top
+      .page-header__top-inner
+        +top-nav-toggler()
+        +top-nav()
+        +user-block()
+    .page-header__bottom
+      .page-header__bottom-inner
+        +logo('/')
+          img(src='img/logo.svg', alt='Kuks',)
+        +main-nav-toggler()
+        +main-nav()
+        +cart()
+
+block content
+  +checkout()
+    +breadcrumbs('left')
+      +breadcrumbs-item('Главная', '/')
+      +breadcrumbs-item('Корзина')
+    h1.checkout__title Корзина
+    .checkout__items
+      +cart-item('img/ordering-1.jpg', 'Strap', 'Ремень для сумки', '1', '2499', '', true)
+        .cart-item__remove
+          +btn('Удалить', 'remove')
+      +cart-item('img/ordering-2.jpg', 'Valentine', 'Сумка женская', '1', '8499', 'S', true)
+        .cart-item__remove
+          +btn('Удалить', 'remove')
+    +ordering-total('0', '8499', 'Товаров на: ', 'checkout')
+      +coupon()
+        +btn('Ок', 'light-gray', true)
+    +ordering-btns('total')
+      +btn('Оформить заказ', 'green')(href='ordering.html')
+
+
+block footer
+  +page-footer()
+    +socials()
+      +socials-item('Vkontakte', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-vk")
+      +socials-item('Instagram', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-insta")
+      +socials-item('Facebook', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-fb")

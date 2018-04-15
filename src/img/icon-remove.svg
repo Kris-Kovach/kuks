@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 63.6 63.6" enable-background="new 0 0 63.6 63.6" xml:space="preserve">
+<g>
+	<line fill="#FF3D3D" x1="60.4" y1="60.4" x2="3.2" y2="3.2"/>
+	
+		<rect x="27.3" y="-8.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -13.1692 31.7938)" fill="#FF3D3D" width="9" height="80.9"/>
+</g>
+<g>
+	<line fill="#FF3D3D" x1="60.4" y1="3.2" x2="3.2" y2="60.4"/>
+	
+		<rect x="-8.7" y="27.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -13.1692 31.7936)" fill="#FF3D3D" width="80.9" height="9"/>
+</g>
+</svg>

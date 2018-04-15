@@ -294,6 +294,14 @@
     @media (min-width: $screen-lg) {
       padding: 35px 0 37px;
     }
+
+    &--checkout {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
 
   &__delivery-price {

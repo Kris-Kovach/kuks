@@ -1,4 +1,4 @@
-mixin cart-item(src, name, category, quantity, price, size, mods)
+mixin cart-item(src, name, category, quantity, price, size, hasSpinner, mods)
 
   -
     // список модификаторов
@@ -13,14 +13,23 @@ mixin cart-item(src, name, category, quantity, price, size, mods)
   .cart-item(class=allMods)&attributes(attributes)
     a.cart-item__img(href='#')
       img(src=src)
-    .cart-item__info
-      a.cart-item__name(href='#')= name
-      .cart-item__category= category
+    .cart-item__descr
+      .cart-item__info
+        a.cart-item__name(href='#')= name
+        .cart-item__category= category
 
-      if (typeof(size) !== 'undefined' && size)
-        .cart-item__size Размер&nbsp;&mdash;&nbsp;
-          span= size
+        if (typeof(size) !== 'undefined' && size)
+          .cart-item__size Размер&nbsp;&mdash;&nbsp;
+            span= size
 
-    .cart-item__quantity= quantity + ' шт.'
-    .cart-item__price= price
-      span.b-rub &nbsp;Ь
+      if (typeof(hasSpinner) !== 'undefined' && hasSpinner)
+        .cart-item__price-per-item= price
+          span.b-rub &nbsp;Ь
+        .cart-item__spinner
+          input.cart-item__spinner-input(type='text' value=quantity)
+      else
+        .cart-item__quantity= quantity + ' шт.'
+
+      .cart-item__price= price
+        span.b-rub &nbsp;Ь
+      block

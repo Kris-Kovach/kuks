@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (checkout)
+
+mixin checkout(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +checkout('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' checkout--' + modsList[i].trim();
+      }
+    }
+
+  .checkout(class=allMods)&attributes(attributes)
+    .checkout__inner
+      block

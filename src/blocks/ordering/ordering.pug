@@ -81,7 +81,7 @@ mixin ordering-option(id, name, title, text, price, isChecked, mods)
           .ordering__option-price= price
             span.b-rub &nbsp;Ь
 
-mixin ordering-total(deliveryPrice, totalPrice, mods)
+mixin ordering-total(firstPrice, totalPrice, priceText, mods)
 
   -
     // список модификаторов
@@ -93,12 +93,20 @@ mixin ordering-total(deliveryPrice, totalPrice, mods)
       }
     }
 
-  .ordering__total
-    .ordering__delivery-price
-      span Доставка:&nbsp;
-      span.ordering__delivery-value= deliveryPrice
+  .ordering__total(class=allMods)
+    block
+    .ordering__total-prices
+      if (typeof(priceText) !== 'undefined' && priceText)
+        .ordering__delivery-price
+          span= priceText
+          span.ordering__delivery-value= firstPrice
+          span.b-rub &nbsp;Ь
+      else
+        .ordering__delivery-price
+          span Доставка:&nbsp;
+          span.ordering__delivery-value= firstPrice
+            span.b-rub &nbsp;Ь
+      .ordering__total-price
+        span Итого:&nbsp;
+        span= totalPrice
         span.b-rub &nbsp;Ь
-    .ordering__total-price
-      span Итого:&nbsp;
-      span= totalPrice
-      span.b-rub &nbsp;Ь

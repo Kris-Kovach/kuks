@@ -29,8 +29,8 @@ block content
     form.ordering__items
       +ordering-item('1', 'Товары в заказе')
         .ordering-item__content
-          +cart-item('img/ordering-1.jpg', 'Strap', 'Ремень для сумки', '1', '2499', '', 'border')
-          +cart-item('img/ordering-2.jpg', 'Valentine', 'Сумка женская', '1', '8499', 'S', 'border')
+          +cart-item('img/ordering-1.jpg', 'Strap', 'Ремень для сумки', '1', '2499', '', '', 'border')
+          +cart-item('img/ordering-2.jpg', 'Valentine', 'Сумка женская', '1', '8499', 'S', '', 'border')
         +ordering-btns('forward')
           +btn('Далее', 'green')
       +ordering-item('2', 'Регион доставки')
@@ -136,7 +136,7 @@ block content
           +btn('Назад', 'green')
     +ordering-total('0', '8499')
     +ordering-btns('total')
-      +btn('Отправить', 'green', isInput)&attributes(type='submit')
+      +btn('Отправить', 'green', isInput)
 
 block footer
   +page-footer()

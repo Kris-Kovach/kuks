@@ -35,7 +35,16 @@
     "range-field": [],
     "product": [],
     "block-left": [],
-    "block-double": []
+    "block-double": [],
+    "ordering": [],
+    "input-field": [],
+    "text-field": [],
+    "field-text": [],
+    "location-select": [],
+    "cart-item": [],
+    "checkout": [],
+    "spinner": [],
+    "coupon": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -64,6 +73,7 @@
     "./node_modules/select2/dist/js/select2.js",
     "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./node_modules/magnify/dist/js/jquery.magnify.js",
+    "./src/js/jquery-ui.js",
     "./src/js/jquery.fancybox.js"
   ],
   "addJsAfter": [

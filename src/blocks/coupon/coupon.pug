@@ -1,0 +1,25 @@
+//- Все примеси в этом файле должны начинаться c имени блока (coupon)
+
+mixin coupon(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +coupon('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' coupon--' + modsList[i].trim();
+      }
+    }
+
+  .coupon(class=allMods)&attributes(attributes)
+    .coupon__title Промокод
+    form.coupon__form
+      input.coupon__input(type=text name='coupon')
+      block

@@ -4,21 +4,58 @@
 
 .cart-item {
   $block-name: &; // #{$block-name}__element
-  padding-top: 20px;
-  padding-bottom: 12px;
   text-align: center;
+  margin-bottom: 25px;
 
   @media (min-width: $screen-md) {
     display: flex;
-    padding-bottom: 20px;
     text-align: left;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &--border {
+    margin-bottom: 0;
     border-bottom: 1px solid #c4c4c4;
 
     &:last-child {
       border-bottom: 0;
+    }
+
+    .cart-item__img {
+      margin: 20px auto 15px auto;
+
+      @media (min-width: $screen-md) {
+        margin: 20px 0 20px 0;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 110px;
+        height: 110px;
+      }
+    }
+
+    .cart-item__descr {
+      padding-top: 20px;
+      padding-bottom: 12px;
+
+      @media (min-width: $screen-md) {
+        padding-bottom: 20px;
+        padding-right: 0;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-right: 0;
+      }
+    }
+
+    .cart-item__info {
+
+      @media (min-width: $screen-md) {
+        padding-top: 5px;
+      }
     }
   }
 
@@ -26,32 +63,65 @@
     display: block;
     width: 110px;
     height: 110px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
+    margin: 15px auto 15px auto;
 
     @media (min-width: $screen-md) {
-      margin: 0;
-      margin-right: 30px;
+      margin: 5px 0 5px 0;
     }
 
-    &__img {
+    @media (min-width: $screen-xl) {
+      width: 140px;
+      height: 140px;
+    }
+
+    > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  &__info {
-    margin-bottom: 10px;
+  &__descr {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 15px 12px;
+    background: $gray--lighter;
+    width: 100%;
+
+    @media (min-width: $screen-sm) {
+      padding: 15px 35px 12px;
+    }
 
     @media (min-width: $screen-md) {
+      padding: 15px 20px 15px 30px;
+      width: calc(100% - 110px);
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 24px;
+      padding-right: 38px;
+      width: calc(100% - 140px);
+    }
+  }
+
+  &__info {
+    margin-bottom: 10px;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: 43%;
       margin-bottom: 0;
-      padding-top: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 50%;
     }
   }
 
   &__name {
+    white-space: nowrap;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;
@@ -60,7 +130,11 @@
     letter-spacing: 0.2em;
     line-height: 1.25;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
+      font-size: 22px;
+    }
+
+    @media (min-width: $screen-xl) {
       font-size: 24px;
     }
 
@@ -94,10 +168,18 @@
     white-space: nowrap;
     font-size: 18px;
     color: $gray;
+    margin-right: auto;
 
     @media (min-width: $screen-md) {
       margin-left: auto;
       margin-right: 45px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 2px;
+    }
+
+    @media (min-width: $screen-xl) {
       font-size: 20px;
     }
   }
@@ -108,12 +190,150 @@
     letter-spacing: 0.05em;
     font-weight: 700;
 
-    @media (min-width: $screen-md) {
-      font-size: 24px;
+    @media (min-width: $screen-lg) {
+      font-size: 22px;
 
       .b-rub {
         font-size: 18px;
       }
     }
+
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+    }
+  }
+
+  &__price-per-item {
+    display: none;
+    padding-top: 3px;
+    font-size: 18px;
+
+    @media (min-width: $screen-sm) {
+      display: block;
+    }
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      margin-left: auto;
+      margin-right: 25px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 5px;
+      font-size: 20px;
+      margin-right: 40px;
+    }
+
+    .b-rub {
+      font-size: 14px;
+
+      @media (min-width: $screen-lg) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__remove {
+    padding-top: 2px;
+    margin-left: 15px;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 23px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 3px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 5px;
+    }
+  }
+
+  &__spinner {
+    width: 124px;
+    height: 35px;
+    margin-right: auto;
+
+    @media (min-width: $screen-sm) {
+      margin-left: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-right: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 0;
+      margin-right: 20px;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-right: 35px;
+    }
+  }
+
+  &__spinner-input {
+    border: 1px solid #b2b2b2;
+    color: #292929;
+    font-size: 16px;
+    width: 80px;
+    padding: 5px 10px;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 20px;
+    }
+  }
+
+  // Стили для виджета Jquery UI Spinner
+
+  .ui-spinner {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+  }
+
+  .ui-spinner-button {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    text-decoration: none;
+    height: 14px;
+    width: 7px;
+    background: url('../img/icon-arrow--black.svg') center center no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  .ui-spinner-down {
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .ui-spinner-up {
+    right: 0;
   }
 }
