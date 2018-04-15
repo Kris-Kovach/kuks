@@ -101,7 +101,7 @@
                 </li>
               </ul>
             </nav>
-            <a class="cart" href="/">
+            <a class="cart" href="page-cart.html">
               <svg class="cart__icon" width="16" height="20">
                 <use xlink:href="img/sprite-svg.svg#icon-bag"></use>
               </svg><span class="cart__number">0</span></a>
@@ -123,19 +123,23 @@
                 <h2 class="ordering__subtitle"><span class="ordering__number">1</span><span>Товары в заказе</span></h2>
                 <div class="ordering-item__content">
                   <div class="cart-item  cart-item--border"><a class="cart-item__img" href="#"><img src="img/ordering-1.jpg"/></a>
-                    <div class="cart-item__info"><a class="cart-item__name" href="#">Strap</a>
-                      <div class="cart-item__category">Ремень для сумки</div>
+                    <div class="cart-item__descr">
+                      <div class="cart-item__info"><a class="cart-item__name" href="#">Strap</a>
+                        <div class="cart-item__category">Ремень для сумки</div>
+                      </div>
+                      <div class="cart-item__quantity">1 шт.</div>
+                      <div class="cart-item__price">2499<span class="b-rub">&nbsp;Ь</span></div>
                     </div>
-                    <div class="cart-item__quantity">1 шт.</div>
-                    <div class="cart-item__price">2499<span class="b-rub">&nbsp;Ь</span></div>
                   </div>
                   <div class="cart-item  cart-item--border"><a class="cart-item__img" href="#"><img src="img/ordering-2.jpg"/></a>
-                    <div class="cart-item__info"><a class="cart-item__name" href="#">Valentine</a>
-                      <div class="cart-item__category">Сумка женская</div>
-                      <div class="cart-item__size">Размер&nbsp;&mdash;&nbsp;<span>S</span></div>
+                    <div class="cart-item__descr">
+                      <div class="cart-item__info"><a class="cart-item__name" href="#">Valentine</a>
+                        <div class="cart-item__category">Сумка женская</div>
+                        <div class="cart-item__size">Размер&nbsp;&mdash;&nbsp;<span>S</span></div>
+                      </div>
+                      <div class="cart-item__quantity">1 шт.</div>
+                      <div class="cart-item__price">8499<span class="b-rub">&nbsp;Ь</span></div>
                     </div>
-                    <div class="cart-item__quantity">1 шт.</div>
-                    <div class="cart-item__price">8499<span class="b-rub">&nbsp;Ь</span></div>
                   </div>
                 </div>
                 <div class="ordering__btns  ordering__btns--forward"><button class="btn  btn--green">Далее</button></div>
@@ -177,11 +181,13 @@
 
             </form>
             <div class="ordering__total">
-              <div class="ordering__delivery-price"><span>Доставка:&nbsp;</span><span class="ordering__delivery-value">0<span class="b-rub">&nbsp;Ь</span></span>
+              <div class="ordering__total-prices">
+                <div class="ordering__delivery-price"><span>Доставка:&nbsp;</span><span class="ordering__delivery-value">0<span class="b-rub">&nbsp;Ь</span></span>
+                </div>
+                <div class="ordering__total-price"><span>Итого:&nbsp;</span><span>8499</span><span class="b-rub">&nbsp;Ь</span></div>
               </div>
-              <div class="ordering__total-price"><span>Итого:&nbsp;</span><span>8499</span><span class="b-rub">&nbsp;Ь</span></div>
             </div>
-            <div class="ordering__btns  ordering__btns--total"><button class="btn  btn--green" 0="s" 1="u" 2="b" 3="m" 4="i" 5="t">Отправить</button></div>
+            <div class="ordering__btns  ordering__btns--total"><button class="btn  btn--green">Отправить</button></div>
           </div>
         </div>
       </main>

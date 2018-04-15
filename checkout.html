@@ -10,7 +10,7 @@
   <meta name="format-detection" content="email=no">
   <meta content="notranslate" name="google">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon.png">
-  <title>Женское</title>
+  <title>Оформление заказа</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
@@ -109,48 +109,49 @@
         </div>
       </header>
       <main>
-        <div class="main-content  main-content--gray">
-          <div class="main-content__inner">
-            <h1 class="main-content__title title">Женское</h1>
-          </div>
-          <div class="block-right"><img class="block-right__img" src="img/promo-bg-1.jpg">
-            <div class="block-right__inner">
-              <div class="block-descr">
-                <div class="block-descr__bg" style="background-color:#2e0e2a;"></div>
-                <div class="block-descr__title">Сумки и клатчи</div>
-                <p class="block-descr__text">Основа всего!<br>Яркие, классические, большие и маленькие, для города и для спорта.</p><a class="btn  btn--white" href="catalog.html">Смотреть</a></div>
-            </div>
-          </div>
-          <div class="block-double">
-            <div class="block-double__inner">
-              <div class="block-double__imgs"><img class="block-double__img" src="img/block-double-1.jpg"><img class="block-double__img" src="img/block-double-2.jpg"></div>
-              <div class="block-double__item">
-                <div class="block-descr  block-descr--small">
-                  <div class="block-descr__bg" style="background-color:#1e1e1e;"></div>
-                  <div class="block-descr__title">Рюкзаки</div>
-                  <p class="block-descr__text">Все нужное с собой!</p><a class="btn  btn--white" href="catalog.html">Смотреть</a></div>
+        <div class="checkout">
+          <div class="checkout__inner">
+            <ul class="breadcrumbs  breadcrumbs--left" aria-label="Breadcrumb" role="navigation">
+              <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+              <li class="breadcrumbs__item"><span>Корзина</span></li>
+            </ul>
+            <h1 class="checkout__title">Корзина</h1>
+            <div class="checkout__items">
+              <div class="cart-item"><a class="cart-item__img" href="#"><img src="img/ordering-1.jpg"/></a>
+                <div class="cart-item__descr">
+                  <div class="cart-item__info"><a class="cart-item__name" href="#">Strap</a>
+                    <div class="cart-item__category">Ремень для сумки</div>
+                  </div>
+                  <div class="cart-item__price-per-item">2499<span class="b-rub">&nbsp;Ь</span></div>
+                  <div class="cart-item__spinner"><input class="cart-item__spinner-input" type="text" value="1" /></div>
+                  <div class="cart-item__price">2499<span class="b-rub">&nbsp;Ь</span></div>
+                  <div class="cart-item__remove"><button class="btn  btn--remove">Удалить</button></div>
+                </div>
               </div>
-              <div class="block-double__item">
-                <div class="block-descr  block-descr--small">
-                  <div class="block-descr__bg" style="background-color:#3c2e36;"></div>
-                  <div class="block-descr__title">Аксессуары</div>
-                  <p class="block-descr__text">Жизненнонеобходимые мелочи</p><a class="btn  btn--white" href="catalog.html">Смотреть</a></div>
+              <div class="cart-item"><a class="cart-item__img" href="#"><img src="img/ordering-2.jpg"/></a>
+                <div class="cart-item__descr">
+                  <div class="cart-item__info"><a class="cart-item__name" href="#">Valentine</a>
+                    <div class="cart-item__category">Сумка женская</div>
+                    <div class="cart-item__size">Размер&nbsp;&mdash;&nbsp;<span>S</span></div>
+                  </div>
+                  <div class="cart-item__price-per-item">8499<span class="b-rub">&nbsp;Ь</span></div>
+                  <div class="cart-item__spinner"><input class="cart-item__spinner-input" type="text" value="1" /></div>
+                  <div class="cart-item__price">8499<span class="b-rub">&nbsp;Ь</span></div>
+                  <div class="cart-item__remove"><button class="btn  btn--remove">Удалить</button></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="block-left"><img class="block-left__img" src="img/block-left.jpg">
-            <div class="block-left__inner">
-              <div class="block-descr">
-                <div class="block-descr__bg" style="background-color:#121212;"></div>
-                <div class="block-descr__title">Одежда</div>
-                <p class="block-descr__text">Основа всего!<br>Яркие, классические, большие и маленькие, для города и для спорта.</p><a class="btn  btn--white" href="catalog.html">Смотреть</a></div>
+            <div class="ordering__total  ordering__total--checkout">
+              <div class="coupon">
+                <div class="coupon__title">Промокод</div>
+                <form class="coupon__form"><input class="coupon__input" name="coupon" /><input class="btn  btn--light-gray" value="Ок" type="submit" /></form>
+              </div>
+              <div class="ordering__total-prices">
+                <div class="ordering__delivery-price"><span>Товаров на: </span><span class="ordering__delivery-value">0</span><span class="b-rub">&nbsp;Ь</span></div>
+                <div class="ordering__total-price"><span>Итого:&nbsp;</span><span>8499</span><span class="b-rub">&nbsp;Ь</span></div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="subscribe  subscribe--white">
-          <div class="subscribe__inner">
-            <div class="subscribe__text">Оставьте свою почту, мы будем оповещать вас о&nbsp;самом важном<span class="subscribe__symbols"> &mdash;&nbsp;</span></div>
-            <form class="subscribe__form"><input class="input-field subscribe__input-field" type="text" name="email" /><input class="btn  btn--subscribe" value="Подписаться" type="submit" /></form>
+            <div class="ordering__btns  ordering__btns--total"><a class="btn  btn--green" href="ordering.html">Оформить заказ</a></div>
           </div>
         </div>
       </main>
