@@ -13,6 +13,14 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  &--left {
+
+    @media (min-width: $screen-lg) {
+      justify-content: flex-start;
+    }
+
+  }
+
   &__item {
     position: relative;
     font-size: 14px;

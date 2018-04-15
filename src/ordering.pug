@@ -1,0 +1,152 @@
+extends pug/layout.pug
+
+block meta
+  title Оформление заказа
+  meta(name='description', content='')
+
+block header
+  +page-header('dark')
+    div#header-top.page-header__top
+      .page-header__top-inner
+        +top-nav-toggler()
+        +top-nav()
+        +user-block()
+    .page-header__bottom
+      .page-header__bottom-inner
+        +logo('/')
+          img(src='img/logo.svg', alt='Kuks',)
+        +main-nav-toggler()
+        +main-nav()
+        +cart()
+
+block content
+  +ordering()
+    +breadcrumbs('left')
+      +breadcrumbs-item('Главная', '/')
+      +breadcrumbs-item('Корзина', '/')
+      +breadcrumbs-item('Оформление')
+    h1.ordering__title Оформление
+    form.ordering__items
+      +ordering-item('1', 'Товары в заказе')
+        .ordering-item__content
+          +cart-item('img/ordering-1.jpg', 'Strap', 'Ремень для сумки', '1', '2499', '', 'border')
+          +cart-item('img/ordering-2.jpg', 'Valentine', 'Сумка женская', '1', '8499', 'S', 'border')
+        +ordering-btns('forward')
+          +btn('Далее', 'green')
+      +ordering-item('2', 'Регион доставки')
+        .ordering__fieldset
+          +location-select('location', 'location', 'Местоположение', 'required')
+            option
+            option Санкт-Петербург
+            option Москва
+          +field-text({
+            title: 'Индекс',
+            isTextarea: false,
+            helpText: '',
+            mods: 'required',
+            val: '',
+            attrs: {
+              name: 'region'
+            }
+          })
+          .ordering__note.
+                            Выберите свой город в списке. Если вы не нашли свой город, выберите «другое местоположение», а город
+                            впишите в поле «Город»
+          +ordering-btns()
+            +btn('Назад', 'green')
+            +btn('Далее', 'green')
+      +ordering-item('3', 'Доставка')
+        .ordering__options
+          +ordering-option('pickup', 'delivery', 'Самовывоз', 'из нашего магазина по адресу Озерной пер. д. 12', '0', 'isChecked')
+            svg.ordering__option-img(width="65", height="55")
+              use(xlink:href='img/sprite-svg.svg#icon-box')
+          +ordering-option('post', 'delivery', 'Почта России', 'точную цену и сроки доставки вам назовет оператор', '300')
+            svg.ordering__option-img(width="65", height="55")
+              use(xlink:href='img/sprite-svg.svg#icon-truck')
+          +ordering-option('express', 'delivery', 'Курьер по городу', 'доставка по Петербургу в пределах КАД', '500')
+            svg.ordering__option-img(width="65", height="55")
+              use(xlink:href='img/sprite-svg.svg#icon-cap')
+        +ordering-btns()
+          +btn('Назад', 'green')
+          +btn('Далее', 'green')
+      +ordering-item('4', 'Оплата')
+        .ordering__options
+          +ordering-option('cash', 'payment', 'Наличными', 'возможна только при самовывозе или доставкой курьером по городу', '', 'isChecked', 'fullwidth')
+            svg.ordering__option-img(width="65", height="44")
+              use(xlink:href='img/sprite-svg.svg#icon-wallet')
+          +ordering-option('card', 'payment', 'Карта', 'оплатить на сайте банковской картой', '', '', 'fullwidth')
+            svg.ordering__option-img(width="65", height="44")
+              use(xlink:href='img/sprite-svg.svg#icon-card')
+        +ordering-btns()
+          +btn('Назад', 'green')
+          +btn('Далее', 'green')
+      +ordering-item('5', 'Покупатель')
+        .ordering__fieldset
+          +field-text({
+            title: 'Ф.И.О',
+            isTextarea: false,
+            helpText: '',
+            mods: 'required',
+            val: '',
+            attrs: {
+              name: 'fio'
+            }
+          })
+          +field-text({
+            title: 'Email',
+            isTextarea: false,
+            helpText: '',
+            mods: 'required',
+            val: '',
+            attrs: {
+              name: 'email'
+            }
+          })
+          +field-text({
+            title: 'Телефон',
+            isTextarea: false,
+            helpText: '',
+            mods: 'required',
+            val: '',
+            attrs: {
+              name: 'phone'
+            }
+          })
+          +field-text({
+            title: 'Адрес доставки',
+            isTextarea: true,
+            helpText: '',
+            mods: 'required',
+            val: '',
+            attrs: {
+              name: 'address'
+            }
+          })
+          +field-text({
+            title: 'Комментарии к заказу',
+            isTextarea: true,
+            helpText: '',
+            mods: 'required',
+            val: '',
+            attrs: {
+              name: 'comment'
+            }
+          })
+        +ordering-btns()
+          +btn('Назад', 'green')
+    +ordering-total('0', '8499')
+    +ordering-btns('total')
+      +btn('Отправить', 'green', isInput)&attributes(type='submit')
+
+block footer
+  +page-footer()
+    +socials()
+      +socials-item('Vkontakte', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-vk")
+      +socials-item('Instagram', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-insta")
+      +socials-item('Facebook', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-fb")

@@ -1,0 +1,26 @@
+mixin cart-item(src, name, category, quantity, price, size, mods)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' cart-item--' + modsList[i].trim();
+      }
+    }
+
+  .cart-item(class=allMods)&attributes(attributes)
+    a.cart-item__img(href='#')
+      img(src=src)
+    .cart-item__info
+      a.cart-item__name(href='#')= name
+      .cart-item__category= category
+
+      if (typeof(size) !== 'undefined' && size)
+        .cart-item__size Размер&nbsp;&mdash;&nbsp;
+          span= size
+
+    .cart-item__quantity= quantity + ' шт.'
+    .cart-item__price= price
+      span.b-rub &nbsp;Ь

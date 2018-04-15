@@ -1,0 +1,104 @@
+//- Все примеси в этом файле должны начинаться c имени блока (ordering)
+
+mixin ordering(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +ordering('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ordering--' + modsList[i].trim();
+      }
+    }
+
+  .ordering(class=allMods)&attributes(attributes)
+    .ordering__inner
+      block
+
+mixin ordering-item(number, title, mods)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ordering__item--' + modsList[i].trim();
+      }
+    }
+
+  section.ordering__item(class=allMods)&attributes(attributes)
+    h2.ordering__subtitle
+      span.ordering__number= number
+      span= title
+    block
+
+mixin ordering-btns(mods)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ordering__btns--' + modsList[i].trim();
+      }
+    }
+
+  .ordering__btns(class=allMods)&attributes(attributes)
+    block
+
+mixin ordering-option(id, name, title, text, price, isChecked, mods)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ordering__option--' + modsList[i].trim();
+      }
+    }
+
+  .ordering__option(class=allMods)
+    if (typeof(isChecked) !== 'undefined' && isChecked)
+      input.ordering__radio(id=id class=allMods type='radio' name=name checked)
+    else
+      input.ordering__radio(id=id class=allMods type='radio' name=name)
+    label(for=id)
+      block
+      .ordering__option-info
+        .ordering__option-name= title
+        .ordering__option-descr= text
+
+        if (typeof(price) !== 'undefined' && price)
+          .ordering__option-price= price
+            span.b-rub &nbsp;Ь
+
+mixin ordering-total(deliveryPrice, totalPrice, mods)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ordering__total--' + modsList[i].trim();
+      }
+    }
+
+  .ordering__total
+    .ordering__delivery-price
+      span Доставка:&nbsp;
+      span.ordering__delivery-value= deliveryPrice
+        span.b-rub &nbsp;Ь
+    .ordering__total-price
+      span Итого:&nbsp;
+      span= totalPrice
+      span.b-rub &nbsp;Ь

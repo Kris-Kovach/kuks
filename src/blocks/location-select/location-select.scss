@@ -1,0 +1,86 @@
+// В этом файле должны быть стили для БЭМ-блока location-select, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.location-select {
+  $block-name: &; // #{$block-name}__element
+  margin-bottom: 15px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 22px;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    color: $gray--light;
+    font-size: 16px;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+    }
+  }
+
+  &--required {
+
+    label:after {
+      content: ' *';
+      color: #ff3d3d;
+    }
+  }
+
+  .select2-container--default .select2-selection--single {
+    border: 1px solid #c4c4c4;
+    border-radius: 0;
+    background: transparent;
+    outline: 0;
+  }
+
+  .select2-container .select2-selection--single {
+    height: 44px;
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 44px;
+    color: $gray;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    position: relative;
+    padding-left: 45px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 44px;
+    color: $gray;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: url('../img/icon-glass.svg') center center no-repeat;
+      background-size: contain;
+      top: 13px;
+      left: 17px;
+    }
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 42px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: 0;
+    background: url('../img/select-arrow.svg') center center no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 5px;
+  }
+}

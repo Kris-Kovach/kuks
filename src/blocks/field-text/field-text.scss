@@ -1,0 +1,64 @@
+// В этом файле должны быть стили для БЭМ-блока field-text, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-text {
+  $block-name: &; // #{$block-name}__element
+  display: block;
+  margin-bottom: 15px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 22px;
+  }
+
+  &__name {
+    position: relative;
+    color: $gray--light;
+    font-size: 16px;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+    }
+  }
+
+  &--required {
+
+    .field-text__name:after {
+      content: ' *';
+      color: #ff3d3d;
+    }
+  }
+
+  &__input {
+    padding: 10px 18px;
+    border: 1px solid #c4c4c4;
+    background: transparent;
+    font-size: 18px;
+    color: #000;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    padding: 10px 18px;
+    border: 1px solid #c4c4c4;
+    background: transparent;
+    font-size: 18px;
+    color: #000;
+    width: 100%;
+    resize: none;
+    height: 130px;
+
+    @media (min-width: $screen-md) {
+      height: 180px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
