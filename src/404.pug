@@ -1,0 +1,66 @@
+extends pug/layout.pug
+
+block meta
+  title Страница не найдена
+  meta(name='description', content='')
+
+block header
+  +page-header('dark')
+    div#header-top.page-header__top
+      .page-header__top-inner
+        +top-nav-toggler()
+        +top-nav()
+        +user-block()
+    .page-header__bottom
+      .page-header__bottom-inner
+        +logo('/')
+          img(src='img/logo.svg', alt='Kuks',)
+        +main-nav-toggler()
+        +main-nav()
+        +cart()
+
+block content
+  +error()
+    +error-img('img/error-1.jpg')
+    .error__content
+      +error-title('404')
+      .error__subtitle
+                      | Такой страницы у нас нет, <br/>
+                      | зато у нас есть:
+      .error__blocks
+        +error-block
+          +error-block-title('women.html', 'Sale')
+        +error-block
+          +error-block-title('women.html', 'New')
+        +error-block
+          +error-block-title('women.html', 'Женское')
+          +error-nav()
+            +error-nav-item('women.html', 'Сумки')
+            +error-nav-item('women.html', 'Рюкзаки')
+            +error-nav-item('women.html', 'Клатчи')
+            +error-nav-item('women.html', 'Аксессуары')
+            +error-nav-item('women.html', 'Одежда')
+        +error-block
+          +error-block-title('women.html', 'Мужское')
+          +error-nav()
+            +error-nav-item('women.html', 'Рюкзаки')
+            +error-nav-item('women.html', 'Кошельки')
+            +error-nav-item('women.html', 'Футляры для очков')
+            +error-nav-item('women.html', 'Ремни')
+
+
+  +subscribe('white')
+    +btn('Подписаться', 'subscribe', true)(type='submit')
+
+block footer
+  +page-footer()
+    +socials()
+      +socials-item('Vkontakte', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-vk")
+      +socials-item('Instagram', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-insta")
+      +socials-item('Facebook', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-fb")

@@ -1,0 +1,173 @@
+// В этом файле должны быть стили для БЭМ-блока error, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.error {
+  $block-name: &; // #{$block-name}__element
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background: #fff;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  &__inner {
+    @include container();
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+  }
+
+  &__img {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    > img {
+      width: 100%;
+      max-width: 526px;
+      height: auto;
+
+      @media (min-width: $screen-md) {
+        width: 90%;
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+      width: 50%;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 18px;
+    }
+  }
+
+  &__title {
+    font-size: 76px;
+    font-weight: 300;
+    width: auto;
+    margin: 0;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+      font-size: 100px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 140px;
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    color: #999;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+      font-size: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 40px;
+    }
+  }
+
+  &__blocks {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__block {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      width: 50%;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 41%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__block-title {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s;
+
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+    }
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__nav {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    padding-top: 15px;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 22px;
+    }
+  }
+
+  &__nav-item {
+    margin-bottom: 8px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__nav-link {
+    padding: 4px 0;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+
+    @media (min-width: $screen-xl) {
+      font-size: 18px;
+    }
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}

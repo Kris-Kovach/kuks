@@ -1,0 +1,145 @@
+//- Все примеси в этом файле должны начинаться c имени блока (error)
+
+mixin error(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +error('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' error--' + modsList[i].trim();
+      }
+    }
+
+  .error(class=allMods)&attributes(attributes)
+    .error__inner
+      block
+
+mixin error-img(src, mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +error-img('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' error__img--' + modsList[i].trim();
+      }
+    }
+
+  .error__img(class=allMods)
+    img(src=src alt='Страница не найдена')
+
+mixin error-title(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +error-title('текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' error__title--' + modsList[i].trim();
+      }
+    }
+
+  h1.error__title(class=allMods)= text
+
+mixin error-block(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +error-block('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' error__block--' + modsList[i].trim();
+      }
+    }
+
+  .error__block(class=allMods)
+    block
+
+mixin error-block-title(href, text, mods)
+
+  //- Принимает:
+  //-   href    {string} - ссылка
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +error-block-title('some/href', 'текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' error__block-title--' + modsList[i].trim();
+      }
+    }
+
+  a.error__block-title(class=allMods href=href)= text
+
+mixin error-nav(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +error-nav('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' error__nav--' + modsList[i].trim();
+      }
+    }
+
+  ul.error__nav(class=allMods)
+    block
+
+mixin error-nav-item(href, text, mods)
+
+  //- Принимает:
+  //-   href    {string} - ссылка
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +error-nav-item('some/href', 'текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' error__nav-item--' + modsList[i].trim();
+      }
+    }
+
+  li.error__nav-item(class=allMods)
+    a.error__nav-link(href=href)= text
