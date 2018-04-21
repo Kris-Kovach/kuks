@@ -4059,6 +4059,69 @@ hr {
     width: calc(100% - 65px); }
 .coupon__input:focus {
       outline: none; }
+.error {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background: #fff; }
+.error__inner {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+.error__img {
+    margin-bottom: 20px; }
+.error__img > img {
+      width: 100%;
+      max-width: 526px;
+      height: auto; }
+.error__content {
+    text-align: center; }
+.error__title {
+    font-size: 76px;
+    font-weight: 300;
+    width: auto;
+    margin: 0;
+    letter-spacing: 0.1em;
+    line-height: 1.2; }
+.error__subtitle {
+    color: #999;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 20px; }
+.error__block {
+    margin-bottom: 20px; }
+.error__block:last-child {
+      margin-bottom: 0; }
+.error__block-title {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    font-weight: 700;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+.error__block-title:hover, .error__block-title:active {
+      opacity: 0.7; }
+.error__nav {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    padding-top: 15px; }
+.error__nav-item {
+    margin-bottom: 8px; }
+.error__nav-link {
+    padding: 4px 0;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+.error__nav-link:hover, .error__nav-link:active {
+      opacity: 0.7; }
 /*!*
  * ВНИМАНИЕ! Этот файл генерируется автоматически.
  * Не пишите сюда ничего вручную, все такие правки будут потеряны при следующей компиляции.
@@ -4162,7 +4225,9 @@ hr {
       .checkout__inner {
         width: auto; }
     .coupon {
-      width: 305px; } }
+      width: 305px; }
+      .error__inner {
+        width: auto; } }
 @media (min-width: 768px) {
     h1 {
       font-size: 34px; }
@@ -4652,7 +4717,34 @@ hr {
       margin-right: 0;
       margin-bottom: 0; }
       .coupon__title {
-        text-align: left; } }
+        text-align: left; }
+      .error__inner {
+        width: 720px; }
+      .error__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+      .error__img {
+        width: 50%;
+        margin-bottom: 0; }
+        .error__img > img {
+          width: 90%; }
+      .error__content {
+        text-align: left;
+        width: 50%; }
+      .error__title {
+        text-align: left;
+        font-size: 100px; }
+    .error__blocks {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .error__block {
+        width: 50%; }
+        .error__block:last-child {
+          margin-bottom: 20px; } }
 @media (min-width: 768px) and (max-width: 991px) {
       .news__item {
         width: 45%;
@@ -5101,7 +5193,18 @@ hr {
     .coupon {
       margin-left: 80px; }
       .coupon__title {
-        font-size: 18px; } }
+        font-size: 18px; }
+    .error {
+      padding-top: 60px;
+      padding-bottom: 70px; }
+      .error__inner {
+        width: 960px; }
+      .error__subtitle {
+        font-size: 32px; }
+      .error__nav {
+        padding-top: 22px; }
+      .error__nav-item {
+        margin-bottom: 14px; } }
 @media (min-width: 992px) and (max-width: 1359px) {
     .catalog__content--fullwidth .card {
       width: 30%;
@@ -5339,7 +5442,22 @@ hr {
       .checkout__inner {
         width: 1258px; }
     .coupon {
-      margin-left: 105px; } }
+      margin-left: 105px; }
+      .error__inner {
+        width: 1258px; }
+      .error__content {
+        padding-left: 18px; }
+      .error__title {
+        font-size: 140px;
+        text-align: left; }
+      .error__subtitle {
+        font-size: 40px; }
+      .error__block {
+        width: 41%; }
+      .error__block-title {
+        font-size: 24px; }
+      .error__nav-link {
+        font-size: 18px; } }
 @media (min-width: 1800px) {
       .page-header__top-inner {
         width: 1258px; }
@@ -5382,6 +5500,8 @@ hr {
       .ordering__inner {
         width: 1258px; }
       .checkout__inner {
+        width: 1258px; }
+      .error__inner {
         width: 1258px; } }
 @media (min-width: 1935px) {
       .catalog .card {
