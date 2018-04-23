@@ -1,0 +1,93 @@
+// В этом файле должны быть стили для БЭМ-блока success-modal, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.success-modal {
+  $block-name: &; // #{$block-name}__element
+  position: relative;
+  padding: 20px 25px;
+  background: #fff;
+  width: 100%;
+  max-width: 590px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    padding: 50px;
+  }
+
+  &__img {
+    width: 150px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 36px;
+    margin-top: 0;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      font-size: 64px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      font-size: 26px;
+      margin-bottom: 26px;
+    }
+  }
+
+  p {
+    margin-top: 0;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+      margin-bottom: 36px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.mfp-bg {
+  color: #000;
+  opacity: 0.85;
+}
+
+.mfp-close-btn-in .mfp-close {
+  top: 25px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  background: url('../img/icon-close.svg') center center no-repeat;
+  background-size: contain;
+  opacity: 1;
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+}

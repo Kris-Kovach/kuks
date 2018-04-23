@@ -1,0 +1,82 @@
+//- Все примеси в этом файле должны начинаться c имени блока (success-modal)
+
+mixin success-modal(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +success-modal('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' success-modal--' + modsList[i].trim();
+      }
+    }
+
+  .success-modal.mfp-hide(class=allMods)&attributes(attributes)
+    .success-modal__inner
+      block
+
+mixin success-modal-img(src, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +success-modal('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' success-modal__img--' + modsList[i].trim();
+      }
+    }
+
+  img.success-modal__img(src=src alt='Ваше сообщение успешно отправлено')
+
+mixin success-modal-title(title, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +success-modal('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' success-modal__title--' + modsList[i].trim();
+      }
+    }
+
+  h4.success-modal__title(class=allMods)= title
+
+mixin success-modal-subtitle(subtitle, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +success-modal('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' success-modal__title--' + modsList[i].trim();
+      }
+    }
+
+  .success-modal__subtitle(class=allMods)= subtitle

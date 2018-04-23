@@ -93,6 +93,39 @@
 
     @media (min-width: $screen-lg) {
       margin-bottom: 0;
+      width: 95%;
+    }
+
+    .owl-nav {
+      position: absolute;
+      height: 30px;
+      top: 50%;
+      width: 100%;
+    }
+
+    .owl-nav button.owl-prev > span,
+    .owl-nav button.owl-next > span {
+      display: none;
+    }
+
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+      position: absolute;
+      top: 0;
+      width: 15px;
+      height: 30px;
+      background: url('../img/icon-arrow--black.svg') center center no-repeat;
+      background-size: contain;
+      outline: none;
+    }
+
+    .owl-nav button.owl-next {
+      right: 0;
+    }
+
+    .owl-nav button.owl-prev {
+      left: 0;
+      transform: rotate(-180deg);
     }
   }
 
@@ -302,7 +335,6 @@
         padding: 0;
         border: 0;
       }
-
 
       @media (min-width: $screen-lg) {
         border: 0;

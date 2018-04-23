@@ -50,8 +50,8 @@ block content
             }
           })
           .ordering__note.
-                            Выберите свой город в списке. Если вы не нашли свой город, выберите «другое местоположение», а город
-                            впишите в поле «Город»
+            Выберите свой город в списке. Если вы не нашли свой город, выберите «другое местоположение», а город
+            впишите в поле «Город»
           +ordering-btns()
             +btn('Назад', 'green')
             +btn('Далее', 'green')
@@ -136,7 +136,7 @@ block content
           +btn('Назад', 'green')
     +ordering-total('0', '8499')
     +ordering-btns('total')
-      +btn('Отправить', 'green', isInput)
+      +btn('Отправить', 'green', isInput)(class='open-popup' data-mfp-src="#success-modal" type='submit')
 
 block footer
   +page-footer()
@@ -150,3 +150,15 @@ block footer
       +socials-item('Facebook', '/')
         svg(width="32", height="32")
           use(xlink:href="img/sprite-svg.svg#icon-fb")
+
+block modals
+  +success-modal()(id='success-modal')
+    +success-modal-img('img/icon-bag.svg')
+    +success-modal-title('Спасибо')
+    +success-modal-subtitle('Заказ был успешно отправлен')
+    p.
+      Наш менеджер свяжется с вами для уточнения деталей.
+      Копия заказа была отправлена на указанный
+      вами электронный ящик.
+    p.
+      Вы можете отследить статус заказа в личном кабинете.

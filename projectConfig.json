@@ -45,7 +45,8 @@
     "checkout": [],
     "spinner": [],
     "coupon": [],
-    "error": []
+    "error": [],
+    "success-modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -57,6 +58,7 @@
     "../../node_modules/ion-rangeslider/css/ion.rangeSlider.css",
     "../../node_modules/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css",
     "../../node_modules/magnify/dist/css/magnify.css",
+    "../../node_modules/magnific-popup/dist/magnific-popup.css",
     "./src/scss/plugins/jquery.fancybox.scss"
   ],
   "addCssAfter": [
@@ -74,6 +76,7 @@
     "./node_modules/select2/dist/js/select2.js",
     "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./node_modules/magnify/dist/js/jquery.magnify.js",
+    "./node_modules/magnific-popup/dist/jquery.magnific-popup.js",
     "./src/js/jquery-ui.js",
     "./src/js/jquery.fancybox.js"
   ],

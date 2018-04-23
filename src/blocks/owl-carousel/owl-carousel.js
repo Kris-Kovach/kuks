@@ -41,6 +41,11 @@ $(document).ready(function(){
     loop: true,
     dotsSpeed: 1000,
     animateOut: 'fadeOut',
+    responsive: {
+      1024: {
+        nav: true
+      }
+    },
     onTranslated: function() {
       if ($(window).width() >= 992) {
         $zoom.destroy().magnify();
@@ -73,4 +78,10 @@ $(document).ready(function(){
   $('.product__thumb').click(function () {
     $('#product-slider').trigger('to.owl.carousel', [$(this).index(), 1000]);
   });
+
+  //Переключение слайда по клику на текущий слайд
+
+  $('#product-slider .owl-item').click(function () {
+    $('#product-slider').trigger('next.owl.carousel');
+  })
 });
