@@ -10,8 +10,6 @@
   width: 0;
   height: 100vh;
   min-height: 330px;
-  overflow-x: hidden;
-  overflow-y: scroll;
   text-overflow: ellipsis;
   transition: 0.5s;
   background-color: rgba(0, 0, 0, 0.8);
@@ -20,25 +18,22 @@
   list-style: none;
   color: #fff;
   z-index: 10100;
+  padding-bottom: 40px;
 
-  @media (min-width: $screen-md) {
-    min-height: 450px;
+  @media (min-width: $screen-lg) {
+    padding-bottom: 70px;
   }
 
   &__inner {
-    padding: 0 20px 30px 20px;
+    margin-top: 86px;
+    margin-bottom: 40px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 20px;
+    height: 80%;
 
     @media (min-width: $screen-md) {
-      padding: 0 25px 30px 55px;
-      min-height: 450px;
-    }
-  }
-
-  &--visible {
-    width: 320px;
-
-    @media (min-width: $screen-md) {
-      width: 355px;
+      padding-left: 25px;
     }
   }
 
@@ -47,13 +42,10 @@
   }
 
   .mCustomScrollBox {
-    margin-top: 86px;
-    padding: 0 0 30px 20px;
     margin-right: 20px;
 
 
     @media (min-width: $screen-md) {
-      padding: 0 0 30px 55px;
       margin-right: 25px;
     }
   }
@@ -61,7 +53,7 @@
   &__close {
     position: absolute;
     top: 20px;
-    right: 17px;
+    right: -170px;
     width: 25px;
     height: 25px;
     z-index: 1500;
@@ -171,6 +163,19 @@
   &__name {
     line-height: 1.2;
   }
+
+  &--visible {
+    width: 320px;
+
+    @media (min-width: $screen-md) {
+      width: 355px;
+    }
+
+    .cart-preview__close {
+      right: 23px;
+    }
+  }
+
 }
 
 // Стили для кастомного скролла

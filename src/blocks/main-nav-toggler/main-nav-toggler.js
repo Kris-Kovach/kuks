@@ -7,6 +7,7 @@ $(document).ready(function () {
   var subNav = $('.main-nav__submenu');
   var backBtn = $('.main-nav__submenu-title');
   var cartPreview = $(".cart-preview");
+  var cartPreviewContent = $(".cart-preview__inner");
   var cartToggler = $('.cart');
   var cartPreviewClose = $('.cart-preview__close');
 
@@ -55,16 +56,17 @@ $(document).ready(function () {
     }
   });
 
-  cartPreview.mCustomScrollbar();
-
-  cartPreview.append('<button class="btn cart-preview__close">x<span></span></button>');
+  cartPreviewContent.mCustomScrollbar();
 
   cartToggler.on('click', function (evt) {
     evt.preventDefault();
     cartPreview.addClass('cart-preview--visible');
     subNav.removeClass('main-nav__submenu--visible');
     topNavToggler.addClass('top-nav-toggler--disabled');
-    $('body').addClass('fixed');
+
+    if ($(window).width() < 768) {
+      $('body').addClass('fixed');
+    }
   });
 
   cartPreviewClose.on('click', function (evt) {
