@@ -1,0 +1,68 @@
+//- Все примеси в этом файле должны начинаться c имени блока (cart-preview)
+
+mixin cart-preview(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +cart-preview('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' cart-preview--' + modsList[i].trim();
+      }
+    }
+
+  .cart-preview(class=allMods)&attributes(attributes)
+    block
+
+mixin cart-preview-title(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +cart-preview('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' cart-preview__title--' + modsList[i].trim();
+      }
+    }
+
+  h4.cart-preview__title(class=allMods)&attributes(attributes)= text
+
+mixin cart-preview-item(href, src, name, category, price, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +cart-preview('Текст', 'some-mod')
+
+  -
+   // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' cart-preview__item--' + modsList[i].trim();
+      }
+    }
+
+  a.cart-preview__item(class=allMods href=href)&attributes(attributes)
+    img.cart-preview__img(src=src alt='Товар')
+    .cart-preview__item-info
+      .cart-preview__name= name
+      .cart-preview__category= category
+      .cart-preview__price= price
+        span.b-rub &nbsp;Ь

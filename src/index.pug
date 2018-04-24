@@ -15,10 +15,41 @@ block header
     .page-header__bottom
       .page-header__bottom-inner
         +logo('/')
-          img(src='img/logo.svg', alt='Kuks',)
+          img(src='img/logo.svg', alt='Kuks')
         +main-nav-toggler()
         +main-nav()
         +cart()
+        +cart-preview()
+          //+btn('x')(class='cart-preview__close')
+          //  span
+          +cart-preview-title('Корзина')
+          .cart-preview__items
+            +cart-preview-item('good.html', 'img/ordering-1.jpg', 'Strap', 'Ремень для сумки', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+            +cart-preview-item('good.html', 'img/ordering-2.jpg', 'Valentine', 'Сумка женская', '2499')
+          +btn('Оформить', 'white')(href='checkout.html')
 
 block content
 

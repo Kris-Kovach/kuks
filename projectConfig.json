@@ -46,7 +46,8 @@
     "spinner": [],
     "coupon": [],
     "error": [],
-    "success-modal": []
+    "success-modal": [],
+    "cart-preview": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -59,6 +60,7 @@
     "../../node_modules/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css",
     "../../node_modules/magnify/dist/css/magnify.css",
     "../../node_modules/magnific-popup/dist/magnific-popup.css",
+    "../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
     "./src/scss/plugins/jquery.fancybox.scss"
   ],
   "addCssAfter": [
@@ -77,6 +79,7 @@
     "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./node_modules/magnify/dist/js/jquery.magnify.js",
     "./node_modules/magnific-popup/dist/jquery.magnific-popup.js",
+    "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js",
     "./src/js/jquery-ui.js",
     "./src/js/jquery.fancybox.js"
   ],

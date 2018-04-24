@@ -1,0 +1,205 @@
+// В этом файле должны быть стили для БЭМ-блока cart-preview, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.cart-preview {
+  $block-name: &; // #{$block-name}__element
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  min-height: 330px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-overflow: ellipsis;
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  color: #fff;
+  z-index: 10100;
+
+  @media (min-width: $screen-md) {
+    min-height: 450px;
+  }
+
+  &__inner {
+    padding: 0 20px 30px 20px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 25px 30px 55px;
+      min-height: 450px;
+    }
+  }
+
+  &--visible {
+    width: 320px;
+
+    @media (min-width: $screen-md) {
+      width: 355px;
+    }
+  }
+
+  .mCSB_inside > .mCSB_container {
+    overflow: visible;
+  }
+
+  .mCustomScrollBox {
+    margin-top: 86px;
+    padding: 0 0 30px 20px;
+    margin-right: 20px;
+
+
+    @media (min-width: $screen-md) {
+      padding: 0 0 30px 55px;
+      margin-right: 25px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    width: 25px;
+    height: 25px;
+    z-index: 1500;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    background-color: transparent;
+    font-size: 0;
+
+    > span {
+      display: inline-block;
+      background-color: transparent;
+      position: relative;
+
+      &:before,
+      &:after {
+        display: inline-block;
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        content: '';
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      font-size: 36px;
+    }
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+    }
+  }
+
+  &__category {
+    color: #838181;
+    font-size: 14px;
+  }
+
+  &__price {
+    white-space: nowrap;
+  }
+
+  &__items {
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    display: flex;
+    padding-top: 28px;
+    padding-bottom: 18px;
+    border-top: 1px solid #464748;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color: #fff;
+
+    &:last-child {
+      border-bottom: 1px solid #464748;
+    }
+
+    &:hover,
+    &:active {
+      color: #fff;
+    }
+  }
+
+  &__img {
+    margin-top: 3px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 18px;
+  }
+
+  &__item-info {
+    width: calc(100% - 78px);
+  }
+
+  &__name {
+    line-height: 1.2;
+  }
+}
+
+// Стили для кастомного скролла
+
+.mCSB_scrollTools {
+  opacity: 1;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 13px;
+  height: 13px;
+  border: 2px solid #fff;
+  border-radius: 0;
+  background: #171514;
+  line-height: 0 !important;
+
+  &:hover,
+  &:active {
+    background-color: #fff;
+    opacity: 1;
+  }
+}
+
+.mCSB_dragger {
+  min-height: 13px !important;
+  height: 13px !important;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  background: #fff;
+  width: 1px;
+}
