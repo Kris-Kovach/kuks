@@ -6,8 +6,8 @@ $(document).ready(function () {
         zoom: 16
       }),
       kuks = new ymaps.Placemark([59.938184, 30.362847], {
-        hintContent: 'Собственный значок метки',
-        balloonContent: 'Это красивая метка'
+        hintContent: 'Санкт-Петербург, Озерной пер., д. 14',
+        balloonContent: 'Санкт-Петербург, Озерной пер., д. 14'
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'img/map-pointer.png',
