@@ -1,0 +1,106 @@
+extends pug/layout.pug
+
+block meta
+  title Контакты
+  meta(name='description', content='')
+  script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+
+block header
+  +page-header('dark')
+    div#header-top.page-header__top
+      .page-header__top-inner
+        +top-nav-toggler()
+        +top-nav()
+        +user-block()
+    .page-header__bottom
+      .page-header__bottom-inner
+        +logo('/')
+          img(src='img/logo.svg', alt='Kuks',)
+        +main-nav-toggler()
+        +main-nav()
+        +cart()
+
+block content
+  +contacts()
+    .contacts__inner
+      +breadcrumbs()
+        +breadcrumbs-item('Главная', '/')
+        +breadcrumbs-item('Контакты')
+      h1.contatcs__title Контакты
+    .contacts__info
+      .contacts__info-inner
+        .contacts__location
+          .contacts__items
+            .contacts__item
+              img.contacts__item-img(src='img/icon-location.svg')
+              .contacts__text
+                .contacts__item-name Шоурум DOM
+                .contacts__item-info Санкт-Петербург, Озерной пер., д. 14
+                .contacts__item-descr
+                  | с 11:00 до 18:00 — с понедельника по пятницу
+                  br
+                  | сб и вс — по предварительной договоренности
+            .contacts__item
+              img.contacts__item-img(src='img/icon-phone.svg')
+              .contacts__text
+                a.contacts__item-name(href='tel:+79095883918') +7 909 588-39-18
+                .contacts__item-descr с 11:00 до 18:00 — ежедневно
+          a.contacts__email(href='mailto:ku-ks-bags@gmail.com') ku-ks-bags@gmail.com
+          +socials('dark')
+            +socials-item('Vkontakte', '/')
+              svg(width="40", height="40")
+                use(xlink:href="img/sprite-svg.svg#icon-vk")
+            +socials-item('Instagram', '/')
+              svg(width="40", height="40")
+                use(xlink:href="img/sprite-svg.svg#icon-insta")
+            +socials-item('Facebook', '/')
+              svg(width="40", height="40")
+                use(xlink:href="img/sprite-svg.svg#icon-fb")
+        .contacts__video
+          iframe(src='https://www.youtube.com/embed/p8r2mLhRFBQ' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen)
+    .contacts__map#contacts-map
+    .contacts__inner
+      h1 DOM
+    +owl-carousel('default-slider')
+      .default-slider__item.default-slider__item--1
+      .default-slider__item.default-slider__item--2
+      .default-slider__item.default-slider__item--3
+    .contacts__inner
+      +default-text()
+        p.
+          Доводилось ли Вам когда-нибудь бывать в гостях у модного дизайнера? Видеть место,
+          где он творит, примерять понравившуюся модель, а затем, за чашкой чая обсуждать ее детали?
+          Шоу-рум «D.O.M.» - именно такое место, которое всегда открыто для ценителей красоты и эксклюзивности.
+        p.
+          Шоурум «D.O.M.» или «Design Open Manufactory» » был основан тремя петербуржскими дизайнерами: Ксенией
+          Куплешниковой, Диной Ковалевой и Ксенией Алексеевой и находится на цокольном этаже бывшего доходного дома
+          Пелагеи Коноваловой на Озерном переулке.
+        p.
+          Это место является в прямом смысле домом продуктов петербургского дизайна. Здесь можно не только примерить
+          различные модели, а также побаловать себя элегантными аксессуарами, но и погрузиться в атмосферу создания
+          уникальных коллекций петербургских дизайнеров.
+        p.
+          В пространстве «Design Open Manufactory» помимо шоурума располагается и мастерская, где происходит пошив
+          всех изделий, что является особенным преимуществом для всех наших гостей. Это позволяет не просто приобрести
+          понравившуюся модель, но скорректировать ее, по индивидуальным меркам, а, возможно, и заказать что-то
+          особенное, получив консультацию напрямую от самих дизайнеров.
+        p.
+          Отправной точкой в создании такого уникального пространства стало желание преодолеть барьер между клиентами
+          и дизайнерами. Открыть место, где люди чувствовали бы себя, как дома.
+        p.
+          Мы будем рады видеть Вас у нас в гостях каждый день с 13.00 до 21.00 по адресу Озерной переулок, 12!
+  +subscribe('white')
+    +btn('Подписаться', 'subscribe', true)(type='submit')
+
+block footer
+  +page-footer()
+    +socials()
+      +socials-item('Vkontakte', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-vk")
+      +socials-item('Instagram', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-insta")
+      +socials-item('Facebook', '/')
+        svg(width="32", height="32")
+          use(xlink:href="img/sprite-svg.svg#icon-fb")

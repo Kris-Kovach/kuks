@@ -15,4 +15,23 @@
       margin-right: 0;
     }
   }
+
+  svg {
+    fill: #fff;
+  }
+
+  &--dark {
+
+    .socials__item {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    svg {
+      fill: #292929;
+    }
+  }
 }

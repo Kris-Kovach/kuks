@@ -47,7 +47,8 @@
     "coupon": [],
     "error": [],
     "success-modal": [],
-    "cart-preview": []
+    "cart-preview": [],
+    "contacts": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

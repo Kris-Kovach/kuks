@@ -1,0 +1,220 @@
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contacts {
+  $block-name:                &; // #{$block-name}__element
+  padding-top: 30px;
+
+  &__inner {
+    @include container();
+  }
+
+  &__info-inner {
+    @include container();
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+    }
+  }
+
+  &__info {
+    padding-bottom: 35px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 30px;
+      background-color: #f2f2f2;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 60px;
+      padding-bottom: 65px;
+    }
+  }
+
+  &__location {
+    text-align: center;
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 50%;
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 105px;
+    }
+  }
+
+  &__video {
+
+    iframe {
+      height: 340px;
+      width: 100%;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 50%;
+    }
+  }
+
+  &__items {
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      margin-bottom: 30px;
+
+      &:first-child {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 40px;
+
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      margin-left: 0;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-right: 30px;
+    }
+  }
+
+  &__item-text {
+
+    @media (min-width: $screen-md) {
+      width: calc(100% - 80px);
+    }
+  }
+
+  &__item-name {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+
+    @media (min-width: $screen-lg) {
+      font-size: 22px;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  &__item-info {
+    font-size: 18px;
+
+    @media (min-width: $screen-lg) {
+      font-size: 20px;
+    }
+  }
+
+  &__item-descr {
+    color: #8c8c8c;
+    font-style: italic;
+    font-size: 14px;
+    padding-top: 5px;
+
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__email {
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    line-height: 1.2;
+
+    @media (min-width: $screen-md) {
+      text-align: center;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 80px;
+      font-size: 20px;
+      text-align: left;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      height: 450px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 560px;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: 2560px) {
+      height: 700px;
+    }
+  }
+
+  .socials {
+
+    @media (min-width: $screen-md) {
+      text-align: center;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 80px;
+      text-align: left;
+    }
+  }
+
+  .breadcrumbs {
+    margin-bottom: 20px;
+  }
+}
