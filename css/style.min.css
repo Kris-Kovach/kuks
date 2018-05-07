@@ -2193,10 +2193,10 @@ h3 {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; }
-/* for Mac OS X support */
-::-webkit-scrollbar {
-  width: 0; }
+  bottom: 0;
+  /* for Mac OS X support */ }
+.fixed ::-webkit-scrollbar {
+    width: 0; }
 @font-face {
   font-family: 'Muller';
   src: url("../fonts/MullerRegular.woff2") format("woff2"), url("../fonts/MullerRegular.woff") format("woff");
