@@ -81,10 +81,10 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
+
+  /* for Mac OS X support */
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
-/* for Mac OS X support */
-
-::-webkit-scrollbar {
-  width: 0;
-}
