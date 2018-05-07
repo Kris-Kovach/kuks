@@ -9,7 +9,6 @@
     @include container();
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   &__item {
@@ -18,10 +17,24 @@
     font-size: 0;
     margin-bottom: 15px;
     overflow: hidden;
+    margin-right: 4%;
+
+
+    @media (max-width: $screen-sm-max) {
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
 
     @media (min-width: $screen-md) {
       width: 32%;
       margin-bottom: 16px;
+      margin-right: 2%;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
 
     @media (min-width: $screen-lg) {
