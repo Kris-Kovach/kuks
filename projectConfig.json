@@ -48,7 +48,8 @@
     "error": [],
     "success-modal": [],
     "cart-preview": [],
-    "contacts": []
+    "contacts": [],
+    "checkbox-field": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

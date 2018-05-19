@@ -26,7 +26,7 @@ mixin cart-item(src, name, category, quantity, price, size, hasSpinner, mods)
         .cart-item__price-per-item= price
           span.b-rub &nbsp;Ь
         .cart-item__spinner
-          input.cart-item__spinner-input(type='text' value=quantity)
+          input.cart-item__hidden-input(type='text' value=quantity)
       else
         .cart-item__quantity= quantity + ' шт.'
 

@@ -183,3 +183,7 @@
     }
   }
 }
+
+.container {
+  @include container();
+}
