@@ -101,5 +101,198 @@ h3 {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
 
+.person {
+  padding-bottom: 45px;
+}
+
+.person__section-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.person__section-nav-item {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.person__section-nav-link {
+  position: relative;
+  display: block;
+  color: #1e1e1e;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  @media (min-width: $screen-md) {
+    font-size: 20px;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.personal__text {
+  padding-left: 35px;
+}
+
+.person__img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.profile-user-div-link a {
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.bx-auth {
+  text-align: center;
+  padding-bottom: 45px;
+}
+
+.bx-auth-note {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.checkbox__icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.checkbox__label {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  text-align: left;
+}
+
+input[type=checkbox]:checked + .checkbox__label .checkbox__icon:after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  background: #000;
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    2px 0 0 #000,
+    4px 0 0 #000,
+    4px -2px 0 #000,
+    4px -4px 0 #000,
+    4px -6px 0 #000,
+    4px -8px 0 #000;
+  transform: rotate(45deg);
+}
+
+.checkbox__name {
+  font-size: 14px;
+}
+
+.register-note {
+  font-size: 14px;
+}
+
+.auth-links {
+  padding-top: 45px;
+}
+
+.auth-link {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.notes {
+  padding-top: 30px;
+  text-align: left;
+}
+
+.requirement-note {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-style: italic;
+  color: #707070;
+  text-align: left;
+}
+
+.back-to-auth a {
+  font-weight: 700;
+  color: #707070;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .checkbox__name {
+    font-size: 16px;
+  }
+
+  .bx-auth-note {
+    font-size: 20px;
+  }
+
+  .requirement-note {
+    font-size: 16px;
+  }
+
+  .back-to-auth a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bx-auth-note {
+    font-size: 22px;
+  }
+
+  .auth-fields {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .auth-fields .field-text {
+    width: 30%;
+    margin-right: 5%;
+  }
+
+  .auth-fields .field-text:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .auth-fields .field-text__name {
+    text-align: left;
+  }
+}
+
+.order__form-box {
+  padding-bottom: 45px;
 }
