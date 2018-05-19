@@ -13,6 +13,8 @@ mixin new(mods)
     }
 
   section.new(class=allMods)
+    svg.new__bg(fill='#1B4200')
+      use(xlink:href='img/sprite-svg.svg#bg-new' transform='scale(2.5)')
     .new__inner
       block
 

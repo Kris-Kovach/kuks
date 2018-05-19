@@ -4,7 +4,6 @@ $(document).ready(function(){
     items: 1,
     nav: false,
     dots: true,
-    loop: true,
     center: false,
     margin: 25,
     dotsSpeed: 1000,
