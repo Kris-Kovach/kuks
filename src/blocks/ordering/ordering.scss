@@ -11,6 +11,10 @@
     padding-top: 35px;
   }
 
+  &--pd {
+    padding-bottom: 65px;
+  }
+
   &__inner {
     @include container();
   }
@@ -307,6 +311,9 @@
   &__delivery-price {
     font-size: 16px;
     margin-bottom: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media (min-width: $screen-md) {
       margin-bottom: 12px;
@@ -325,11 +332,21 @@
     }
   }
 
+  &__total-prices {
+
+    @media (min-width: $screen-md) {
+      max-width: calc(100% - 315px);
+    }
+  }
+
   &__total-price {
     font-size: 20px;
     letter-spacing: 0.05em;
     font-weight: 700;
     text-transform: uppercase;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media (min-width: $screen-lg) {
       font-size: 24px;

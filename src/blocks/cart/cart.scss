@@ -8,7 +8,7 @@
   vertical-align: top;
   position: relative;
   margin-top: 6px;
-  width: 50px;
+  max-width: 82px;
   text-decoration: none;
   padding-left: 25px;
   padding-right: 15px;
@@ -26,15 +26,13 @@
     margin-top: 10px;
   }
 
-  &:after {
+  &__arrow {
     position: absolute;
-    content: '';
-    background: url('../img/icon-arrow.svg') center center no-repeat;
-    background-size: contain;
     width: 9px;
     height: 4px;
     top: 5px;
     right: 0;
+    stroke: #fff;
   }
 
   &:hover,
@@ -49,9 +47,13 @@
     position: absolute;
     top: -4px;
     left: 0;
+    stroke: #fff;
+    stroke-width: 2px;
   }
 
   &__number {
+    display: block;
+    max-width: 100%;
     color: #fff;
   }
 }

@@ -78,6 +78,7 @@
   }
 
   &__price {
+    white-space: nowrap;
     font-weight: 700;
     font-size: 20px;
     letter-spacing: 0.05em;
@@ -92,6 +93,7 @@
         padding-right: 20px;
 
         &--old {
+          font-size: 16px;
           font-weight: 700;
           color: $font-color;
           text-decoration: line-through;

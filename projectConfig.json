@@ -82,11 +82,13 @@
     "./node_modules/magnify/dist/js/jquery.magnify.js",
     "./node_modules/magnific-popup/dist/jquery.magnific-popup.js",
     "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js",
+    "./node_modules/jquery-validation/dist/jquery.validate.js",
+    "./src/js/messages_ru.js",
     "./src/js/jquery-ui.js",
     "./src/js/jquery.fancybox.js"
   ],
   "addJsAfter": [
-    "./src/js/global-script.js"
+    "./src/js/form.js"
   ],
   "addImages": [
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico}"

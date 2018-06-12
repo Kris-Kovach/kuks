@@ -2,7 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.error {
+.error:not(input) {
   $block-name: &; // #{$block-name}__element
   padding-top: 30px;
   padding-bottom: 40px;

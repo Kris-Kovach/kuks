@@ -6,6 +6,7 @@
   $block-name:                &; // #{$block-name}__element
   display: flex;
   align-items: flex-end;
+  color: inherit;
 
   @media (min-width: $screen-md) {
     justify-content: flex-end;
@@ -19,7 +20,7 @@
   &__phone {
     display: inline-block;
     vertical-align: top;
-    color: #fff;
+    color: inherit;
     opacity: 0.5;
     text-decoration: none;
     font-size: 14px;
@@ -35,7 +36,7 @@
     &:active,
     &:focus,
     &:visited {
-      color: #fff;
+      color: inherit;
       opacity: 0.3;
     }
   }
@@ -44,13 +45,15 @@
     position: absolute;
     top: 0;
     left: 0;
+    stroke: #fff;
+    stroke-width: 2;
   }
 
   &__login {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    color: #fff;
+    color: inherit;
     opacity: 0.5;
     text-transform: uppercase;
     font-size: 11px;
@@ -61,7 +64,7 @@
     &:active,
     &:focus,
     &:visited {
-      color: #fff;
+      color: inherit;
       opacity: 0.3;
     }
   }
@@ -69,7 +72,7 @@
   &__change-lang {
     display: inline-block;
     vertical-align: top;
-    color: #fff;
+    color: inherit;
     opacity: 0.5;
     text-transform: uppercase;
     font-size: 11px;
@@ -80,7 +83,7 @@
     &:active,
     &:focus,
     &:visited {
-      color: #fff;
+      color: inherit;
       opacity: 0.3;
     }
   }

@@ -33,7 +33,7 @@ let repoUrl = require('./package.json').repository.url.replace(/\.git$/g, '');
 // console.log(repoUrl);
 
 // Сообщение, записываемое в стилевой файл
-let styleFileMsg = '/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Не пишите сюда ничего вручную, все такие правки будут потеряны при следующей компиляции.\n * Правки без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-3 раза.\n * Нужны дополнительные стили? Создайте новый css-файл и подключите его к странице.\n * Читайте ./README.md для понимания.\n */\n\n';
+let styleFileMsg = '';
 
 // Формирование и запись диспетчера подключений (style.scss), который компилируется в style.min.css
 let styleImports = styleFileMsg;
@@ -44,7 +44,7 @@ styleImports = styleImports += styleFileMsg;
 fs.writeFileSync(dirs.srcPath + 'scss/style.scss', styleImports);
 
 // Формирование и запись списка примесей (mixins.pug) со списком инклудов всех pug-файлов блоков
-let pugMixins = '//- ВНИМАНИЕ! Этот файл генерируется автоматически. Не пишите сюда ничего вручную!\n//- Читайте ./README.md для понимания.\n\n';
+let pugMixins = '';
 lists.pug.forEach(function(blockPath) {
   pugMixins += 'include '+blockPath+'\n';
 });

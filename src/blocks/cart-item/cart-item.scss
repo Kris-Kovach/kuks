@@ -111,17 +111,19 @@
     @media (min-width: $screen-md) {
       width: 43%;
       margin-bottom: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
     @media (min-width: $screen-lg) {
+      width: 45%;
+    }
+
+    @media (min-width: $screen-xl) {
       width: 50%;
     }
   }
 
   &__name {
-    white-space: nowrap;
+    display: block;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;
@@ -129,6 +131,9 @@
     transition: all 0.3s;
     letter-spacing: 0.2em;
     line-height: 1.25;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media (min-width: $screen-lg) {
       font-size: 22px;
@@ -186,12 +191,27 @@
 
   &__price {
     color: $gray;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.05em;
     font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 164px); // 164px = ширина спиннера 124px + ширина иконки для удаления товара 15px + отступы 25px
+
+    @media (min-width: $screen-sm) {
+      width: calc(100% - 240px); // 240px = ширина спиннера 124px + ширина иконки для удаления товара 15px + ширина цены за единицу товара 75px + отступы 30px
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 20px;
+      width: calc(57% - 184px); // 100% - 43% (ширина блока с названием) = 57%
+    }
 
     @media (min-width: $screen-lg) {
       font-size: 22px;
+      width: calc(55% - 292px);
 
       .b-rub {
         font-size: 18px;
@@ -200,13 +220,17 @@
 
     @media (min-width: $screen-xl) {
       font-size: 24px;
+      width: calc(50% - 307px);
     }
   }
 
   &__price-per-item {
     display: none;
-    padding-top: 3px;
-    font-size: 18px;
+    max-width: 75px;
+    font-size: 16px;
+    margin-right: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media (min-width: $screen-sm) {
       display: block;
@@ -221,10 +245,11 @@
       margin-left: auto;
       margin-right: 25px;
       margin-bottom: 0;
+      font-size: 18px;
+      max-width: 85px;
     }
 
     @media (min-width: $screen-xl) {
-      padding-top: 5px;
       font-size: 20px;
       margin-right: 40px;
     }
@@ -239,6 +264,7 @@
   }
 
   &__remove {
+    width: 15px;
     padding-top: 2px;
     margin-left: 15px;
 

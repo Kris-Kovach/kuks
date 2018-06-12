@@ -1,4 +1,9 @@
+
 $(document).ready(function () {
+  var parseValue = function () {
+    $(this).val($(this).siblings('.cart-item__hidden-input').val() + ' шт');
+  };
+
   $('.cart-item__hidden-input').spinner({
     min: 0,
     spin: function () {
@@ -17,7 +22,4 @@ $(document).ready(function () {
 
   $('.cart-item__spinner-input').blur(parseValue);
 
-  function parseValue() {
-    $(this).val($(this).siblings('.cart-item__hidden-input').val() + ' шт');
-  }
 });

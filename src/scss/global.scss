@@ -296,3 +296,89 @@ input[type=checkbox]:checked + .checkbox__label .checkbox__icon:after {
 .order__form-box {
   padding-bottom: 45px;
 }
+
+.sale-order-history-link {
+  color: #000;
+  font-family: $font-family;
+  font-size: 16px;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    color: #000;
+    opacity: 0.7;
+  }
+}
+
+.person {
+  font-family: $font-family !important;
+}
+
+.sale-order-list-repeat-link {
+  color: #000 !important;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    color: #000 !important;
+    opacity: 0.7;
+  }
+
+  &:before {
+    background: url('/local/templates/main/img/sale-order-repeat.svg') no-repeat;
+  }
+}
+
+.sale-order-list-about-link {
+  color: #000 !important;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    color: #000 !important;
+    opacity: 0.7;
+  }
+}
+
+.ps_logo img {
+  display: none !important;
+}
+
+.pay_name {
+  font-size: 18px;
+
+  @media (min-width: $screen-lg) {
+    font-size: 20px;
+  }
+}
+
+.ordering .heading_type_h1 {
+  width: 100%;
+
+  @media (min-width: $screen-lg) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+}
+
+.sale-order-history-link:focus,
+.sale-order-history-link:visited {
+  color: #000;
+}
+
+// Для невалидных полей
+
+form select.error,
+form textarea.error,
+form input.error {
+  border: 1px solid #cc0000;
+
+  &::placeholder {
+    color: #cc0000;
+    text-transform: uppercase;
+  }
+}
