@@ -35,6 +35,16 @@
 
   // Стили для owl-carousel
 
+  .owl-nav {
+    @include container;
+    left: 50%;
+    transform: translate(-50%);
+
+    @media (min-width: $screen-sm) {
+      width: 100%;
+    }
+  }
+
   .owl-dots {
     position: absolute;
     bottom: 27px;

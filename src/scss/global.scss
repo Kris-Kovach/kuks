@@ -377,6 +377,10 @@ form textarea.error,
 form input.error {
   border: 1px solid #cc0000;
 
+  &:focus {
+    border: 1px solid #cc0000;
+  }
+
   &::placeholder {
     color: #cc0000;
     text-transform: uppercase;

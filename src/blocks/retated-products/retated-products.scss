@@ -43,34 +43,34 @@
       display: flex;
       flex-wrap: wrap;
     }
-  }
 
-  .card {
+    .card {
 
-    @media (min-width: $screen-md) {
-      width: 46%;
-      margin-right: 8%;
-      margin-left: 0;
-      max-width: none;
-    }
-
-    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
-      &:nth-child(2n) {
-        margin-right: 0;
+      @media (min-width: $screen-md) {
+        width: 46%;
+        margin-right: 8%;
+        margin-left: 0;
+        max-width: none;
       }
 
-      &:last-child {
-        margin-bottom: 25px;
+      @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 25px;
+        }
       }
-    }
 
-    @media (min-width: $screen-lg) {
-      width: 23%;
-      margin-right: 2.66%;
-      margin-bottom: 0;
+      @media (min-width: $screen-lg) {
+        width: 23%;
+        margin-right: 2.66%;
+        margin-bottom: 0;
 
-      &:nth-child(4n) {
-        margin-right: 0;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
       }
     }
   }

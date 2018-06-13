@@ -143,3 +143,140 @@
   }
 }
 
+
+.owl-nav {
+  position: absolute;
+  height: 30px;
+  top: 50%;
+  width: 100%;
+}
+
+.owl-nav button.owl-prev > span,
+.owl-nav button.owl-next > span {
+  display: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 30px;
+  background: url('../img/icon-arrow--white.svg') center center no-repeat;
+  background-size: contain;
+  outline: none;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: 0;
+
+  @media (min-width: $screen-sm) {
+    right: 15px;
+  }
+
+  @media (min-width: $screen-md) {
+    right: -7px;
+  }
+
+  @media (min-width: $screen-lg) {
+    right: -25px;
+  }
+}
+
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+  transform: rotate(-180deg);
+
+  @media (min-width: $screen-sm) {
+    left: 15px;
+  }
+
+  @media (min-width: $screen-md) {
+    left: -7px;
+  }
+
+  @media (min-width: $screen-lg) {
+    left: -25px;
+  }
+}
+
+//.viewed-slider.owl-carousel .owl-nav button.owl-prev {
+//  left: -10px;
+//  transform: rotate(-180deg);
+//
+//  @media (min-width: $screen-sm) {
+//    left: 0;
+//  }
+//
+//  @media (min-width: $screen-md) {
+//    left: -30px;
+//  }
+//}
+//
+//.viewed-slider.owl-carousel .owl-nav button.owl-next {
+//  right: -10px;
+//
+//  @media (min-width: $screen-sm) {
+//    right: 0;
+//  }
+//
+//  @media (min-width: $screen-md) {
+//    right: -30px;
+//  }
+//}
+
+.new-items.owl-carousel .owl-nav button.owl-prev,
+.new-items.owl-carousel .owl-nav button.owl-next,
+.viewed-slider.owl-carousel .owl-nav button.owl-prev,
+.viewed-slider.owl-carousel .owl-nav button.owl-next{
+  background: url('../img/icon-arrow--black.svg') center center no-repeat;
+  background-size: contain;
+}
+
+
+.new-items.owl-carousel .owl-nav button.owl-next,
+.viewed-slider.owl-carousel .owl-nav button.owl-next {
+  right: -15px;
+
+  @media (min-width: $screen-sm) {
+    right: 0;
+  }
+
+  @media (min-width: $screen-md) {
+    right: -22px;
+  }
+
+  @media (min-width: $screen-lg) {
+    right: -40px;
+  }
+}
+
+
+.new-items.owl-carousel .owl-nav button.owl-prev,
+.viewed-slider.owl-carousel .owl-nav button.owl-prev {
+  left: -15px;
+  transform: rotate(-180deg);
+
+  @media (min-width: $screen-sm) {
+    left: 0;
+  }
+
+  @media (min-width: $screen-md) {
+    left: -22px;
+  }
+
+  @media (min-width: $screen-lg) {
+    left: -40px;
+  }
+}
+
+.default-slider .owl-nav {
+  @include container;
+  left: 50%;
+  transform: translate(-50%);
+
+  @media (min-width: $screen-sm) {
+    width: 100%;
+  }
+}
