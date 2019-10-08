@@ -6,7 +6,7 @@ block meta
 
 block header
 
-  +page-header('absolute')
+  +page-header('fixed, index')
     div#header-top.page-header__top
       .page-header__top-inner
         +top-nav-toggler()
@@ -131,16 +131,6 @@ block content
               мелочей, которая прекрасно подойдет для похода в любое место куда вам
               захочется с ней пойти.
             +new-price-block('8499')
-      div.new__item-wrap
-        +new-item()
-          +card-label()
-          +new-item-img('/', 'img/new-3.jpg')
-          +new-item-content('Helen', 'Сумка женская', '12 219')
-            p.new__descr.
-              Классическая сумка для небольших
-              мелочей, которая прекрасно подойдет для похода в любое место куда вам
-              захочется с ней пойти.
-            +new-price-block('8499', 'sale', '12999')
   +bg-gallery()
     +socials()
       +socials-item('Vkontakte', '/')

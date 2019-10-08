@@ -35,15 +35,20 @@
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: transparent;
+    transition: background-color 300ms linear 0s;
 
     @media (min-width: $screen-lg) {
       padding-top: 27px;
       padding-bottom: 27px;
     }
+
+    &--dark {
+      background: #1e1e1e;
+    }
   }
 
-  &--absolute {
-    position: absolute;
+  &--fixed {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -68,3 +73,4 @@
     justify-content: space-between;
   }
 }
+
