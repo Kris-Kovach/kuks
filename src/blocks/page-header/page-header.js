@@ -3,7 +3,7 @@ $(document).ready(function () {
     var indexHeaderBottomPanel = indexHeader.find('.page-header__bottom');
     var promoSlider = $('.promo-slider__item');
 
-    var changeBottomPanleBackground = function () {
+    var changeBottomPanelBackground = function () {
         var indexHeaderBottomPanelHeight = indexHeaderBottomPanel.outerHeight();
         var promoSliderHeight = promoSlider.outerHeight();
         var scrollOffset = promoSliderHeight - indexHeaderBottomPanelHeight;
@@ -18,10 +18,10 @@ $(document).ready(function () {
     };
 
     if (indexHeader) {
-        changeBottomPanleBackground();
+        changeBottomPanelBackground();
 
         $(window).on('resize', function () {
-            changeBottomPanleBackground();
+            changeBottomPanelBackground();
         });
     }
 });
