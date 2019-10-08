@@ -17,7 +17,7 @@ $(document).ready(function () {
     mainNav.toggleClass('main-nav--visible');
     topNavToggler.toggleClass('top-nav-toggler--disabled');
     cartPreview.removeClass('cart-preview--visible');
-    $('body').toggleClass('fixed');
+    disableBodyScroll(true, '.main-nav');
 
     setTimeout(function () {
       subNav.removeClass('main-nav__submenu--visible');
@@ -26,12 +26,15 @@ $(document).ready(function () {
   };
 
   var onBackBtnClick = function (evt) {
-    evt.preventDefault();
-    subNav.removeClass('main-nav__submenu--visible');
 
-    setTimeout(function () {
-      mainNav.removeClass('main-nav--hidden');
-    }, 200);
+    if ($(window).width() < 768) {
+      evt.preventDefault();
+      subNav.removeClass('main-nav__submenu--visible');
+
+      setTimeout(function () {
+        mainNav.removeClass('main-nav--hidden');
+      }, 200);
+    }
   };
 
   var onSubmenuTogglerClick = function (evt) {
@@ -44,10 +47,7 @@ $(document).ready(function () {
     cartPreview.addClass('cart-preview--visible');
     subNav.removeClass('main-nav__submenu--visible');
     topNavToggler.addClass('top-nav-toggler--disabled');
-
-    if ($(window).width() < 768) {
-      $('body').addClass('fixed');
-    }
+    disableBodyScroll(true, '.cart-preview');
   };
 
   var onCartPreviewClose = function (evt) {
@@ -55,7 +55,6 @@ $(document).ready(function () {
     cartPreview.removeClass('cart-preview--visible');
     subNav.removeClass('main-nav__submenu--visible');
     topNavToggler.removeClass('top-nav-toggler--disabled');
-    $('body').removeClass('fixed');
   };
 
   mainNavToggler.on('click', function (evt) {
@@ -68,7 +67,6 @@ $(document).ready(function () {
 
     if ($(this).next('.main-nav__submenu').length) {
       evt.preventDefault();
-      console.log(true);
       mainNav.toggleClass('main-nav--hidden');
       $(this).next('.main-nav__submenu').toggleClass('main-nav__submenu--visible');
     }
@@ -81,12 +79,6 @@ $(document).ready(function () {
 
   submenuToggler.on('click', function (evt) {
     onSubmenuTogglerClick(evt);
-  });
-
-  $(window).resize(function () {
-    if ($(window).width() > 768) {
-      $('body').removeClass('fixed');
-    }
   });
 
   cartPreviewContent.mCustomScrollbar();

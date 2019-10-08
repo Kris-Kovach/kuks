@@ -17,6 +17,25 @@ $(document).ready(function(){
         items: 4,
         margin: 25
       }
+    },
+    afterAction: function(){
+      if ( this.itemsAmount > this.visibleItems.length ) {
+        $('.next').show();
+        $('.prev').show();
+        $('.next').removeClass('disabled');
+        $('.prev').removeClass('disabled');
+
+        if ( this.currentItem == 0 ) {
+          $('.prev').addClass('disabled');
+        }
+
+        if ( this.currentItem == this.maximumItem ) {
+          $('.next').addClass('disabled');
+        }
+      } else {
+        $('.next').hide();
+        $('.prev').hide();
+      }
     }
   });
 
@@ -37,7 +56,27 @@ $(document).ready(function(){
       },
       1260 : {
         items: 3,
-        margin: 45
+        margin: 45,
+        slideBy: 3
+      }
+    },
+    afterAction: function(){
+      if ( this.itemsAmount > this.visibleItems.length ) {
+        $('.next').show();
+        $('.prev').show();
+        $('.next').removeClass('disabled');
+        $('.prev').removeClass('disabled');
+
+        if ( this.currentItem == 0 ) {
+          $('.prev').addClass('disabled');
+        }
+
+        if ( this.currentItem == this.maximumItem ) {
+          $('.next').addClass('disabled');
+        }
+      } else {
+        $('.next').hide();
+        $('.prev').hide();
       }
     }
   });
@@ -48,7 +87,26 @@ $(document).ready(function(){
     dots: false,
     loop: true,
     center: false,
-    navSpeed: 1000
+    navSpeed: 1000,
+    afterAction: function(){
+      if ( this.itemsAmount > this.visibleItems.length ) {
+        $('.next').show();
+        $('.prev').show();
+        $('.next').removeClass('disabled');
+        $('.prev').removeClass('disabled');
+
+        if ( this.currentItem == 0 ) {
+          $('.prev').addClass('disabled');
+        }
+
+        if ( this.currentItem == this.maximumItem ) {
+          $('.next').addClass('disabled');
+        }
+      } else {
+        $('.next').hide();
+        $('.prev').hide();
+      }
+    }
   });
 
   $('#product-slider').owlCarousel({

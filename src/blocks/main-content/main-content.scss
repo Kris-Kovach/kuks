@@ -60,18 +60,6 @@
         margin-bottom: 50px;
       }
     }
-
-    .block-left {
-      margin-bottom: 0;
-
-      @media (min-width: $screen-md) {
-        margin-bottom: 0;
-      }
-
-      @media (min-width: $screen-lg) {
-        margin-bottom: 0;
-      }
-    }
   }
 
   &__subtitle {

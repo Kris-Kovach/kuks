@@ -17,6 +17,7 @@
     z-index: 1000;
     transition: 0.5s;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 
     &--visible {
       left: 0;

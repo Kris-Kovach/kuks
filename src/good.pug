@@ -23,6 +23,7 @@ block header
 block content
   +product()
     section.product__section.product__section--dark
+      .product__background(style="background: pink;")
       .product__inner
         .product__column.product__slider-wrap
           +owl-carousel('product-slider')(class='product__slider')
@@ -34,8 +35,8 @@ block content
               img(src='img/product-3.jpg' data-magnify-src="img/product-3.jpg" alt='Bag')
             .product__img(data-dot='<img src="img/product-4.jpg" alt="Bag">')
               img(src='img/product-4.jpg' data-magnify-src="img/product-4.jpg" alt='Bag')
-        .product__column.product__info
-          +breadcrumbs('white')
+        .product__column.product__info(style="background: pink;")
+          +breadcrumbs()
             +breadcrumbs-item('Женское', '/')
             +breadcrumbs-item('Сумки и клатчи', '/')
             +breadcrumbs-item('Marta')
@@ -59,7 +60,7 @@ block content
               .product__purchase
                 .product__price 12 219&nbsp;
                   span.b-rub Ь
-                +btn('Купить', 'purchase')(href='/')
+                +btn('Купить', 'purchase')(href='/' style="color: pink;")
           .product__note Обращаем ваше внимание, что стоимость данной модели зависит от размера!
     section.product__section.product__section--gray
       .product__inner
@@ -120,7 +121,12 @@ block content
               li.product__color
                 a(href='/')
                   img(src='img/color-4.jpg' alt='Some alt')
-
+              li.product__color
+                a(href='/')
+                  img(src='img/color-4.jpg' alt='Some alt')
+              li.product__color
+                a(href='/')
+                  img(src='img/color-4.jpg' alt='Some alt')
   +related-products()
     +retated-products-title('Рекомендуем')
     .related-products__items

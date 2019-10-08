@@ -11,24 +11,13 @@ $(document).ready(function () {
     if ($(window).width() >= 1024) {
       var value = FILTER_WIDTH - catalogContainer.offset().left + PADDING;
       catalogContent.css('margin-left', value);
-    } else {
-      catalogContent.css('margin-left', '0');
     }
   };
-
-  var setFilterState = function () {
-    if ($(window).width() > 1024) {
-      filter.removeClass('filter--hidden');
-    }
-  };
-
-  setCatalogMargin();
-  setFilterState();
 
   $(window).resize(function () {
-    setCatalogMargin();
-    setFilterState();
-    catalogContent.removeClass('catalog__content--fullwidth');
+    if ($(window).width() < 1024) {
+      catalogContent.css('margin-left', '0');
+    }
   });
 
   filterClose.on('click', function (evt) {
@@ -41,6 +30,7 @@ $(document).ready(function () {
   filterLabel.on('click', function (evt) {
     evt.preventDefault();
 
+    setCatalogMargin();
     filter.removeClass('filter--hidden');
     catalogContent.removeClass('catalog__content--fullwidth');
   });

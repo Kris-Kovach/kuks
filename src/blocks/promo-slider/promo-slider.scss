@@ -5,12 +5,18 @@
 .promo-slider {
   $block-name: &; // #{$block-name}__element
   padding-top: 47px;
+  margin: 0 auto;
+  max-width: 1600px;
 
   &__item {
-    height: 500px;
+    height: 270px;
 
-    @media (min-width: $screen-lg) {
-      height: 600px;
+    @media (min-width: $screen-sm) {
+      height: 350px;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 500px;
     }
 
     @media (min-width: $screen-lg) {
@@ -34,15 +40,15 @@
   }
 
   // Стили для owl-carousel
+  &.owl-carousel .owl-nav button.owl-prev {
+    left: 15px;
+  }
+
+  &.owl-carousel .owl-nav button.owl-next {
+    right: 15px;
+  }
 
   .owl-nav {
-    @include container;
-    left: 50%;
-    transform: translate(-50%);
-
-    @media (min-width: $screen-sm) {
-      width: 100%;
-    }
   }
 
   .owl-dots {

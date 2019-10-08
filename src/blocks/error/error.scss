@@ -3,7 +3,6 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .error:not(input) {
-  $block-name: &; // #{$block-name}__element
   padding-top: 30px;
   padding-bottom: 40px;
   background: #fff;
@@ -12,7 +11,9 @@
     padding-top: 60px;
     padding-bottom: 70px;
   }
+}
 
+.error {
   &__inner {
     @include container();
 

@@ -77,7 +77,7 @@
       > a {
 
         @media (min-width: $screen-lg) {
-          color: #fff;
+          color: #fff !important;
 
           &:after {
             background: url('../img/icon-arrow--white.svg') center center no-repeat;

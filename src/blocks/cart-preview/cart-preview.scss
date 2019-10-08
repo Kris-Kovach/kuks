@@ -19,6 +19,7 @@
   color: #fff;
   z-index: 10100;
   padding-bottom: 40px;
+  -webkit-overflow-scrolling: touch;
 
   @media (min-width: $screen-lg) {
     padding-bottom: 70px;

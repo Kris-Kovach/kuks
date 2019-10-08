@@ -12,7 +12,7 @@ mixin new(mods)
       }
     }
 
-  section.new(class=allMods)
+  section.new(class=allMods)&attributes(attributes)
     svg.new__bg(fill='#1B4200')
       use(xlink:href='img/sprite-svg.svg#bg-new' transform='scale(2.5)')
     .new__inner

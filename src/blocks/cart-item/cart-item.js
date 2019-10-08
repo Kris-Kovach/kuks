@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   var parseValue = function () {
     $(this).val($(this).siblings('.cart-item__hidden-input').val() + ' шт');

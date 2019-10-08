@@ -23,7 +23,7 @@ $(document).ready(function () {
     items: 1,
     nav: true,
     dots: false,
-    loop: false,
+    loop: true,
     mouseDrag: false,
     touchDrag: false,
     animateOut: 'fadeOut',

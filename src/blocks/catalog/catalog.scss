@@ -112,12 +112,12 @@
           width: 23%;
           margin-right: 2.66%;
 
-          &:nth-child(4n) {
-            margin-right: 0;
-          }
-
           &:nth-child(3n) {
             margin-right: 2.66%;
+          }
+
+          &:nth-child(4n) {
+            margin-right: 0;
           }
         }
       }
