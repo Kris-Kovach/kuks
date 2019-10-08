@@ -17,11 +17,20 @@ $(document).ready(function () {
         });
     };
 
+    var setMainContentPadding = function () {
+        var pageHeaderHeight = $('.page-header--inner').outerHeight();
+        var mainContent = $('main');
+
+        mainContent.css('padding-top', pageHeaderHeight)
+    };
+
     if (indexHeader) {
         changeBottomPanelBackground();
+        setMainContentPadding();
 
         $(window).on('resize', function () {
             changeBottomPanelBackground();
+            setMainContentPadding();
         });
     }
 });

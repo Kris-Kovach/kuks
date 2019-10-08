@@ -37,11 +37,10 @@ mixin card-label (mods)
 
   span.card__label(class=allMods, href=href)&attributes(attributes) sale
 
-mixin card-img (href, src, mods)
+mixin card-img (src, mods)
 
   //- Принимает:
   //-   src   {string} - ссылка на изображение
-  //-   href   {string} - ссылка этого пункта
   //-   mods   {string} - список модификаторов
   -
     // список модификаторов
@@ -53,8 +52,11 @@ mixin card-img (href, src, mods)
       }
     }
 
-  a.card__img(class=allMods, href=href)&attributes(attributes)
-    img(class=allMods, src=src alt="")&attributes(attributes)
+  +owl-carousel(class='card__slider')
+    div.card__slider-item
+      img.card__img(class=allMods, src='img/new-1.jpg' alt="")&attributes(attributes)
+    div.card-slider__item
+      img.card__img(class=allMods, src='img/new-2.jpg' alt="")&attributes(attributes)
 
 mixin card-content(title, href, subtitle, price, mods)
 

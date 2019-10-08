@@ -201,8 +201,10 @@
   }
 }
 
+.card__slider.owl-carousel .owl-nav button.owl-prev,
+.card__slider.owl-carousel .owl-nav button.owl-next,
 .viewed-slider.owl-carousel .owl-nav button.owl-prev,
-.viewed-slider.owl-carousel .owl-nav button.owl-next{
+.viewed-slider.owl-carousel .owl-nav button.owl-next {
   background: url('../img/icon-arrow--black.svg') center center no-repeat;
   background-size: contain;
 }
@@ -225,6 +227,13 @@
   }
 }
 
+.card__slider.owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+
+.card__slider.owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
 
 .new-items.owl-carousel .owl-nav button.owl-prev,
 .viewed-slider.owl-carousel .owl-nav button.owl-prev {
