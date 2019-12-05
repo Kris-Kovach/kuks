@@ -88,8 +88,10 @@
     "magnific-popup": "^1.1.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "midnight.js": "^1.1.1",
+    "node-sass": "^4.13.0",
     "object-fit-images": "^3.2.3",
     "owl.carousel": "^2.2.0",
+    "owl.carousel2.thumbs": "^0.1.8",
     "svg4everybody": "^2.1.8"
   }
 }

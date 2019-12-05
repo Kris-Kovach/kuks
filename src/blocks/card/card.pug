@@ -52,11 +52,14 @@ mixin card-img (src, mods)
       }
     }
 
-  +owl-carousel(class='card__slider')
+  .card__slider.owl-carousel
     div.card__slider-item
-      img.card__img(class=allMods, src='img/new-1.jpg' alt="")&attributes(attributes)
-    div.card-slider__item
+      a.card__img-wrap
+        img.card__img(class=allMods, src='img/new-1.jpg' alt="")&attributes(attributes)
+    div.card__slider-item
       img.card__img(class=allMods, src='img/new-2.jpg' alt="")&attributes(attributes)
+    div.card__slider-item
+      img.card__img(class=allMods, src='img/new-3.jpg' alt="")&attributes(attributes)
 
 mixin card-content(title, href, subtitle, price, mods)
 

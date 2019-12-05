@@ -4,6 +4,8 @@
 
 .default-slider {
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 
   &__inner {
     @include container();
@@ -13,14 +15,18 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: 270px;
 
-    @media (min-width: $screen-lg) {
-      height: 600px;
+    @media (min-width: $screen-sm) {
+      height: 350px;
     }
 
-    @media (min-width: 2560px) {
-      height: 800px;
+    @media (min-width: $screen-md) {
+      height: 500px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 745px;
     }
 
     &--1 {
@@ -72,10 +78,9 @@
     }
   }
 
-
   .owl-dots {
     position: absolute;
-    bottom: 27px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -83,8 +88,8 @@
   }
 
   .owl-dot {
-    height: 14px;
-    margin-right: 17px;
+    height: 6px;
+    margin-right: 8px;
     outline: none;
 
     &:last-child {
@@ -94,21 +99,22 @@
     span {
       display: inline-block;
       vertical-align: top;
-      width: 14px;
-      height: 14px;
+      width: 6px;
+      height: 6px;
+      border: none;
       border-radius: 100%;
-      border: 2px solid #fff;
-      background: transparent;
+      background: #dadada;
     }
 
     &.active span {
-      background: #fff;
+      background: #484848;
     }
   }
 }
 
 // Стили для owl-carousel
 #new-items {
+
   .owl-dots {
     position: absolute;
     bottom: -84px;
@@ -119,8 +125,8 @@
   }
 
   .owl-dot {
-    height: 14px;
-    margin-right: 17px;
+    height: 6px;
+    margin-right: 8px;
     outline: none;
 
     &:last-child {
@@ -130,19 +136,30 @@
     span {
       display: inline-block;
       vertical-align: top;
-      width: 14px;
-      height: 14px;
+      width: 6px;
+      height: 6px;
       border-radius: 100%;
-      border: 2px solid #fff;
-      background: transparent;
+      border: none;
+      background: #dadada;
     }
 
     &.active span {
-      background: #fff;
+      background: #484848;
     }
   }
 }
 
+#viewed-slider {
+
+  .owl-dots {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    transform: none;
+  }
+}
 
 .owl-nav {
   position: absolute;
@@ -269,3 +286,57 @@
   cursor: default;
   pointer-events: none;
 }
+
+.owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.owl-dot {
+  height: 6px;
+  margin-right: 8px;
+  outline: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    border: none;
+    background: #dadada;
+  }
+
+  &.active span {
+    background: #484848;
+  }
+}
+
+.card__slider,
+.product-slider {
+
+  .owl-dots {
+    top: 10px;
+    bottom: auto;
+    left: 15px;
+    width: 100%;
+    transform: none;
+    text-align: left;
+  }
+}
+
+.product-slider {
+
+  .owl-dots {
+    top: 18px;
+  }
+}
+

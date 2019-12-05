@@ -33,6 +33,11 @@
     @media (min-width: $screen-md) {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $screen-lg) {
+      justify-content: flex-start;
     }
   }
 
@@ -40,17 +45,10 @@
     margin-bottom: 30px;
 
     @media (min-width: $screen-md) {
-      width: 46%;
-      margin-right: 8%;
+      width: 290px;
+      margin-right: 0;
       margin-left: 0;
       max-width: none;
-    }
-
-    @media (min-width: $screen-md) and (max-width: $screen-lg-max) {
-
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
     }
 
     @media (min-width: $screen-xl) {

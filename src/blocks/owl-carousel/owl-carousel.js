@@ -3,11 +3,12 @@ $(document).ready(function () {
 
     $("#viewed-slider").owlCarousel({
         items: 1,
-        nav: true,
-        dots: false,
+        nav: false,
+        dots: true,
         center: false,
         margin: 25,
         navSpeed: 1000,
+        dotsSpeed: 1000,
         responsive: {
             768: {
                 items: 2,
@@ -39,21 +40,27 @@ $(document).ready(function () {
         }
     });
 
-    $(".card__slider").owlCarousel({
-        items: 1,
-        nav: true,
-        dots: false,
-        center: true,
-        navSpeed: 1000
+    $('.card__slider').each(function() {
+        var cardSlider = $(this);
+
+        cardSlider.owlCarousel({
+            items: 1,
+            nav: false,
+            dots: true,
+            dotsSpeed: 1000,
+            navSpeed: 1000,
+            loop: true
+        });
     });
 
     $("#new-items").owlCarousel({
         items: 1,
-        nav: true,
-        dots: false,
+        nav: false,
+        dots: true,
         center: false,
         margin: 25,
         navSpeed: 1000,
+        dotsSpeed: 1000,
         responsive: {
             768: {
                 items: 2
@@ -91,11 +98,12 @@ $(document).ready(function () {
 
     $('#default-slider').owlCarousel({
         items: 1,
-        nav: true,
-        dots: false,
+        nav: false,
+        dots: true,
         loop: true,
         center: false,
         navSpeed: 1000,
+        dotsSpeed: 1000,
         afterAction: function () {
             if (this.itemsAmount > this.visibleItems.length) {
                 $('.next').show();
@@ -119,11 +127,11 @@ $(document).ready(function () {
 
     $('#product-slider').owlCarousel({
         items: 1,
-        nav: true,
+        nav: false,
         dots: true,
-        dotsData: true,
-        dotsContainer: '.product__thumbs',
-        dotClass: 'product__thumb',
+        thumbsPrerendered: true,
+        thumbContainerClass: 'product__thumbs',
+        thumbItemClass: 'product__thumb',
         loop: true,
         dotsSpeed: 1000,
         animateOut: 'fadeOut',

@@ -21,11 +21,11 @@ $(document).ready(function () {
 
   promoSlider.owlCarousel({
     items: 1,
-    nav: true,
-    dots: false,
+    nav: false,
+    dots: true,
     loop: true,
     mouseDrag: false,
-    touchDrag: false,
+    touchDrag: true,
     animateOut: 'fadeOut',
     navSpeed: 1000
   });
